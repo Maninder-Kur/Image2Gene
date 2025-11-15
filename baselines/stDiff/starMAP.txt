@@ -1,0 +1,174 @@
+nohup: ignoring input
+adata_spatial:  /home/maninder/stPlus/data/starMAP/st_data.h5ad
+adata_seq:  /home/maninder/stPlus/data/starMAP/scRNAseq_common.h5ad
+sp shape (1549, 996)
+sc shape (5577, 996)
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+outdir1: Result/starMAPBaseline_stplus/stplus
+
+===== Fold 1 =====
+Number of train genes: 796, Number of test genes: 199
+Models will be saved in: Result/starMAPBaseline_stplus/process_file/stPlus-demo-5min*.pt
+
+Spatial transcriptomics data: 1549 cells * 796 genes
+Reference scRNA-seq data:     5577 cells * 995 genes
+199 genes to be predicted
+
+Start initialization
+⚙️  Selected physical GPU 0 (22.05 GB free)
+Start embedding
+	[1] recon_loss: 20321.176, pred_loss: 9063.427, total_loss: 29384.603
+	[2] recon_loss: 18661.735, pred_loss: 6846.853, total_loss: 25508.588
+	[3] recon_loss: 17743.668, pred_loss: 6629.431, total_loss: 24373.098
+	[4] recon_loss: 17271.947, pred_loss: 6319.208, total_loss: 23591.155
+	[5] recon_loss: 16950.754, pred_loss: 5831.478, total_loss: 22782.231
+	[6] recon_loss: 16773.585, pred_loss: 5774.027, total_loss: 22547.612
+	[7] recon_loss: 16691.231, pred_loss: 5697.448, total_loss: 22388.679
+	[8] recon_loss: 16509.050, pred_loss: 5554.576, total_loss: 22063.626
+	[9] recon_loss: 16379.393, pred_loss: 5517.239, total_loss: 21896.632
+	[10] recon_loss: 16246.821, pred_loss: 5474.407, total_loss: 21721.228
+	[11] recon_loss: 16194.398, pred_loss: 5480.251, total_loss: 21674.649
+Start prediction
+	Using model 1 to predict
+	Using model 2 to predict
+	Using model 3 to predict
+	Using model 4 to predict
+	Using model 5 to predict
+{'fold': 1, 'phase': 'val', 'loss': 2.6762, 'pearson_mean': 0.0881, 'spearman_mean_genewise': 0.0856, 'l1_error_mean': 1.1965, 'l2_errors_mean': 2.6762, 'r2_scores_mean': -0.7067, 'pearson_std': 0.1103, 'l2_error_q1': 1.4698, 'l2_error_q2': 2.1437, 'l2_error_q3': 3.2885, 'r2_score_q1': -0.5723, 'r2_score_q2': -0.1566, 'r2_score_q3': -0.0676}
+
+===== Fold 2 =====
+Number of train genes: 796, Number of test genes: 199
+Models will be saved in: Result/starMAPBaseline_stplus/process_file/stPlus-demo-5min*.pt
+
+Spatial transcriptomics data: 1549 cells * 796 genes
+Reference scRNA-seq data:     5577 cells * 995 genes
+199 genes to be predicted
+
+Start initialization
+⚙️  Selected physical GPU 1 (22.05 GB free)
+Start embedding
+	[1] recon_loss: 20210.636, pred_loss: 7701.005, total_loss: 27911.640
+	[2] recon_loss: 18500.510, pred_loss: 5630.896, total_loss: 24131.406
+	[3] recon_loss: 17567.823, pred_loss: 5472.918, total_loss: 23040.741
+	[4] recon_loss: 17063.008, pred_loss: 5436.844, total_loss: 22499.853
+	[5] recon_loss: 16796.500, pred_loss: 5390.111, total_loss: 22186.611
+	[6] recon_loss: 16593.843, pred_loss: 5340.409, total_loss: 21934.252
+	[7] recon_loss: 16502.468, pred_loss: 5327.438, total_loss: 21829.906
+	[8] recon_loss: 16324.746, pred_loss: 5251.832, total_loss: 21576.578
+	[9] recon_loss: 16189.444, pred_loss: 5024.176, total_loss: 21213.621
+	[10] recon_loss: 16117.735, pred_loss: 4875.321, total_loss: 20993.056
+	[11] recon_loss: 16077.092, pred_loss: 4870.913, total_loss: 20948.006
+Start prediction
+	Using model 1 to predict
+	Using model 2 to predict
+	Using model 3 to predict
+	Using model 4 to predict
+	Using model 5 to predict
+{'fold': 2, 'phase': 'val', 'loss': 2.8004, 'pearson_mean': 0.0863, 'spearman_mean_genewise': 0.0869, 'l1_error_mean': 1.2309, 'l2_errors_mean': 2.8004, 'r2_scores_mean': -1.1467, 'pearson_std': 0.098, 'l2_error_q1': 1.4004, 'l2_error_q2': 2.2648, 'l2_error_q3': 3.4873, 'r2_score_q1': -0.7349, 'r2_score_q2': -0.2007, 'r2_score_q3': -0.0842}
+
+===== Fold 3 =====
+Number of train genes: 796, Number of test genes: 199
+Models will be saved in: Result/starMAPBaseline_stplus/process_file/stPlus-demo-5min*.pt
+
+Spatial transcriptomics data: 1549 cells * 796 genes
+Reference scRNA-seq data:     5577 cells * 995 genes
+199 genes to be predicted
+
+Start initialization
+⚙️  Selected physical GPU 1 (22.05 GB free)
+Start embedding
+	[1] recon_loss: 20362.870, pred_loss: 8081.587, total_loss: 28444.457
+	[2] recon_loss: 18782.006, pred_loss: 5791.417, total_loss: 24573.423
+	[3] recon_loss: 17848.192, pred_loss: 5291.915, total_loss: 23140.107
+	[4] recon_loss: 17346.456, pred_loss: 5210.134, total_loss: 22556.590
+	[5] recon_loss: 17056.663, pred_loss: 5146.045, total_loss: 22202.708
+	[6] recon_loss: 16866.858, pred_loss: 5183.625, total_loss: 22050.483
+	[7] recon_loss: 16698.726, pred_loss: 5101.911, total_loss: 21800.637
+	[8] recon_loss: 16570.014, pred_loss: 5102.191, total_loss: 21672.204
+	[9] recon_loss: 16418.906, pred_loss: 4950.695, total_loss: 21369.601
+	[10] recon_loss: 16366.282, pred_loss: 4914.408, total_loss: 21280.689
+	[11] recon_loss: 16349.014, pred_loss: 4983.006, total_loss: 21332.020
+Start prediction
+	Using model 1 to predict
+	Using model 2 to predict
+	Using model 3 to predict
+	Using model 4 to predict
+	Using model 5 to predict
+{'fold': 3, 'phase': 'val', 'loss': 2.8732, 'pearson_mean': 0.089, 'spearman_mean_genewise': 0.0867, 'l1_error_mean': 1.1974, 'l2_errors_mean': 2.8732, 'r2_scores_mean': -0.6375, 'pearson_std': 0.11, 'l2_error_q1': 1.4282, 'l2_error_q2': 2.3164, 'l2_error_q3': 3.53, 'r2_score_q1': -0.748, 'r2_score_q2': -0.2065, 'r2_score_q3': -0.0851}
+
+===== Fold 4 =====
+Number of train genes: 796, Number of test genes: 199
+Models will be saved in: Result/starMAPBaseline_stplus/process_file/stPlus-demo-5min*.pt
+
+Spatial transcriptomics data: 1549 cells * 796 genes
+Reference scRNA-seq data:     5577 cells * 995 genes
+199 genes to be predicted
+
+Start initialization
+⚙️  Selected physical GPU 1 (22.05 GB free)
+Start embedding
+	[1] recon_loss: 20527.606, pred_loss: 8079.792, total_loss: 28607.398
+	[2] recon_loss: 18616.305, pred_loss: 6329.867, total_loss: 24946.173
+	[3] recon_loss: 17689.989, pred_loss: 5899.452, total_loss: 23589.440
+	[4] recon_loss: 17172.877, pred_loss: 5856.248, total_loss: 23029.126
+	[5] recon_loss: 16868.596, pred_loss: 5802.135, total_loss: 22670.731
+	[6] recon_loss: 16693.919, pred_loss: 5796.380, total_loss: 22490.299
+	[7] recon_loss: 16554.962, pred_loss: 5709.268, total_loss: 22264.230
+	[8] recon_loss: 16423.401, pred_loss: 5647.303, total_loss: 22070.704
+	[9] recon_loss: 16360.098, pred_loss: 5639.196, total_loss: 21999.294
+Start prediction
+	Using model 1 to predict
+	Using model 2 to predict
+	Using model 3 to predict
+	Using model 4 to predict
+	Using model 5 to predict
+{'fold': 4, 'phase': 'val', 'loss': 2.6376, 'pearson_mean': 0.1029, 'spearman_mean_genewise': 0.0954, 'l1_error_mean': 1.1645, 'l2_errors_mean': 2.6376, 'r2_scores_mean': -0.6856, 'pearson_std': 0.0987, 'l2_error_q1': 1.279, 'l2_error_q2': 2.1661, 'l2_error_q3': 3.4818, 'r2_score_q1': -0.6653, 'r2_score_q2': -0.1631, 'r2_score_q3': -0.064}
+
+===== Fold 5 =====
+Number of train genes: 796, Number of test genes: 199
+Models will be saved in: Result/starMAPBaseline_stplus/process_file/stPlus-demo-5min*.pt
+
+Spatial transcriptomics data: 1549 cells * 796 genes
+Reference scRNA-seq data:     5577 cells * 995 genes
+199 genes to be predicted
+
+Start initialization
+⚙️  Selected physical GPU 1 (22.05 GB free)
+Start embedding
+	[1] recon_loss: 20661.405, pred_loss: 8406.062, total_loss: 29067.467
+	[2] recon_loss: 19151.454, pred_loss: 6031.142, total_loss: 25182.596
+	[3] recon_loss: 18301.018, pred_loss: 5596.894, total_loss: 23897.912
+	[4] recon_loss: 17777.680, pred_loss: 5511.050, total_loss: 23288.730
+	[5] recon_loss: 17504.366, pred_loss: 5481.866, total_loss: 22986.232
+	[6] recon_loss: 17309.758, pred_loss: 5412.490, total_loss: 22722.248
+	[7] recon_loss: 17170.014, pred_loss: 5313.084, total_loss: 22483.098
+	[8] recon_loss: 16998.316, pred_loss: 5259.004, total_loss: 22257.320
+	[9] recon_loss: 16919.171, pred_loss: 5214.299, total_loss: 22133.470
+	[10] recon_loss: 16860.576, pred_loss: 5124.804, total_loss: 21985.380
+	[11] recon_loss: 16784.663, pred_loss: 5078.333, total_loss: 21862.996
+	[12] recon_loss: 16729.851, pred_loss: 5083.781, total_loss: 21813.632
+Start prediction
+	Using model 1 to predict
+	Using model 2 to predict
+	Using model 3 to predict
+	Using model 4 to predict
+	Using model 5 to predict
+{'fold': 5, 'phase': 'val', 'loss': 2.9212, 'pearson_mean': 0.0834, 'spearman_mean_genewise': 0.0799, 'l1_error_mean': 1.2391, 'l2_errors_mean': 2.9212, 'r2_scores_mean': -0.7825, 'pearson_std': 0.108, 'l2_error_q1': 1.5076, 'l2_error_q2': 2.3944, 'l2_error_q3': 3.5552, 'r2_score_q1': -0.657, 'r2_score_q2': -0.1955, 'r2_score_q3': -0.0795}
+Saved all fold metrics to Result/starMAPBaseline_stplus/stplus/fold_results/fold_metrics.csv
+Saved mean and std metrics to Result/starMAPBaseline_stplus/stplus/fold_results/metrics_summary.csv
+We are calculating the : starMAPBaseline_stplus
+
+impute_count_dir++++++++++++++++++++++++++++++++++++++++++++++++++Result/starMAPBaseline_stplus
++++++++++++++++++++++++++++['process_file', 'stPlus_impute.csv', 'stplus']++++++++
+impute_count: ['stPlus_impute.csv']
+stPlus_impute.csv
+Result/starMAPBaseline_stplus/stPlus_impute.csv
+raw = (1549, 995)
+impute = (1549, 995)
+ARI  0.28808795557024314
+AMI  0.43260686025234135
+Homo  0.4492881582245796
+NMI  0.43662285499153997
+median ::: [np.float64(0.0748884949715721), np.float64(0.039464462327098), np.float64(1.3616878237621426), np.float64(0.4545967782888496)]
+metrics ::: ['SPCC(gene)', 'SSIM(gene)', 'RMSE(gene)', 'JS(gene)']
+

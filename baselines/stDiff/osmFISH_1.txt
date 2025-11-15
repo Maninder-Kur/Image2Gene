@@ -1,0 +1,242 @@
+Reading data:
+  spatial: /home/maninder/stPlus/data/osmFISH/st_data.h5ad
+  sc    : /home/maninder/stPlus/data/osmFISH/scRNAseq_common.h5ad
+Loaded shapes: spatial (3405, 32), sc (1691, 32)
+Number of common genes: 32
+Converted to DataFrame: sp_data (3405, 32), sc_data (1691, 32)
+Spatial split -> Train: (2724, 32), Test: (681, 32)
+
+>> Running stPlus ...
+
+===== stPlus Fold 1 =====
+[Fold 1] train_genes: 25, test_genes: 7
+Models will be saved in: Result/osmFISHBaseline_stplus_new/stplus/fold_1/stplus_model-5min*.pt
+
+Spatial transcriptomics data: 2724 cells * 25 genes
+Reference scRNA-seq data:     1691 cells * 32 genes
+7 genes to be predicted
+
+Start initialization
+⚙️  Selected physical GPU 0 (22.05 GB free)
+Start embedding
+	[1] recon_loss: 5453.652, pred_loss: 4163.804, total_loss: 9617.457
+	[2] recon_loss: 3176.639, pred_loss: 3494.639, total_loss: 6671.278
+	[3] recon_loss: 3137.518, pred_loss: 3353.970, total_loss: 6491.489
+	[4] recon_loss: 3136.696, pred_loss: 3275.096, total_loss: 6411.792
+	[5] recon_loss: 3132.506, pred_loss: 3167.847, total_loss: 6300.353
+	[6] recon_loss: 3136.274, pred_loss: 3094.621, total_loss: 6230.895
+	[7] recon_loss: 3132.516, pred_loss: 2990.235, total_loss: 6122.751
+	[8] recon_loss: 3129.988, pred_loss: 2921.431, total_loss: 6051.419
+	[9] recon_loss: 3129.245, pred_loss: 2845.834, total_loss: 5975.079
+	[10] recon_loss: 3130.821, pred_loss: 2815.811, total_loss: 5946.632
+	[11] recon_loss: 3133.196, pred_loss: 2743.668, total_loss: 5876.864
+	[12] recon_loss: 3133.382, pred_loss: 2675.735, total_loss: 5809.117
+	[13] recon_loss: 3138.030, pred_loss: 2658.971, total_loss: 5797.001
+Start prediction
+	Using model 1 to predict
+	Using model 2 to predict
+	Using model 3 to predict
+	Using model 4 to predict
+	Using model 5 to predict
+🔁 Reusing provided stPlus model to predict new spatial data...
+Spatial transcriptomics data: 681 cells * 25 genes
+Predicting 7 genes
+
+[INFO] Reuse successful: 681 spatial + 1691 scRNA used.
+[stPlus Fold 1] val spearman 0.1282, test spearman 0.0466
+
+===== stPlus Fold 2 =====
+[Fold 2] train_genes: 25, test_genes: 7
+Models will be saved in: Result/osmFISHBaseline_stplus_new/stplus/fold_2/stplus_model-5min*.pt
+
+Spatial transcriptomics data: 2724 cells * 25 genes
+Reference scRNA-seq data:     1691 cells * 32 genes
+7 genes to be predicted
+
+Start initialization
+⚙️  Selected physical GPU 1 (22.05 GB free)
+Start embedding
+	[1] recon_loss: 3084.949, pred_loss: 4165.378, total_loss: 7250.327
+	[2] recon_loss: 122.984, pred_loss: 2992.109, total_loss: 3115.093
+	[3] recon_loss: 54.123, pred_loss: 2773.651, total_loss: 2827.774
+	[4] recon_loss: 39.726, pred_loss: 2681.549, total_loss: 2721.275
+	[5] recon_loss: 34.568, pred_loss: 2599.779, total_loss: 2634.347
+	[6] recon_loss: 31.327, pred_loss: 2528.905, total_loss: 2560.232
+	[7] recon_loss: 30.450, pred_loss: 2456.157, total_loss: 2486.607
+	[8] recon_loss: 27.045, pred_loss: 2419.818, total_loss: 2446.863
+	[9] recon_loss: 28.483, pred_loss: 2389.437, total_loss: 2417.920
+	[10] recon_loss: 30.163, pred_loss: 2366.313, total_loss: 2396.476
+	[11] recon_loss: 29.563, pred_loss: 2326.741, total_loss: 2356.304
+	[12] recon_loss: 28.510, pred_loss: 2304.453, total_loss: 2332.963
+	[13] recon_loss: 26.552, pred_loss: 2225.040, total_loss: 2251.592
+	[14] recon_loss: 26.819, pred_loss: 2211.280, total_loss: 2238.099
+	[15] recon_loss: 26.485, pred_loss: 2195.116, total_loss: 2221.601
+	[16] recon_loss: 26.236, pred_loss: 2144.885, total_loss: 2171.121
+	[17] recon_loss: 27.329, pred_loss: 2155.744, total_loss: 2183.072
+	[18] recon_loss: 27.118, pred_loss: 2120.406, total_loss: 2147.525
+	[19] recon_loss: 29.603, pred_loss: 2101.613, total_loss: 2131.216
+	[20] recon_loss: 25.380, pred_loss: 2067.444, total_loss: 2092.823
+	[21] recon_loss: 23.836, pred_loss: 2035.457, total_loss: 2059.293
+	[22] recon_loss: 25.996, pred_loss: 2015.463, total_loss: 2041.459
+	[23] recon_loss: 25.453, pred_loss: 1994.403, total_loss: 2019.856
+	[24] recon_loss: 25.293, pred_loss: 1984.844, total_loss: 2010.137
+	[25] recon_loss: 27.873, pred_loss: 1985.145, total_loss: 2013.018
+Start prediction
+	Using model 1 to predict
+	Using model 2 to predict
+	Using model 3 to predict
+	Using model 4 to predict
+	Using model 5 to predict
+🔁 Reusing provided stPlus model to predict new spatial data...
+Spatial transcriptomics data: 681 cells * 25 genes
+Predicting 7 genes
+
+[INFO] Reuse successful: 681 spatial + 1691 scRNA used.
+[stPlus Fold 2] val spearman 0.0583, test spearman 0.0690
+
+===== stPlus Fold 3 =====
+[Fold 3] train_genes: 26, test_genes: 6
+Models will be saved in: Result/osmFISHBaseline_stplus_new/stplus/fold_3/stplus_model-5min*.pt
+
+Spatial transcriptomics data: 2724 cells * 26 genes
+Reference scRNA-seq data:     1691 cells * 32 genes
+6 genes to be predicted
+
+Start initialization
+⚙️  Selected physical GPU 1 (22.05 GB free)
+Start embedding
+	[1] recon_loss: 7358.375, pred_loss: 5675.394, total_loss: 13033.769
+	[2] recon_loss: 4896.974, pred_loss: 5359.424, total_loss: 10256.398
+	[3] recon_loss: 4853.696, pred_loss: 5278.935, total_loss: 10132.631
+	[4] recon_loss: 4849.412, pred_loss: 5196.376, total_loss: 10045.788
+	[5] recon_loss: 4846.495, pred_loss: 5158.663, total_loss: 10005.158
+	[6] recon_loss: 4845.091, pred_loss: 5111.917, total_loss: 9957.008
+	[7] recon_loss: 4843.867, pred_loss: 5031.523, total_loss: 9875.390
+	[8] recon_loss: 4842.897, pred_loss: 5001.652, total_loss: 9844.549
+Start prediction
+	Using model 1 to predict
+	Using model 2 to predict
+	Using model 3 to predict
+	Using model 4 to predict
+	Using model 5 to predict
+🔁 Reusing provided stPlus model to predict new spatial data...
+Spatial transcriptomics data: 681 cells * 26 genes
+Predicting 6 genes
+
+[INFO] Reuse successful: 681 spatial + 1691 scRNA used.
+[stPlus Fold 3] val spearman 0.1060, test spearman -0.0089
+
+===== stPlus Fold 4 =====
+[Fold 4] train_genes: 26, test_genes: 6
+Models will be saved in: Result/osmFISHBaseline_stplus_new/stplus/fold_4/stplus_model-5min*.pt
+
+Spatial transcriptomics data: 2724 cells * 26 genes
+Reference scRNA-seq data:     1691 cells * 32 genes
+6 genes to be predicted
+
+Start initialization
+⚙️  Selected physical GPU 1 (22.05 GB free)
+Start embedding
+	[1] recon_loss: 5842.016, pred_loss: 2754.536, total_loss: 8596.552
+	[2] recon_loss: 3053.433, pred_loss: 2510.091, total_loss: 5563.524
+	[3] recon_loss: 3016.332, pred_loss: 2421.498, total_loss: 5437.830
+	[4] recon_loss: 3013.976, pred_loss: 2395.581, total_loss: 5409.557
+	[5] recon_loss: 3010.003, pred_loss: 2338.578, total_loss: 5348.582
+	[6] recon_loss: 3009.992, pred_loss: 2347.122, total_loss: 5357.114
+Start prediction
+	Using model 1 to predict
+	Using model 2 to predict
+	Using model 3 to predict
+	Using model 4 to predict
+	Using model 5 to predict
+🔁 Reusing provided stPlus model to predict new spatial data...
+Spatial transcriptomics data: 681 cells * 26 genes
+Predicting 6 genes
+
+[INFO] Reuse successful: 681 spatial + 1691 scRNA used.
+[stPlus Fold 4] val spearman 0.1427, test spearman 0.0096
+
+===== stPlus Fold 5 =====
+[Fold 5] train_genes: 26, test_genes: 6
+Models will be saved in: Result/osmFISHBaseline_stplus_new/stplus/fold_5/stplus_model-5min*.pt
+
+Spatial transcriptomics data: 2724 cells * 26 genes
+Reference scRNA-seq data:     1691 cells * 32 genes
+6 genes to be predicted
+
+Start initialization
+⚙️  Selected physical GPU 1 (22.05 GB free)
+Start embedding
+	[1] recon_loss: 7595.668, pred_loss: 3481.341, total_loss: 11077.009
+	[2] recon_loss: 4838.967, pred_loss: 3226.290, total_loss: 8065.257
+	[3] recon_loss: 4802.194, pred_loss: 3108.552, total_loss: 7910.746
+	[4] recon_loss: 4798.988, pred_loss: 3062.021, total_loss: 7861.009
+	[5] recon_loss: 4795.756, pred_loss: 2983.641, total_loss: 7779.397
+	[6] recon_loss: 4794.591, pred_loss: 2950.670, total_loss: 7745.261
+	[7] recon_loss: 4794.622, pred_loss: 2907.828, total_loss: 7702.451
+	[8] recon_loss: 4794.120, pred_loss: 2870.709, total_loss: 7664.829
+	[9] recon_loss: 4797.799, pred_loss: 2820.918, total_loss: 7618.718
+	[10] recon_loss: 4793.562, pred_loss: 2772.242, total_loss: 7565.803
+	[11] recon_loss: 4790.611, pred_loss: 2740.744, total_loss: 7531.355
+	[12] recon_loss: 4790.108, pred_loss: 2708.685, total_loss: 7498.793
+	[13] recon_loss: 4790.844, pred_loss: 2680.415, total_loss: 7471.258
+Start prediction
+	Using model 1 to predict
+	Using model 2 to predict
+	Using model 3 to predict
+	Using model 4 to predict
+	Using model 5 to predict
+🔁 Reusing provided stPlus model to predict new spatial data...
+Spatial transcriptomics data: 681 cells * 26 genes
+Predicting 6 genes
+
+[INFO] Reuse successful: 681 spatial + 1691 scRNA used.
+[stPlus Fold 5] val spearman 0.1486, test spearman -0.0665
+[INFO] saved summary to Result/osmFISHBaseline_stplus_new/stplus/fold_results/fold_metrics_summary.csv
+[INFO] saved summary to Result/osmFISHBaseline_stplus_new/stplus/fold_results/fold_test_metrics_summary.csv
+
+>> Running SpaGE ...
+
+=== Running SpaGE ===
+
+=== SpaGE Fold 1 ===
+SpaGE failed: "['2.6983816174961395', '3.3195633702219327', '3.4189869232256536', '1.0132610567295208', '0.516173230092586', '1.3763330169902177', '2.145996988129546', '2.798064201279576', '1.679642171107349', '2.102994661221262', '1.2954478883463183', '3.7020279269574425', '1.085557272966466', '2.573230978293259', '0.9879111405560752', '3.1928721928394723', '3.3161183724235794', '0.4519851237430572', '3.974122112936234', '0.7226753553991505', '3.1111484442001083', '0.4166839917129527', '2.516876015844059', '1.220424409217941', '1.7300407868988397', '3.7813446817860297', '2.017199232802615', '2.8086571684890003', '3.481240089335692', '2.3040474378805254', '1.9345176207742183', '2.183968376589085', '0.8188651085489852', '2.761498035545623', '3.4692021107762128', '3.681122171317473', '4.002960000420248', '3.101477330650896', '2.059446588197853', '0.8843127621503526', '1.559026322732619', '3.1162447952697523', '1.7868163054305355', '0.9145087296205864', '2.98396113710378', '1.950296120998568', '3.6593949734348006', '2.8396390689771867', '1.6567840330312986', '3.600677459052952', '2.110431183998679', '3.903414630891546', '3.5041193965061104', '1.3380793453284476', '0.7259370033829361', '3.478098490521738', '1.2113142111843038', '3.230063014258765', '1.3711807233098423', '4.055033865470315', '3.0457830745118675', '2.207877141452427', '3.395709715109434', '1.9105803876968583', '3.435559531853099', '3.2901225647408903', '2.8965256234705428', '1.370869890794259', '1.586965056582042', '4.105155478326316', '0.7731898882334817', '1.2711319344677456', '1.5476562338203508', '0.5596157879354227', '1.1025963576829845', '0.9271407478982208', '2.151528449167701', '2.411784384959037', '1.0388930539664876', '1.6067223642616175', '0.5465437063680699', '2.360854001118021', '1.4763371521280104', '0.2661265485681322', '2.4336133554004498', '3.785789824920732', '3.728357033863129', '3.6277731911698', '3.799525974201', '0.5447271754416719', '2.3470368555648795', '1.439941113982172', '0.8738515485989984', '3.388524830408389', '1.3070312069130834', '1.9201207541723992', '3.822836052183797', '2.249695629073673', '1.0365576436523476', '2.1867119969471323', '1.3978849609348003', '1.0223289839184788', '3.605144039346264', '0.5358269259714078', '3.857457575781497', '1.4032726976543084', '1.2408455473937192', '1.1919554923219189', '4.070049966976847', '1.5764111749162135', '1.3981288187668934', '2.751535313041949', '3.7967368499703498', '3.1152232515555305', '3.9984045544881694', '0.9842523153241292', '3.388431882498986', '2.9012485238157897', '2.729040476994046', '3.7318765960777567', '0.4296640795656078', '3.862862143188044', '2.730559189996133', '4.060183056470176', '3.945257668116124', '2.376526938392672', '0.5985684405054073', '3.4499387045900334', '1.9042374526547448', '2.6100697927420065', '2.396093470509108', '1.5796405496291557', '3.3117102151606197', '3.738437372639699', '0.53758307293554', '2.9599511826663014', '3.657361894367957', '2.416801308559989', '1.959423868222036', '3.873203885265772', '3.796101871719697', '4.411956584479391', '3.386197432272396', '1.2326709684126795', '0.5323496335110843', '2.205735267004128', '1.5754052390116895', '3.404358116839779', '2.4841275301537302', '3.7164801021960487', '3.9229310378708746', '3.6990131198287415', '2.0855417784619754', '2.3498379778445915', '0.7797923510782763', '2.722991781100409', '2.908720896564361', '3.6631156157921896', '1.7880488898315194', '3.706691126270063', '0.2891779590433636', '1.57842767569154', '0.7162428953545947', '3.0860843508863884', '2.583997552432231', '1.7984040119467235', '3.8658101622730143', '2.4215821110182527', '3.292023426358046', '3.3744223554391977', '2.220651710231359', '2.209410562101751', '3.988314478410702', '4.172808114415478', '1.8758425864385964', '2.298577071596507', '0.8488124384881688', '3.1822118404966093', '1.3204477953223042', '2.396911988550022', '2.3556949183079943', '2.6079667425452278', '2.8210735895056054', '1.6933627700132998', '2.4282006222937', '0.7884573603642703', '2.6386626187358493', '3.3151424848984825', '3.1688306361967413', '3.5165082281731497', '2.611518618411979', '2.4464330416377176', '2.1400661634962708', '3.3445860137877093', '3.6630392892435526', '3.894117169634336', '0.6486954179891115', '3.879899627148316', '3.624920475154278', '1.0160411346412146', '2.4094338623548643', '3.7551149042180167', '3.063066737888377', '1.959955323758361', '0.5148256290993367', '3.374639162224551', '1.9527438886338784', '2.0351585317461627', '2.740554513573511', '3.1977854122105405', '1.9591456363835635', '2.231191563332225', '3.720908183970741', '2.354410160858632', '4.185859671057874', '3.849603295143169', '1.5300616493037245', '1.3309218069963995', '0.5713423066757419'] not in index"
+
+>> Running Tangram ...
+
+=== Running Tangram ===
+
+=== Tangram Fold 1 ===
+Score: 0.741, KL reg: 0.049
+Score: 0.942, KL reg: 0.000
+Score: 0.943, KL reg: 0.000
+Score: 0.944, KL reg: 0.000
+Score: 0.944, KL reg: 0.000
+Score: 0.944, KL reg: 0.000
+Score: 0.944, KL reg: 0.000
+Score: 0.944, KL reg: 0.000
+Score: 0.944, KL reg: 0.000
+Score: 0.944, KL reg: 0.000
+Tangram failed: cannot reindex on an axis with duplicate labels
+
+>> Running UniPort ...
+
+=== Running UniPort ===
+[WARN] UniPort library not found — skipping UniPort.
+
+>> Running gimVI ...
+
+=== Running gimVI ===
+[WARN] gimVI not importable: cannot import name '_CONSTANTS' from 'scvi' (/home/maninder/crunch1/lib/python3.10/site-packages/scvi/__init__.py)
+
+>> Running CalDataMetric on all models
+We are calculating metrics for: osmFISHBaseline_stplus_new
+Found model directories: ['process_file', 'tangram', 'spage', 'stplus']
+[INFO] No impute.csv files found for model process_file in Result/osmFISHBaseline_stplus_new/process_file. Skipping.
+[INFO] No impute.csv files found for model tangram in Result/osmFISHBaseline_stplus_new/tangram. Skipping.
+[INFO] No impute.csv files found for model spage in Result/osmFISHBaseline_stplus_new/spage. Skipping.
+Processing: Result/osmFISHBaseline_stplus_new/stplus/stPlus_impute.csv
+[WARN] Calculating metrics failed for Result/osmFISHBaseline_stplus_new/stplus/stPlus_impute.csv : Array shapes are incompatible for broadcasting.
+[INFO] No successful metric results for model stplus
+
+All done.

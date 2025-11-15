@@ -1,0 +1,161 @@
+adata_spatial:  /home/maninder/stPlus/data/osmFISH/st_data.h5ad
+adata_seq:  /home/maninder/stPlus/data/osmFISH/scRNAseq_common.h5ad
+sp shape (3405, 32)
+sc shape (1691, 32)
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+outdir1: Result/osmFISHBaseline_stplus_new/stplus
+
+===== Fold 1 =====
+Number of train genes: 25, Number of test genes: 7
+Models will be saved in: Result/osmFISHBaseline_stplus_new/process_file/stPlus-demo-5min*.pt
+
+Spatial transcriptomics data: 3405 cells * 25 genes
+Reference scRNA-seq data:     1691 cells * 32 genes
+7 genes to be predicted
+
+Start initialization
+⚙️  Selected physical GPU 0 (22.05 GB free)
+Start embedding
+	[1] recon_loss: 6940.200, pred_loss: 6540.683, total_loss: 13480.883
+	[2] recon_loss: 4358.887, pred_loss: 5942.127, total_loss: 10301.014
+	[3] recon_loss: 4322.058, pred_loss: 5797.217, total_loss: 10119.275
+	[4] recon_loss: 4319.187, pred_loss: 5709.012, total_loss: 10028.199
+	[5] recon_loss: 4316.962, pred_loss: 5580.963, total_loss: 9897.925
+	[6] recon_loss: 4318.441, pred_loss: 5547.787, total_loss: 9866.228
+Start prediction
+	Using model 1 to predict
+	Using model 2 to predict
+	Using model 3 to predict
+	Using model 4 to predict
+	Using model 5 to predict
+{'fold': 1, 'phase': 'val', 'loss': 12.8436, 'pearson_mean': 0.1086, 'spearman_mean_genewise': 0.1448, 'l1_error_mean': 3.129, 'l2_errors_mean': 12.8436, 'r2_scores_mean': -1.3593, 'pearson_std': 0.0679, 'l2_error_q1': 9.7236, 'l2_error_q2': 15.3521, 'l2_error_q3': 16.1123, 'r2_score_q1': -2.1507, 'r2_score_q2': -1.148, 'r2_score_q3': -0.2351}
+
+===== Fold 2 =====
+Number of train genes: 25, Number of test genes: 7
+Models will be saved in: Result/osmFISHBaseline_stplus_new/process_file/stPlus-demo-5min*.pt
+
+Spatial transcriptomics data: 3405 cells * 25 genes
+Reference scRNA-seq data:     1691 cells * 32 genes
+7 genes to be predicted
+
+Start initialization
+⚙️  Selected physical GPU 1 (22.05 GB free)
+Start embedding
+	[1] recon_loss: 5117.784, pred_loss: 4946.039, total_loss: 10063.823
+	[2] recon_loss: 2567.529, pred_loss: 3902.839, total_loss: 6470.368
+	[3] recon_loss: 2515.957, pred_loss: 3739.695, total_loss: 6255.652
+	[4] recon_loss: 2504.533, pred_loss: 3654.122, total_loss: 6158.655
+	[5] recon_loss: 2500.248, pred_loss: 3591.538, total_loss: 6091.786
+	[6] recon_loss: 2498.484, pred_loss: 3529.921, total_loss: 6028.405
+	[7] recon_loss: 2500.485, pred_loss: 3509.750, total_loss: 6010.235
+Start prediction
+	Using model 1 to predict
+	Using model 2 to predict
+	Using model 3 to predict
+	Using model 4 to predict
+	Using model 5 to predict
+{'fold': 2, 'phase': 'val', 'loss': 12.8509, 'pearson_mean': 0.0587, 'spearman_mean_genewise': 0.0744, 'l1_error_mean': 2.9151, 'l2_errors_mean': 12.8509, 'r2_scores_mean': -0.9165, 'pearson_std': 0.1014, 'l2_error_q1': 10.3912, 'l2_error_q2': 13.1826, 'l2_error_q3': 14.8598, 'r2_score_q1': -1.0343, 'r2_score_q2': -0.9473, 'r2_score_q3': -0.5992}
+
+===== Fold 3 =====
+Number of train genes: 26, Number of test genes: 6
+Models will be saved in: Result/osmFISHBaseline_stplus_new/process_file/stPlus-demo-5min*.pt
+
+Spatial transcriptomics data: 3405 cells * 26 genes
+Reference scRNA-seq data:     1691 cells * 32 genes
+6 genes to be predicted
+
+Start initialization
+⚙️  Selected physical GPU 1 (22.05 GB free)
+Start embedding
+	[1] recon_loss: 2940.009, pred_loss: 3832.477, total_loss: 6772.486
+	[2] recon_loss: 85.493, pred_loss: 3122.789, total_loss: 3208.282
+	[3] recon_loss: 51.187, pred_loss: 2939.576, total_loss: 2990.762
+	[4] recon_loss: 48.611, pred_loss: 2866.826, total_loss: 2915.437
+	[5] recon_loss: 47.765, pred_loss: 2750.962, total_loss: 2798.727
+	[6] recon_loss: 48.032, pred_loss: 2646.089, total_loss: 2694.121
+	[7] recon_loss: 46.892, pred_loss: 2582.790, total_loss: 2629.683
+	[8] recon_loss: 48.191, pred_loss: 2505.308, total_loss: 2553.499
+	[9] recon_loss: 48.702, pred_loss: 2398.673, total_loss: 2447.375
+	[10] recon_loss: 48.141, pred_loss: 2321.845, total_loss: 2369.986
+	[11] recon_loss: 47.999, pred_loss: 2273.960, total_loss: 2321.959
+	[12] recon_loss: 46.498, pred_loss: 2196.401, total_loss: 2242.899
+	[13] recon_loss: 43.637, pred_loss: 2177.545, total_loss: 2221.182
+	[14] recon_loss: 47.075, pred_loss: 2132.082, total_loss: 2179.157
+	[15] recon_loss: 53.205, pred_loss: 2111.152, total_loss: 2164.357
+	[16] recon_loss: 43.406, pred_loss: 2019.683, total_loss: 2063.089
+	[17] recon_loss: 42.878, pred_loss: 1999.999, total_loss: 2042.877
+	[18] recon_loss: 41.854, pred_loss: 1999.541, total_loss: 2041.395
+Start prediction
+	Using model 1 to predict
+	Using model 2 to predict
+	Using model 3 to predict
+	Using model 4 to predict
+	Using model 5 to predict
+{'fold': 3, 'phase': 'val', 'loss': 17.7405, 'pearson_mean': 0.1369, 'spearman_mean_genewise': 0.1395, 'l1_error_mean': 3.8428, 'l2_errors_mean': 17.7405, 'r2_scores_mean': -2.582, 'pearson_std': 0.082, 'l2_error_q1': 15.2501, 'l2_error_q2': 17.8299, 'l2_error_q3': 19.3342, 'r2_score_q1': -3.0553, 'r2_score_q2': -2.4857, 'r2_score_q3': -1.6525}
+
+===== Fold 4 =====
+Number of train genes: 26, Number of test genes: 6
+Models will be saved in: Result/osmFISHBaseline_stplus_new/process_file/stPlus-demo-5min*.pt
+
+Spatial transcriptomics data: 3405 cells * 26 genes
+Reference scRNA-seq data:     1691 cells * 32 genes
+6 genes to be predicted
+
+Start initialization
+⚙️  Selected physical GPU 1 (22.05 GB free)
+Start embedding
+	[1] recon_loss: 5985.412, pred_loss: 2980.219, total_loss: 8965.632
+	[2] recon_loss: 3486.919, pred_loss: 2803.474, total_loss: 6290.393
+	[3] recon_loss: 3459.933, pred_loss: 2682.897, total_loss: 6142.830
+	[4] recon_loss: 3452.450, pred_loss: 2643.201, total_loss: 6095.651
+	[5] recon_loss: 3455.792, pred_loss: 2603.358, total_loss: 6059.150
+	[6] recon_loss: 3450.535, pred_loss: 2516.844, total_loss: 5967.379
+	[7] recon_loss: 3451.405, pred_loss: 2499.528, total_loss: 5950.933
+Start prediction
+	Using model 1 to predict
+	Using model 2 to predict
+	Using model 3 to predict
+	Using model 4 to predict
+	Using model 5 to predict
+{'fold': 4, 'phase': 'val', 'loss': 16.8799, 'pearson_mean': 0.1141, 'spearman_mean_genewise': 0.1395, 'l1_error_mean': 3.3362, 'l2_errors_mean': 16.8799, 'r2_scores_mean': -2.7113, 'pearson_std': 0.1223, 'l2_error_q1': 12.2743, 'l2_error_q2': 16.0876, 'l2_error_q3': 19.7505, 'r2_score_q1': -4.3864, 'r2_score_q2': -1.6051, 'r2_score_q3': -0.741}
+
+===== Fold 5 =====
+Number of train genes: 26, Number of test genes: 6
+Models will be saved in: Result/osmFISHBaseline_stplus_new/process_file/stPlus-demo-5min*.pt
+
+Spatial transcriptomics data: 3405 cells * 26 genes
+Reference scRNA-seq data:     1691 cells * 32 genes
+6 genes to be predicted
+
+Start initialization
+⚙️  Selected physical GPU 1 (22.05 GB free)
+Start embedding
+	[1] recon_loss: 3538.607, pred_loss: 5187.568, total_loss: 8726.175
+	[2] recon_loss: 818.936, pred_loss: 4995.230, total_loss: 5814.166
+	[3] recon_loss: 806.526, pred_loss: 4891.904, total_loss: 5698.430
+	[4] recon_loss: 803.419, pred_loss: 4890.291, total_loss: 5693.710
+Start prediction
+	Using model 1 to predict
+	Using model 2 to predict
+	Using model 3 to predict
+	Using model 4 to predict
+	Using model 5 to predict
+{'fold': 5, 'phase': 'val', 'loss': 18.3223, 'pearson_mean': 0.1459, 'spearman_mean_genewise': 0.2027, 'l1_error_mean': 3.7886, 'l2_errors_mean': 18.3223, 'r2_scores_mean': -6.2569, 'pearson_std': 0.1261, 'l2_error_q1': 15.3823, 'l2_error_q2': 18.3861, 'l2_error_q3': 20.1924, 'r2_score_q1': -8.0908, 'r2_score_q2': -2.1319, 'r2_score_q3': -1.208}
+Saved all fold metrics to Result/osmFISHBaseline_stplus_new/stplus/fold_results/fold_metrics.csv
+Saved mean and std metrics to Result/osmFISHBaseline_stplus_new/stplus/fold_results/metrics_summary.csv
+We are calculating the : osmFISHBaseline_stplus_new
+
+impute_count_dir++++++++++++++++++++++++++++++++++++++++++++++++++Result/osmFISHBaseline_stplus_new
++++++++++++++++++++++++++++['process_file', 'stPlus_impute.csv', 'stPlus_cluster_Metrics.txt', 'stPlus_gene_Metrics.txt', 'stplus']++++++++
+impute_count: ['stPlus_impute.csv']
+stPlus_impute.csv
+Result/osmFISHBaseline_stplus_new/stPlus_impute.csv
+raw = (3405, 32)
+impute = (3405, 32)
+ARI  0.10655396043379187
+AMI  0.1940546848538266
+Homo  0.20331346581538284
+NMI  0.2001323161275963
+median ::: [np.float64(0.1180783585831142), np.float64(0.06258685707853115), np.float64(1.3195720265594777), np.float64(0.13928900937176505)]
+metrics ::: ['SPCC(gene)', 'SSIM(gene)', 'RMSE(gene)', 'JS(gene)']
+

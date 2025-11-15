@@ -1,0 +1,376 @@
+adata_spatial:  /home/maninder/stPlus/data/seqFISH/st_data.h5ad
+adata_seq:  /home/maninder/stPlus/data/seqFISH/scRNAseq_common.h5ad
+sp shape (913, 9751)
+sc shape (14249, 9751)
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+outdir1: Result/seqfishBaseline_stplus/stplus
+
+===== Fold 1 =====
+Number of train genes: 7800, Number of test genes: 1951
+Models will be saved in: Result/seqfishBaseline_stplus/process_file/stPlus-demo-5min*.pt
+
+Spatial transcriptomics data: 913 cells * 7800 genes
+Reference scRNA-seq data:     14249 cells * 9751 genes
+1951 genes to be predicted
+
+Start initialization
+⚙️  Selected physical GPU 0 (22.05 GB free)
+Start embedding
+	[1] recon_loss: 13714.720, pred_loss: 7856.223, total_loss: 21570.943
+	[2] recon_loss: 12692.352, pred_loss: 6354.967, total_loss: 19047.319
+	[3] recon_loss: 12362.255, pred_loss: 5892.782, total_loss: 18255.037
+	[4] recon_loss: 12114.267, pred_loss: 5704.703, total_loss: 17818.970
+	[5] recon_loss: 11935.596, pred_loss: 5562.934, total_loss: 17498.529
+	[6] recon_loss: 11801.833, pred_loss: 5462.811, total_loss: 17264.644
+	[7] recon_loss: 11692.328, pred_loss: 5340.424, total_loss: 17032.752
+	[8] recon_loss: 11583.126, pred_loss: 5265.530, total_loss: 16848.656
+	[9] recon_loss: 11470.385, pred_loss: 5206.461, total_loss: 16676.846
+	[10] recon_loss: 11361.364, pred_loss: 5156.845, total_loss: 16518.210
+	[11] recon_loss: 11252.192, pred_loss: 5124.077, total_loss: 16376.269
+	[12] recon_loss: 11142.991, pred_loss: 5081.668, total_loss: 16224.660
+	[13] recon_loss: 11029.140, pred_loss: 5059.028, total_loss: 16088.168
+	[14] recon_loss: 10901.789, pred_loss: 5029.780, total_loss: 15931.569
+	[15] recon_loss: 10766.038, pred_loss: 4991.033, total_loss: 15757.071
+	[16] recon_loss: 10627.537, pred_loss: 4903.710, total_loss: 15531.247
+	[17] recon_loss: 10489.785, pred_loss: 4882.118, total_loss: 15371.903
+	[18] recon_loss: 10353.847, pred_loss: 4860.841, total_loss: 15214.687
+	[19] recon_loss: 10224.165, pred_loss: 4840.327, total_loss: 15064.492
+	[20] recon_loss: 10100.410, pred_loss: 4790.720, total_loss: 14891.130
+	[21] recon_loss: 9984.506, pred_loss: 4777.152, total_loss: 14761.658
+	[22] recon_loss: 9865.431, pred_loss: 4759.607, total_loss: 14625.038
+	[23] recon_loss: 9749.295, pred_loss: 4731.494, total_loss: 14480.790
+	[24] recon_loss: 9633.937, pred_loss: 4709.556, total_loss: 14343.493
+	[25] recon_loss: 9519.569, pred_loss: 4698.371, total_loss: 14217.940
+	[26] recon_loss: 9411.247, pred_loss: 4682.894, total_loss: 14094.140
+	[27] recon_loss: 9316.968, pred_loss: 4669.897, total_loss: 13986.865
+	[28] recon_loss: 9224.319, pred_loss: 4655.763, total_loss: 13880.082
+	[29] recon_loss: 9138.963, pred_loss: 4650.152, total_loss: 13789.115
+	[30] recon_loss: 9047.272, pred_loss: 4611.205, total_loss: 13658.477
+	[31] recon_loss: 8957.432, pred_loss: 4583.991, total_loss: 13541.422
+	[32] recon_loss: 8878.038, pred_loss: 4576.115, total_loss: 13454.153
+	[33] recon_loss: 8802.862, pred_loss: 4558.226, total_loss: 13361.088
+	[34] recon_loss: 8727.054, pred_loss: 4545.228, total_loss: 13272.282
+	[35] recon_loss: 8657.257, pred_loss: 4530.512, total_loss: 13187.769
+	[36] recon_loss: 8586.212, pred_loss: 4507.055, total_loss: 13093.267
+	[37] recon_loss: 8513.981, pred_loss: 4499.093, total_loss: 13013.074
+	[38] recon_loss: 8449.179, pred_loss: 4492.835, total_loss: 12942.014
+	[39] recon_loss: 8385.126, pred_loss: 4485.087, total_loss: 12870.213
+	[40] recon_loss: 8327.194, pred_loss: 4447.729, total_loss: 12774.923
+	[41] recon_loss: 8268.037, pred_loss: 4409.704, total_loss: 12677.741
+	[42] recon_loss: 8206.530, pred_loss: 4392.827, total_loss: 12599.357
+	[43] recon_loss: 8146.957, pred_loss: 4383.751, total_loss: 12530.708
+	[44] recon_loss: 8092.622, pred_loss: 4377.984, total_loss: 12470.606
+	[45] recon_loss: 8037.365, pred_loss: 4371.898, total_loss: 12409.263
+	[46] recon_loss: 7986.090, pred_loss: 4363.934, total_loss: 12350.024
+	[47] recon_loss: 7936.405, pred_loss: 4357.391, total_loss: 12293.796
+	[48] recon_loss: 7888.240, pred_loss: 4352.156, total_loss: 12240.396
+	[49] recon_loss: 7846.029, pred_loss: 4346.707, total_loss: 12192.736
+Start prediction
+	Using model 1 to predict
+	Using model 2 to predict
+	Using model 3 to predict
+	Using model 4 to predict
+	Using model 5 to predict
+{'fold': 1, 'phase': 'val', 'loss': 0.5353, 'pearson_mean': 0.1114, 'spearman_mean_genewise': 0.14, 'l1_error_mean': 0.4643, 'l2_errors_mean': 0.5353, 'r2_scores_mean': -0.317, 'pearson_std': 0.1451, 'l2_error_q1': 0.3212, 'l2_error_q2': 0.429, 'l2_error_q3': 0.6156, 'r2_score_q1': -0.2438, 'r2_score_q2': -0.1257, 'r2_score_q3': -0.0396}
+
+===== Fold 2 =====
+Number of train genes: 7801, Number of test genes: 1950
+Models will be saved in: Result/seqfishBaseline_stplus/process_file/stPlus-demo-5min*.pt
+
+Spatial transcriptomics data: 913 cells * 7801 genes
+Reference scRNA-seq data:     14249 cells * 9751 genes
+1950 genes to be predicted
+
+Start initialization
+⚙️  Selected physical GPU 1 (22.05 GB free)
+Start embedding
+	[1] recon_loss: 13811.635, pred_loss: 7819.159, total_loss: 21630.794
+	[2] recon_loss: 12740.796, pred_loss: 6482.657, total_loss: 19223.452
+	[3] recon_loss: 12394.093, pred_loss: 6105.709, total_loss: 18499.802
+	[4] recon_loss: 12130.596, pred_loss: 5870.655, total_loss: 18001.251
+	[5] recon_loss: 11962.606, pred_loss: 5672.844, total_loss: 17635.449
+	[6] recon_loss: 11842.820, pred_loss: 5512.512, total_loss: 17355.332
+	[7] recon_loss: 11741.956, pred_loss: 5381.617, total_loss: 17123.572
+	[8] recon_loss: 11630.370, pred_loss: 5303.309, total_loss: 16933.679
+	[9] recon_loss: 11516.640, pred_loss: 5256.805, total_loss: 16773.445
+	[10] recon_loss: 11402.530, pred_loss: 5209.486, total_loss: 16612.016
+	[11] recon_loss: 11283.661, pred_loss: 5171.918, total_loss: 16455.579
+	[12] recon_loss: 11163.263, pred_loss: 5103.474, total_loss: 16266.737
+	[13] recon_loss: 11038.617, pred_loss: 5051.374, total_loss: 16089.991
+	[14] recon_loss: 10904.190, pred_loss: 4994.805, total_loss: 15898.995
+	[15] recon_loss: 10759.084, pred_loss: 4967.466, total_loss: 15726.550
+	[16] recon_loss: 10610.163, pred_loss: 4925.674, total_loss: 15535.837
+	[17] recon_loss: 10472.851, pred_loss: 4888.314, total_loss: 15361.164
+	[18] recon_loss: 10342.697, pred_loss: 4859.238, total_loss: 15201.935
+	[19] recon_loss: 10221.289, pred_loss: 4799.968, total_loss: 15021.257
+	[20] recon_loss: 10089.158, pred_loss: 4789.430, total_loss: 14878.588
+	[21] recon_loss: 9962.444, pred_loss: 4773.883, total_loss: 14736.327
+	[22] recon_loss: 9847.023, pred_loss: 4759.107, total_loss: 14606.130
+	[23] recon_loss: 9740.569, pred_loss: 4741.862, total_loss: 14482.431
+	[24] recon_loss: 9634.765, pred_loss: 4689.006, total_loss: 14323.770
+	[25] recon_loss: 9520.998, pred_loss: 4652.261, total_loss: 14173.259
+	[26] recon_loss: 9407.801, pred_loss: 4637.333, total_loss: 14045.134
+	[27] recon_loss: 9309.937, pred_loss: 4626.009, total_loss: 13935.945
+	[28] recon_loss: 9222.617, pred_loss: 4610.899, total_loss: 13833.516
+	[29] recon_loss: 9136.942, pred_loss: 4596.558, total_loss: 13733.499
+	[30] recon_loss: 9051.424, pred_loss: 4566.042, total_loss: 13617.466
+	[31] recon_loss: 8965.768, pred_loss: 4536.618, total_loss: 13502.386
+	[32] recon_loss: 8882.127, pred_loss: 4472.895, total_loss: 13355.023
+	[33] recon_loss: 8807.155, pred_loss: 4438.842, total_loss: 13245.997
+	[34] recon_loss: 8731.164, pred_loss: 4429.173, total_loss: 13160.337
+	[35] recon_loss: 8666.100, pred_loss: 4421.054, total_loss: 13087.154
+	[36] recon_loss: 8597.317, pred_loss: 4413.588, total_loss: 13010.904
+	[37] recon_loss: 8526.724, pred_loss: 4406.510, total_loss: 12933.235
+	[38] recon_loss: 8460.837, pred_loss: 4394.778, total_loss: 12855.616
+	[39] recon_loss: 8396.448, pred_loss: 4382.296, total_loss: 12778.744
+	[40] recon_loss: 8338.588, pred_loss: 4340.108, total_loss: 12678.696
+	[41] recon_loss: 8282.043, pred_loss: 4322.767, total_loss: 12604.810
+	[42] recon_loss: 8225.588, pred_loss: 4313.918, total_loss: 12539.506
+	[43] recon_loss: 8169.755, pred_loss: 4308.261, total_loss: 12478.016
+	[44] recon_loss: 8116.432, pred_loss: 4300.413, total_loss: 12416.845
+	[45] recon_loss: 8064.437, pred_loss: 4293.726, total_loss: 12358.162
+	[46] recon_loss: 8010.816, pred_loss: 4286.838, total_loss: 12297.654
+	[47] recon_loss: 7961.226, pred_loss: 4280.766, total_loss: 12241.992
+	[48] recon_loss: 7919.616, pred_loss: 4275.536, total_loss: 12195.152
+Start prediction
+	Using model 1 to predict
+	Using model 2 to predict
+	Using model 3 to predict
+	Using model 4 to predict
+	Using model 5 to predict
+{'fold': 2, 'phase': 'val', 'loss': 0.5433, 'pearson_mean': 0.1133, 'spearman_mean_genewise': 0.1458, 'l1_error_mean': 0.4679, 'l2_errors_mean': 0.5433, 'r2_scores_mean': -0.3671, 'pearson_std': 0.1411, 'l2_error_q1': 0.3196, 'l2_error_q2': 0.4339, 'l2_error_q3': 0.6313, 'r2_score_q1': -0.2518, 'r2_score_q2': -0.127, 'r2_score_q3': -0.0423}
+
+===== Fold 3 =====
+Number of train genes: 7801, Number of test genes: 1950
+Models will be saved in: Result/seqfishBaseline_stplus/process_file/stPlus-demo-5min*.pt
+
+Spatial transcriptomics data: 913 cells * 7801 genes
+Reference scRNA-seq data:     14249 cells * 9751 genes
+1950 genes to be predicted
+
+Start initialization
+⚙️  Selected physical GPU 1 (22.05 GB free)
+Start embedding
+	[1] recon_loss: 13801.843, pred_loss: 7684.283, total_loss: 21486.125
+	[2] recon_loss: 12734.707, pred_loss: 6364.732, total_loss: 19099.439
+	[3] recon_loss: 12420.395, pred_loss: 6016.705, total_loss: 18437.100
+	[4] recon_loss: 12180.997, pred_loss: 5833.888, total_loss: 18014.884
+	[5] recon_loss: 12011.370, pred_loss: 5702.028, total_loss: 17713.398
+	[6] recon_loss: 11883.069, pred_loss: 5610.459, total_loss: 17493.528
+	[7] recon_loss: 11769.263, pred_loss: 5523.121, total_loss: 17292.384
+	[8] recon_loss: 11663.764, pred_loss: 5433.105, total_loss: 17096.870
+	[9] recon_loss: 11564.517, pred_loss: 5323.964, total_loss: 16888.482
+	[10] recon_loss: 11455.694, pred_loss: 5209.142, total_loss: 16664.836
+	[11] recon_loss: 11344.320, pred_loss: 5126.671, total_loss: 16470.990
+	[12] recon_loss: 11226.086, pred_loss: 5053.086, total_loss: 16279.173
+	[13] recon_loss: 11093.861, pred_loss: 5002.923, total_loss: 16096.784
+	[14] recon_loss: 10958.291, pred_loss: 4973.925, total_loss: 15932.215
+	[15] recon_loss: 10816.057, pred_loss: 4890.445, total_loss: 15706.502
+	[16] recon_loss: 10674.012, pred_loss: 4849.326, total_loss: 15523.338
+	[17] recon_loss: 10540.217, pred_loss: 4826.072, total_loss: 15366.289
+	[18] recon_loss: 10413.322, pred_loss: 4800.678, total_loss: 15214.000
+	[19] recon_loss: 10281.370, pred_loss: 4788.015, total_loss: 15069.385
+	[20] recon_loss: 10157.448, pred_loss: 4775.516, total_loss: 14932.965
+	[21] recon_loss: 10032.456, pred_loss: 4747.724, total_loss: 14780.180
+	[22] recon_loss: 9908.582, pred_loss: 4643.521, total_loss: 14552.102
+	[23] recon_loss: 9787.900, pred_loss: 4561.218, total_loss: 14349.117
+	[24] recon_loss: 9675.048, pred_loss: 4355.437, total_loss: 14030.485
+	[25] recon_loss: 9564.719, pred_loss: 4337.037, total_loss: 13901.755
+	[26] recon_loss: 9462.354, pred_loss: 4328.230, total_loss: 13790.584
+	[27] recon_loss: 9369.175, pred_loss: 4321.657, total_loss: 13690.832
+	[28] recon_loss: 9270.051, pred_loss: 4313.316, total_loss: 13583.366
+	[29] recon_loss: 9175.916, pred_loss: 4306.306, total_loss: 13482.221
+	[30] recon_loss: 9081.908, pred_loss: 4297.962, total_loss: 13379.870
+	[31] recon_loss: 8995.538, pred_loss: 4289.762, total_loss: 13285.300
+	[32] recon_loss: 8912.986, pred_loss: 4279.688, total_loss: 13192.675
+	[33] recon_loss: 8838.882, pred_loss: 4270.099, total_loss: 13108.981
+	[34] recon_loss: 8760.375, pred_loss: 4250.337, total_loss: 13010.712
+	[35] recon_loss: 8683.269, pred_loss: 4220.943, total_loss: 12904.212
+	[36] recon_loss: 8611.340, pred_loss: 4212.089, total_loss: 12823.429
+	[37] recon_loss: 8545.885, pred_loss: 4204.809, total_loss: 12750.694
+	[38] recon_loss: 8484.143, pred_loss: 4164.501, total_loss: 12648.644
+	[39] recon_loss: 8419.309, pred_loss: 4122.895, total_loss: 12542.204
+	[40] recon_loss: 8354.616, pred_loss: 4114.060, total_loss: 12468.676
+	[41] recon_loss: 8296.898, pred_loss: 4096.843, total_loss: 12393.741
+	[42] recon_loss: 8233.118, pred_loss: 4077.132, total_loss: 12310.249
+	[43] recon_loss: 8177.405, pred_loss: 4051.300, total_loss: 12228.705
+	[44] recon_loss: 8121.205, pred_loss: 4040.190, total_loss: 12161.394
+	[45] recon_loss: 8065.571, pred_loss: 4028.452, total_loss: 12094.023
+	[46] recon_loss: 8018.059, pred_loss: 4016.034, total_loss: 12034.093
+	[47] recon_loss: 7972.757, pred_loss: 4010.077, total_loss: 11982.834
+	[48] recon_loss: 7923.827, pred_loss: 4000.956, total_loss: 11924.783
+	[49] recon_loss: 7875.335, pred_loss: 3994.682, total_loss: 11870.017
+	[50] recon_loss: 7824.961, pred_loss: 3989.100, total_loss: 11814.061
+	[51] recon_loss: 7772.656, pred_loss: 3982.593, total_loss: 11755.249
+	[52] recon_loss: 7726.259, pred_loss: 3974.841, total_loss: 11701.100
+	[53] recon_loss: 7684.578, pred_loss: 3962.217, total_loss: 11646.795
+	[54] recon_loss: 7644.709, pred_loss: 3941.402, total_loss: 11586.111
+	[55] recon_loss: 7603.391, pred_loss: 3932.428, total_loss: 11535.819
+	[56] recon_loss: 7567.207, pred_loss: 3927.621, total_loss: 11494.828
+Start prediction
+	Using model 1 to predict
+	Using model 2 to predict
+	Using model 3 to predict
+	Using model 4 to predict
+	Using model 5 to predict
+{'fold': 3, 'phase': 'val', 'loss': 0.529, 'pearson_mean': 0.1024, 'spearman_mean_genewise': 0.1252, 'l1_error_mean': 0.4559, 'l2_errors_mean': 0.529, 'r2_scores_mean': -0.3146, 'pearson_std': 0.1398, 'l2_error_q1': 0.3206, 'l2_error_q2': 0.4345, 'l2_error_q3': 0.6075, 'r2_score_q1': -0.2342, 'r2_score_q2': -0.1234, 'r2_score_q3': -0.0419}
+
+===== Fold 4 =====
+Number of train genes: 7801, Number of test genes: 1950
+Models will be saved in: Result/seqfishBaseline_stplus/process_file/stPlus-demo-5min*.pt
+
+Spatial transcriptomics data: 913 cells * 7801 genes
+Reference scRNA-seq data:     14249 cells * 9751 genes
+1950 genes to be predicted
+
+Start initialization
+⚙️  Selected physical GPU 1 (22.05 GB free)
+Start embedding
+	[1] recon_loss: 13751.036, pred_loss: 7822.998, total_loss: 21574.034
+	[2] recon_loss: 12737.938, pred_loss: 6275.490, total_loss: 19013.428
+	[3] recon_loss: 12400.810, pred_loss: 5969.543, total_loss: 18370.353
+	[4] recon_loss: 12152.771, pred_loss: 5763.947, total_loss: 17916.718
+	[5] recon_loss: 11977.050, pred_loss: 5625.053, total_loss: 17602.103
+	[6] recon_loss: 11849.615, pred_loss: 5498.374, total_loss: 17347.989
+	[7] recon_loss: 11734.998, pred_loss: 5392.393, total_loss: 17127.392
+	[8] recon_loss: 11628.782, pred_loss: 5299.313, total_loss: 16928.095
+	[9] recon_loss: 11523.120, pred_loss: 5232.867, total_loss: 16755.987
+	[10] recon_loss: 11410.662, pred_loss: 5170.679, total_loss: 16581.340
+	[11] recon_loss: 11298.722, pred_loss: 5130.284, total_loss: 16429.006
+	[12] recon_loss: 11184.868, pred_loss: 5084.769, total_loss: 16269.637
+	[13] recon_loss: 11064.762, pred_loss: 5045.429, total_loss: 16110.191
+	[14] recon_loss: 10933.506, pred_loss: 5016.023, total_loss: 15949.529
+	[15] recon_loss: 10800.607, pred_loss: 4983.691, total_loss: 15784.297
+	[16] recon_loss: 10662.642, pred_loss: 4947.754, total_loss: 15610.396
+	[17] recon_loss: 10528.748, pred_loss: 4926.219, total_loss: 15454.967
+	[18] recon_loss: 10394.206, pred_loss: 4909.867, total_loss: 15304.073
+	[19] recon_loss: 10269.864, pred_loss: 4868.717, total_loss: 15138.582
+	[20] recon_loss: 10150.211, pred_loss: 4840.577, total_loss: 14990.788
+	[21] recon_loss: 10030.985, pred_loss: 4748.401, total_loss: 14779.386
+	[22] recon_loss: 9913.953, pred_loss: 4729.890, total_loss: 14643.843
+	[23] recon_loss: 9793.016, pred_loss: 4697.320, total_loss: 14490.336
+	[24] recon_loss: 9685.874, pred_loss: 4638.545, total_loss: 14324.419
+	[25] recon_loss: 9580.815, pred_loss: 4629.550, total_loss: 14210.365
+	[26] recon_loss: 9487.116, pred_loss: 4621.985, total_loss: 14109.101
+	[27] recon_loss: 9383.996, pred_loss: 4587.482, total_loss: 13971.478
+	[28] recon_loss: 9285.279, pred_loss: 4549.852, total_loss: 13835.131
+	[29] recon_loss: 9190.026, pred_loss: 4536.637, total_loss: 13726.663
+	[30] recon_loss: 9105.804, pred_loss: 4525.738, total_loss: 13631.542
+	[31] recon_loss: 9030.817, pred_loss: 4510.959, total_loss: 13541.776
+	[32] recon_loss: 8956.491, pred_loss: 4495.452, total_loss: 13451.943
+	[33] recon_loss: 8875.458, pred_loss: 4481.746, total_loss: 13357.204
+	[34] recon_loss: 8798.083, pred_loss: 4468.748, total_loss: 13266.832
+	[35] recon_loss: 8721.372, pred_loss: 4461.359, total_loss: 13182.731
+	[36] recon_loss: 8648.902, pred_loss: 4453.357, total_loss: 13102.259
+	[37] recon_loss: 8584.826, pred_loss: 4447.514, total_loss: 13032.340
+	[38] recon_loss: 8526.151, pred_loss: 4436.868, total_loss: 12963.018
+	[39] recon_loss: 8466.731, pred_loss: 4428.285, total_loss: 12895.017
+	[40] recon_loss: 8402.821, pred_loss: 4423.103, total_loss: 12825.924
+	[41] recon_loss: 8344.247, pred_loss: 4415.105, total_loss: 12759.352
+	[42] recon_loss: 8283.436, pred_loss: 4407.235, total_loss: 12690.670
+	[43] recon_loss: 8227.339, pred_loss: 4394.790, total_loss: 12622.129
+	[44] recon_loss: 8177.363, pred_loss: 4381.592, total_loss: 12558.955
+	[45] recon_loss: 8125.325, pred_loss: 4376.648, total_loss: 12501.973
+	[46] recon_loss: 8078.679, pred_loss: 4371.353, total_loss: 12450.032
+	[47] recon_loss: 8030.195, pred_loss: 4364.803, total_loss: 12394.998
+	[48] recon_loss: 7980.311, pred_loss: 4355.325, total_loss: 12335.636
+	[49] recon_loss: 7933.832, pred_loss: 4348.603, total_loss: 12282.434
+	[50] recon_loss: 7888.199, pred_loss: 4343.918, total_loss: 12232.117
+	[51] recon_loss: 7847.240, pred_loss: 4330.174, total_loss: 12177.415
+	[52] recon_loss: 7802.885, pred_loss: 4311.599, total_loss: 12114.484
+	[53] recon_loss: 7761.452, pred_loss: 4299.096, total_loss: 12060.549
+	[54] recon_loss: 7721.616, pred_loss: 4293.821, total_loss: 12015.436
+Start prediction
+	Using model 1 to predict
+	Using model 2 to predict
+	Using model 3 to predict
+	Using model 4 to predict
+	Using model 5 to predict
+{'fold': 4, 'phase': 'val', 'loss': 0.531, 'pearson_mean': 0.109, 'spearman_mean_genewise': 0.1443, 'l1_error_mean': 0.4648, 'l2_errors_mean': 0.531, 'r2_scores_mean': -0.3257, 'pearson_std': 0.1414, 'l2_error_q1': 0.3215, 'l2_error_q2': 0.4329, 'l2_error_q3': 0.6078, 'r2_score_q1': -0.2406, 'r2_score_q2': -0.1257, 'r2_score_q3': -0.0388}
+
+===== Fold 5 =====
+Number of train genes: 7801, Number of test genes: 1950
+Models will be saved in: Result/seqfishBaseline_stplus/process_file/stPlus-demo-5min*.pt
+
+Spatial transcriptomics data: 913 cells * 7801 genes
+Reference scRNA-seq data:     14249 cells * 9751 genes
+1950 genes to be predicted
+
+Start initialization
+⚙️  Selected physical GPU 1 (22.05 GB free)
+Start embedding
+	[1] recon_loss: 13877.681, pred_loss: 7612.193, total_loss: 21489.874
+	[2] recon_loss: 12728.790, pred_loss: 5979.261, total_loss: 18708.051
+	[3] recon_loss: 12381.587, pred_loss: 5638.216, total_loss: 18019.803
+	[4] recon_loss: 12154.346, pred_loss: 5460.916, total_loss: 17615.261
+	[5] recon_loss: 11983.951, pred_loss: 5344.676, total_loss: 17328.627
+	[6] recon_loss: 11861.867, pred_loss: 5199.853, total_loss: 17061.720
+	[7] recon_loss: 11753.215, pred_loss: 5126.480, total_loss: 16879.695
+	[8] recon_loss: 11644.098, pred_loss: 5076.980, total_loss: 16721.077
+	[9] recon_loss: 11530.410, pred_loss: 5038.188, total_loss: 16568.598
+	[10] recon_loss: 11415.611, pred_loss: 5007.866, total_loss: 16423.477
+	[11] recon_loss: 11309.458, pred_loss: 4984.478, total_loss: 16293.936
+	[12] recon_loss: 11203.992, pred_loss: 4959.571, total_loss: 16163.563
+	[13] recon_loss: 11077.206, pred_loss: 4937.119, total_loss: 16014.325
+	[14] recon_loss: 10935.671, pred_loss: 4907.272, total_loss: 15842.942
+	[15] recon_loss: 10787.521, pred_loss: 4886.768, total_loss: 15674.288
+	[16] recon_loss: 10653.695, pred_loss: 4872.784, total_loss: 15526.479
+	[17] recon_loss: 10524.200, pred_loss: 4850.255, total_loss: 15374.455
+	[18] recon_loss: 10403.615, pred_loss: 4833.554, total_loss: 15237.169
+	[19] recon_loss: 10282.855, pred_loss: 4816.874, total_loss: 15099.728
+	[20] recon_loss: 10161.679, pred_loss: 4800.217, total_loss: 14961.896
+	[21] recon_loss: 10036.074, pred_loss: 4780.846, total_loss: 14816.920
+	[22] recon_loss: 9915.752, pred_loss: 4742.696, total_loss: 14658.448
+	[23] recon_loss: 9799.703, pred_loss: 4709.234, total_loss: 14508.937
+	[24] recon_loss: 9689.775, pred_loss: 4628.150, total_loss: 14317.925
+	[25] recon_loss: 9583.214, pred_loss: 4607.512, total_loss: 14190.725
+	[26] recon_loss: 9479.146, pred_loss: 4597.869, total_loss: 14077.015
+	[27] recon_loss: 9378.240, pred_loss: 4589.159, total_loss: 13967.399
+	[28] recon_loss: 9281.772, pred_loss: 4574.154, total_loss: 13855.926
+	[29] recon_loss: 9196.145, pred_loss: 4550.383, total_loss: 13746.528
+	[30] recon_loss: 9104.255, pred_loss: 4513.133, total_loss: 13617.388
+	[31] recon_loss: 9014.442, pred_loss: 4505.275, total_loss: 13519.717
+	[32] recon_loss: 8924.577, pred_loss: 4491.207, total_loss: 13415.784
+	[33] recon_loss: 8842.395, pred_loss: 4470.478, total_loss: 13312.872
+	[34] recon_loss: 8769.886, pred_loss: 4461.731, total_loss: 13231.617
+	[35] recon_loss: 8700.163, pred_loss: 4453.666, total_loss: 13153.829
+	[36] recon_loss: 8626.736, pred_loss: 4445.299, total_loss: 13072.036
+	[37] recon_loss: 8562.106, pred_loss: 4422.036, total_loss: 12984.142
+	[38] recon_loss: 8498.530, pred_loss: 4408.139, total_loss: 12906.669
+	[39] recon_loss: 8430.914, pred_loss: 4401.811, total_loss: 12832.725
+	[40] recon_loss: 8365.158, pred_loss: 4396.443, total_loss: 12761.601
+	[41] recon_loss: 8301.626, pred_loss: 4389.591, total_loss: 12691.217
+	[42] recon_loss: 8241.858, pred_loss: 4384.326, total_loss: 12626.184
+	[43] recon_loss: 8188.624, pred_loss: 4361.424, total_loss: 12550.048
+	[44] recon_loss: 8134.755, pred_loss: 4339.944, total_loss: 12474.698
+	[45] recon_loss: 8085.598, pred_loss: 4327.992, total_loss: 12413.590
+	[46] recon_loss: 8038.892, pred_loss: 4308.792, total_loss: 12347.684
+	[47] recon_loss: 7988.016, pred_loss: 4298.789, total_loss: 12286.805
+	[48] recon_loss: 7931.414, pred_loss: 4291.882, total_loss: 12223.296
+	[49] recon_loss: 7877.245, pred_loss: 4285.333, total_loss: 12162.578
+	[50] recon_loss: 7832.612, pred_loss: 4282.414, total_loss: 12115.026
+Start prediction
+	Using model 1 to predict
+	Using model 2 to predict
+	Using model 3 to predict
+	Using model 4 to predict
+	Using model 5 to predict
+{'fold': 5, 'phase': 'val', 'loss': 0.5226, 'pearson_mean': 0.1105, 'spearman_mean_genewise': 0.1405, 'l1_error_mean': 0.4524, 'l2_errors_mean': 0.5226, 'r2_scores_mean': -0.3251, 'pearson_std': 0.1407, 'l2_error_q1': 0.321, 'l2_error_q2': 0.431, 'l2_error_q3': 0.6139, 'r2_score_q1': -0.2475, 'r2_score_q2': -0.1294, 'r2_score_q3': -0.0406}
+Saved all fold metrics to Result/seqfishBaseline_stplus/stplus/fold_results/fold_metrics.csv
+Saved mean and std metrics to Result/seqfishBaseline_stplus/stplus/fold_results/metrics_summary.csv
+We are calculating the : seqfishBaseline_stplus
+
+impute_count_dir++++++++++++++++++++++++++++++++++++++++++++++++++Result/seqfishBaseline_stplus
++++++++++++++++++++++++++++['process_file', 'stPlus_impute.csv', 'stplus']++++++++
+impute_count: ['stPlus_impute.csv']
+stPlus_impute.csv
+Result/seqfishBaseline_stplus/stPlus_impute.csv
+raw = (913, 9751)
+impute = (913, 9751)
+ARI  0.3620409839546201
+AMI  0.524790281083207
+Homo  0.5193585624468935
+NMI  0.5388101057971542
+median ::: [np.float64(nan), np.float64(1.615856702097229e-60), np.float64(1.000000036498631), np.float64(14.164081004895966)]
+metrics ::: ['SPCC(gene)', 'SSIM(gene)', 'RMSE(gene)', 'JS(gene)']
+

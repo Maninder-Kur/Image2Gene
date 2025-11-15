@@ -1,0 +1,11 @@
+baseline/
+code_model_training/log_outs/
+code_model_training/modelResults/
+data/
+output/
+
+**/__pycache__/
+
+**/.ipynb_checkpoints/
+
+**.ckpt

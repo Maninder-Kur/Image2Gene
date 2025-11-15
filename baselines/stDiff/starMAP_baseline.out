@@ -1,0 +1,659 @@
+nohup: ignoring input
+adata_spatial:  /home/maninder/AmitCode/data/processedData/starMAP/spatial.h5ad
+adata_seq:  /home/maninder/AmitCode/data/processedData/starMAP/scRNA_common.h5ad
+sp shape (1549, 994)
+sc shape (14249, 994)
+The number of common genes:: 994
+sp_data: (1549, 994), sc_data: (14249, 994)
+sp_idx_test: [ 350  650 1178  271  162  968   59  306 1511  462 1189  714  636  324
+ 1518  184 1456  367   30  185  168  847  485  582  198 1540 1500  123
+ 1103  907  900  694 1206 1258  680  846 1255  135 1242  865  394  944
+  342  979 1375  506 1013   65   23 1040 1090   49  978 1245 1295  678
+ 1342 1234 1102  598  382  583  259 1447 1284  316  289  261  869 1205
+  998 1093 1273  141   51   70   99   76  759  353  597  405  780 1168
+  986  756  527  220  529  438 1514  422  916 1105  692  274  309  767
+ 1124  331  589  124 1151   67  727 1506 1041 1088 1502 1118 1316 1031
+  411 1338  752   29  614  352 1315  535  621 1233  599  247  453  976
+  904  528  706  898  607 1519  344 1117 1274  643 1096  674  415 1121
+ 1400  724  849  526  774 1010 1261  297  203   44 1290  237  481 1026
+ 1177 1175  115  490 1477  813 1108 1296 1170  270   78 1498 1427 1182
+  175 1538  554   15  596  905 1362  513 1101  989  303  943 1243 1272
+  670  906  351  985  361 1145  936 1379 1033  522  239   56 1067 1419
+  468  785 1210   43  965 1495 1114  240  101  428 1547  107  371 1221
+  244  425 1055 1543  494 1285 1347  128  275  810  654  722  381  482
+  651 1097  611  332 1425 1032 1211  950 1288   32 1469 1262 1489 1111
+  497  993 1063  354 1424  231  812 1324  380  163  429 1134  575  963
+ 1246  615  298  561 1226  192 1442   63 1416 1392 1483  613  439 1247
+ 1436  218  792 1280  819  366 1046 1276 1000  433  948 1402 1357  339
+ 1361  538  626  908  664  478  416 1310 1474  277 1203  886  757  236
+  631 1074 1492  970 1539  208 1188  432 1412   58 1110 1083  451  806
+ 1229 1353]
+scRNA split -> Train: (1239, 994), Test: (310, 994)
+We run SpaGE for this data
+
+
+===== Fold 1 =====
+Number of train genes: 795, Number of test genes: 199
+gene_seq:: [['2900055J20RIK', '3632451O06RIK', 'AAMP', 'ADAMTS2', 'ADCYAP1', 'ADK', 'AEBP1', 'ALDH3A2', 'APOE', 'APRT', 'ARHGAP25', 'ARPP19', 'ATRAID', 'BRINP3', 'BTBD3', 'C1QL3', 'CADPS2', 'CAV1', 'CDK6', 'CEND1', 'CHAT', 'CHCHD3', 'CHRNA6', 'CPLX3', 'CXXC4', 'CYR61', 'DBPHT2', 'DGKG', 'DHRS3', 'DYNC2LI1', 'EEPD1', 'EFNA1', 'EFNA5', 'EID1', 'ELAVL2', 'ELMO1', 'ELOVL5', 'ENC1', 'ESD', 'EXOSC9', 'FABP7', 'FAM107A', 'FAM163B', 'FAM19A1', 'FAM19A2', 'FBXL3', 'FBXO11', 'FEZF2', 'FOXP1', 'FOXP2', 'FRMPD3', 'FXYD6', 'GAA', 'GABRD', 'GAD1', 'GAD2', 'GADD45A', 'GDE1', 'GEMIN7', 'GM5643', 'GM765', 'GNG7', 'GPR22', 'GRIK1', 'GRM3', 'GSS', 'GSTM1', 'HADHB', 'HAPLN1', 'HCRTR1', 'HCRTR2', 'HLF', 'HOMER1', 'HPCAL1', 'HS3ST1', 'HSD11B1', 'HSD17B12', 'HSD3B7', 'IGFBP6', 'IGSF3', 'INHBA', 'INPP4B', 'JUNB', 'KCNAB1', 'KCNIP3', 'KCNS3', 'KIT', 'LHX1', 'LIMS2', 'LMAN1L', 'LMCD1', 'LUZP2', 'LYPD6', 'MAF', 'MAPK3', 'MATN2', 'MBP', 'MDGA1', 'MED21', 'MEF2C', 'MEGF10', 'METTL3', 'MGP', 'MYH8', 'MYLK', 'NCDN', 'NCOA7', 'NDUFB2', 'NEUROD6', 'NGF', 'NR2F2', 'NR5A1', 'NRN1', 'OGFRL1', 'OTUB2', 'PARM1', 'PBX3', 'PCDHA1', 'PCDHA2', 'PCDHA5', 'PCDHB15', 'PCDHB3', 'PCDHGA5', 'PCP4L1', 'PCSK2', 'PDE1C', 'PDLIM1', 'PDZRN3', 'PFN1', 'PIP5K1B', 'PLB1', 'PLEKHB1', 'PLK2', 'PNCK', 'POLR2H', 'POU3F4', 'PRDX6', 'PRSS23', 'PSMB4', 'PTCHD1', 'PTGS2', 'PTHLH', 'PTN', 'PTPN2', 'RAB27B', 'RAB3B', 'RAPGEF6', 'RELN', 'RESP18', 'RGS4', 'RLBP1', 'RND2', 'RND3', 'RPP21', 'RSPO1', 'RSPO2', 'S100A16', 'SAT1', 'SC5D', 'SCML4', 'SCRG1', 'SIRT3', 'SKAP1', 'SLA', 'SLC20A1', 'SLC32A1', 'SLCO1C1', 'SMIM18', 'SOX2OT', 'SOX6', 'SOX9', 'SP8', 'SPARC', 'SPARCL1', 'SPINT2', 'SPOCK3', 'SSTR4', 'SULF2', 'SYNPR', 'SYT6', 'TACSTD2', 'TCEAL1', 'TENM2', 'THSD7B', 'THUMPD3', 'TMEM100', 'TMEM176A', 'TMEM176B', 'TMEM258', 'TMEM91', 'TMTC4', 'TNNI3K', 'TOX3', 'TPH2', 'VAMP1', 'VSTM2A', 'YTHDF2', 'ZDHHC24', 'ZMAT4']]
+{'pearson_mean': 0.1251, 'spearman_mean_genewise': 0.1166, 'l1_error_mean': 1.1102, 'l2_errors_mean': 2.7876, 'r2_scores_mean': -0.6884, 'pearson_std': 0.1316, 'l2_error_q1': 1.5929, 'l2_error_q2': 2.3329, 'l2_error_q3': 3.4954, 'r2_score_q1': -0.6265, 'r2_score_q2': -0.2474, 'r2_score_q3': -0.1231, 'fold': 1, 'phase': 'val', 'loss': 2.7876}
+[Fold 1] SpaGE val Spearman: 0.1166, Pearson: 0.1251
+
+===== Fold 2 =====
+Number of train genes: 795, Number of test genes: 199
+gene_seq:: [['2900055J20RIK', '3632451O06RIK', 'AAMP', 'ADAMTS2', 'ADCYAP1', 'ADK', 'AEBP1', 'ALDH3A2', 'APOE', 'APRT', 'ARHGAP25', 'ARPP19', 'ATRAID', 'BRINP3', 'BTBD3', 'C1QL3', 'CADPS2', 'CAV1', 'CDK6', 'CEND1', 'CHAT', 'CHCHD3', 'CHRNA6', 'CPLX3', 'CXXC4', 'CYR61', 'DBPHT2', 'DGKG', 'DHRS3', 'DYNC2LI1', 'EEPD1', 'EFNA1', 'EFNA5', 'EID1', 'ELAVL2', 'ELMO1', 'ELOVL5', 'ENC1', 'ESD', 'EXOSC9', 'FABP7', 'FAM107A', 'FAM163B', 'FAM19A1', 'FAM19A2', 'FBXL3', 'FBXO11', 'FEZF2', 'FOXP1', 'FOXP2', 'FRMPD3', 'FXYD6', 'GAA', 'GABRD', 'GAD1', 'GAD2', 'GADD45A', 'GDE1', 'GEMIN7', 'GM5643', 'GM765', 'GNG7', 'GPR22', 'GRIK1', 'GRM3', 'GSS', 'GSTM1', 'HADHB', 'HAPLN1', 'HCRTR1', 'HCRTR2', 'HLF', 'HOMER1', 'HPCAL1', 'HS3ST1', 'HSD11B1', 'HSD17B12', 'HSD3B7', 'IGFBP6', 'IGSF3', 'INHBA', 'INPP4B', 'JUNB', 'KCNAB1', 'KCNIP3', 'KCNS3', 'KIT', 'LHX1', 'LIMS2', 'LMAN1L', 'LMCD1', 'LUZP2', 'LYPD6', 'MAF', 'MAPK3', 'MATN2', 'MBP', 'MDGA1', 'MED21', 'MEF2C', 'MEGF10', 'METTL3', 'MGP', 'MYH8', 'MYLK', 'NCDN', 'NCOA7', 'NDUFB2', 'NEUROD6', 'NGF', 'NR2F2', 'NR5A1', 'NRN1', 'OGFRL1', 'OTUB2', 'PARM1', 'PBX3', 'PCDHA1', 'PCDHA2', 'PCDHA5', 'PCDHB15', 'PCDHB3', 'PCDHGA5', 'PCP4L1', 'PCSK2', 'PDE1C', 'PDLIM1', 'PDZRN3', 'PFN1', 'PIP5K1B', 'PLB1', 'PLEKHB1', 'PLK2', 'PNCK', 'POLR2H', 'POU3F4', 'PRDX6', 'PRSS23', 'PSMB4', 'PTCHD1', 'PTGS2', 'PTHLH', 'PTN', 'PTPN2', 'RAB27B', 'RAB3B', 'RAPGEF6', 'RELN', 'RESP18', 'RGS4', 'RLBP1', 'RND2', 'RND3', 'RPP21', 'RSPO1', 'RSPO2', 'S100A16', 'SAT1', 'SC5D', 'SCML4', 'SCRG1', 'SIRT3', 'SKAP1', 'SLA', 'SLC20A1', 'SLC32A1', 'SLCO1C1', 'SMIM18', 'SOX2OT', 'SOX6', 'SOX9', 'SP8', 'SPARC', 'SPARCL1', 'SPINT2', 'SPOCK3', 'SSTR4', 'SULF2', 'SYNPR', 'SYT6', 'TACSTD2', 'TCEAL1', 'TENM2', 'THSD7B', 'THUMPD3', 'TMEM100', 'TMEM176A', 'TMEM176B', 'TMEM258', 'TMEM91', 'TMTC4', 'TNNI3K', 'TOX3', 'TPH2', 'VAMP1', 'VSTM2A', 'YTHDF2', 'ZDHHC24', 'ZMAT4'], ['1110008P14RIK', '1700019D03RIK', '9130024F11RIK', 'A730017C20RIK', 'ACAT2', 'ACKR1', 'ACRBP', 'ACSBG1', 'AFAP1', 'AGT', 'AGTR1A', 'AIF1', 'AK1', 'ALDOC', 'AMPH', 'ANAPC13', 'ANKRD29', 'ANXA5', 'ARL4D', 'ARPC3', 'ASB11', 'ATP1A2', 'ATP6V0E', 'ATP9A', 'AVP', 'AW549877', 'B2M', 'BATF3', 'BEX1', 'C730002L08RIK', 'CALB1', 'CAMK2A', 'CAMK4', 'CAR12', 'CBLN4', 'CCDC80', 'CD63', 'CDK4', 'CLDN10', 'CLIC1', 'CMTM5', 'CNIH3', 'CNOT6L', 'CNTN4', 'COL25A1', 'CORO6', 'COX20', 'CPNE6', 'CPNE9', 'CRYAB', 'CRYM', 'CTXN3', 'CYB5R1', 'CYGB', 'DDT', 'DNAJA2', 'DYNC1I1', 'EEF1E1', 'EFR3A', 'EGLN3', 'EGR1', 'ELFN1', 'ELOVL1', 'EPHA7', 'ETV1', 'ETV5', 'FGFR3', 'FOSL2', 'FST', 'FTO', 'GARNL3', 'GATM', 'GDA', 'GLT8D2', 'GM2A', 'GMPPA', 'GPC3', 'GPR88', 'GPRASP2', 'GRIA3', 'HAS2', 'HPCA', 'HTR2A', 'IDI1', 'IFITM2', 'IMMP1L', 'ITIH5', 'KCNIP1', 'KCNMB4', 'KLHL13', 'KLHL14', 'KLHL5', 'LGALS1', 'LHX6', 'LMO2', 'LRRC4C', 'LXN', 'LY6D', 'MAP2K1', 'MARCKS', 'MAS1', 'MCEE', 'MEI1', 'MMP16', 'MOBP', 'MRPL22', 'MRPS18C', 'MSANTD2', 'MT1', 'MTFP1', 'MYBPC1', 'MYH1', 'MYH4', 'MYO1C', 'NAA38', 'NDN', 'NDRG2', 'NEUROG2', 'NNAT', 'NOS1', 'NPAS4', 'NR4A1', 'NRM', 'NRSN1', 'NTSR1', 'NXPH1', 'OXT', 'PANTR1', 'PAX6', 'PCDHA12', 'PCDHAC2', 'PCDHB20', 'PCDHB4', 'PCDHB8', 'PCDHGA10', 'PCDHGA2', 'PCDHGA6', 'PCP4', 'PDGFRA', 'PDIA4', 'PFDN4', 'PFKL', 'PHACTR1', 'PPIL3', 'PRC1', 'PROK2', 'PTCHD2', 'PTK2B', 'RASGEF1B', 'RASGRF2', 'RBM18', 'RBP4', 'RGS8', 'RIT2', 'RNF13', 'RORB', 'RPS12', 'RPS2', 'S100B', 'SCG3', 'SDC4', 'SEMA5B', 'SERPINE1', 'SH3BGRL3', 'SIRT2', 'SKIL', 'SLC18A3', 'SLC24A2', 'SLC2A13', 'SLC38A3', 'SLC5A5', 'SMIM8', 'SNX10', 'SORCS3', 'STX1A', 'SULT2B1', 'SYN1', 'SYT17', 'TACC1', 'TBR1', 'TH', 'TIMM8A1', 'TLE4', 'TMEM132C', 'TMEM179B', 'TMEM55A', 'TNMD', 'TPD52L1', 'TRF', 'TRP53I11', 'TSNAX', 'TSPAN12', 'TTYH1', 'UBE2E3', 'WHRN', 'WSB2', 'YTHDC1', 'ZCCHC12', 'ZNRD1']]
+{'pearson_mean': 0.136, 'spearman_mean_genewise': 0.1317, 'l1_error_mean': 1.1173, 'l2_errors_mean': 2.8194, 'r2_scores_mean': -1.4336, 'pearson_std': 0.1322, 'l2_error_q1': 1.4926, 'l2_error_q2': 2.3266, 'l2_error_q3': 3.4169, 'r2_score_q1': -0.6797, 'r2_score_q2': -0.258, 'r2_score_q3': -0.0896, 'fold': 2, 'phase': 'val', 'loss': 2.8194}
+[Fold 2] SpaGE val Spearman: 0.1317, Pearson: 0.1360
+
+===== Fold 3 =====
+Number of train genes: 795, Number of test genes: 199
+gene_seq:: [['2900055J20RIK', '3632451O06RIK', 'AAMP', 'ADAMTS2', 'ADCYAP1', 'ADK', 'AEBP1', 'ALDH3A2', 'APOE', 'APRT', 'ARHGAP25', 'ARPP19', 'ATRAID', 'BRINP3', 'BTBD3', 'C1QL3', 'CADPS2', 'CAV1', 'CDK6', 'CEND1', 'CHAT', 'CHCHD3', 'CHRNA6', 'CPLX3', 'CXXC4', 'CYR61', 'DBPHT2', 'DGKG', 'DHRS3', 'DYNC2LI1', 'EEPD1', 'EFNA1', 'EFNA5', 'EID1', 'ELAVL2', 'ELMO1', 'ELOVL5', 'ENC1', 'ESD', 'EXOSC9', 'FABP7', 'FAM107A', 'FAM163B', 'FAM19A1', 'FAM19A2', 'FBXL3', 'FBXO11', 'FEZF2', 'FOXP1', 'FOXP2', 'FRMPD3', 'FXYD6', 'GAA', 'GABRD', 'GAD1', 'GAD2', 'GADD45A', 'GDE1', 'GEMIN7', 'GM5643', 'GM765', 'GNG7', 'GPR22', 'GRIK1', 'GRM3', 'GSS', 'GSTM1', 'HADHB', 'HAPLN1', 'HCRTR1', 'HCRTR2', 'HLF', 'HOMER1', 'HPCAL1', 'HS3ST1', 'HSD11B1', 'HSD17B12', 'HSD3B7', 'IGFBP6', 'IGSF3', 'INHBA', 'INPP4B', 'JUNB', 'KCNAB1', 'KCNIP3', 'KCNS3', 'KIT', 'LHX1', 'LIMS2', 'LMAN1L', 'LMCD1', 'LUZP2', 'LYPD6', 'MAF', 'MAPK3', 'MATN2', 'MBP', 'MDGA1', 'MED21', 'MEF2C', 'MEGF10', 'METTL3', 'MGP', 'MYH8', 'MYLK', 'NCDN', 'NCOA7', 'NDUFB2', 'NEUROD6', 'NGF', 'NR2F2', 'NR5A1', 'NRN1', 'OGFRL1', 'OTUB2', 'PARM1', 'PBX3', 'PCDHA1', 'PCDHA2', 'PCDHA5', 'PCDHB15', 'PCDHB3', 'PCDHGA5', 'PCP4L1', 'PCSK2', 'PDE1C', 'PDLIM1', 'PDZRN3', 'PFN1', 'PIP5K1B', 'PLB1', 'PLEKHB1', 'PLK2', 'PNCK', 'POLR2H', 'POU3F4', 'PRDX6', 'PRSS23', 'PSMB4', 'PTCHD1', 'PTGS2', 'PTHLH', 'PTN', 'PTPN2', 'RAB27B', 'RAB3B', 'RAPGEF6', 'RELN', 'RESP18', 'RGS4', 'RLBP1', 'RND2', 'RND3', 'RPP21', 'RSPO1', 'RSPO2', 'S100A16', 'SAT1', 'SC5D', 'SCML4', 'SCRG1', 'SIRT3', 'SKAP1', 'SLA', 'SLC20A1', 'SLC32A1', 'SLCO1C1', 'SMIM18', 'SOX2OT', 'SOX6', 'SOX9', 'SP8', 'SPARC', 'SPARCL1', 'SPINT2', 'SPOCK3', 'SSTR4', 'SULF2', 'SYNPR', 'SYT6', 'TACSTD2', 'TCEAL1', 'TENM2', 'THSD7B', 'THUMPD3', 'TMEM100', 'TMEM176A', 'TMEM176B', 'TMEM258', 'TMEM91', 'TMTC4', 'TNNI3K', 'TOX3', 'TPH2', 'VAMP1', 'VSTM2A', 'YTHDF2', 'ZDHHC24', 'ZMAT4'], ['1110008P14RIK', '1700019D03RIK', '9130024F11RIK', 'A730017C20RIK', 'ACAT2', 'ACKR1', 'ACRBP', 'ACSBG1', 'AFAP1', 'AGT', 'AGTR1A', 'AIF1', 'AK1', 'ALDOC', 'AMPH', 'ANAPC13', 'ANKRD29', 'ANXA5', 'ARL4D', 'ARPC3', 'ASB11', 'ATP1A2', 'ATP6V0E', 'ATP9A', 'AVP', 'AW549877', 'B2M', 'BATF3', 'BEX1', 'C730002L08RIK', 'CALB1', 'CAMK2A', 'CAMK4', 'CAR12', 'CBLN4', 'CCDC80', 'CD63', 'CDK4', 'CLDN10', 'CLIC1', 'CMTM5', 'CNIH3', 'CNOT6L', 'CNTN4', 'COL25A1', 'CORO6', 'COX20', 'CPNE6', 'CPNE9', 'CRYAB', 'CRYM', 'CTXN3', 'CYB5R1', 'CYGB', 'DDT', 'DNAJA2', 'DYNC1I1', 'EEF1E1', 'EFR3A', 'EGLN3', 'EGR1', 'ELFN1', 'ELOVL1', 'EPHA7', 'ETV1', 'ETV5', 'FGFR3', 'FOSL2', 'FST', 'FTO', 'GARNL3', 'GATM', 'GDA', 'GLT8D2', 'GM2A', 'GMPPA', 'GPC3', 'GPR88', 'GPRASP2', 'GRIA3', 'HAS2', 'HPCA', 'HTR2A', 'IDI1', 'IFITM2', 'IMMP1L', 'ITIH5', 'KCNIP1', 'KCNMB4', 'KLHL13', 'KLHL14', 'KLHL5', 'LGALS1', 'LHX6', 'LMO2', 'LRRC4C', 'LXN', 'LY6D', 'MAP2K1', 'MARCKS', 'MAS1', 'MCEE', 'MEI1', 'MMP16', 'MOBP', 'MRPL22', 'MRPS18C', 'MSANTD2', 'MT1', 'MTFP1', 'MYBPC1', 'MYH1', 'MYH4', 'MYO1C', 'NAA38', 'NDN', 'NDRG2', 'NEUROG2', 'NNAT', 'NOS1', 'NPAS4', 'NR4A1', 'NRM', 'NRSN1', 'NTSR1', 'NXPH1', 'OXT', 'PANTR1', 'PAX6', 'PCDHA12', 'PCDHAC2', 'PCDHB20', 'PCDHB4', 'PCDHB8', 'PCDHGA10', 'PCDHGA2', 'PCDHGA6', 'PCP4', 'PDGFRA', 'PDIA4', 'PFDN4', 'PFKL', 'PHACTR1', 'PPIL3', 'PRC1', 'PROK2', 'PTCHD2', 'PTK2B', 'RASGEF1B', 'RASGRF2', 'RBM18', 'RBP4', 'RGS8', 'RIT2', 'RNF13', 'RORB', 'RPS12', 'RPS2', 'S100B', 'SCG3', 'SDC4', 'SEMA5B', 'SERPINE1', 'SH3BGRL3', 'SIRT2', 'SKIL', 'SLC18A3', 'SLC24A2', 'SLC2A13', 'SLC38A3', 'SLC5A5', 'SMIM8', 'SNX10', 'SORCS3', 'STX1A', 'SULT2B1', 'SYN1', 'SYT17', 'TACC1', 'TBR1', 'TH', 'TIMM8A1', 'TLE4', 'TMEM132C', 'TMEM179B', 'TMEM55A', 'TNMD', 'TPD52L1', 'TRF', 'TRP53I11', 'TSNAX', 'TSPAN12', 'TTYH1', 'UBE2E3', 'WHRN', 'WSB2', 'YTHDC1', 'ZCCHC12', 'ZNRD1'], ['1110008F13RIK', '1700086L19RIK', '2900092D14RIK', '3110035E14RIK', 'ABAT', 'ACSS1', 'ADAMTS18', 'ANO3', 'AQP4', 'ARPC2', 'ARPP21', 'ATP6AP1L', 'BCAR3', 'BCL6', 'BMP3', 'BTBD11', 'BTG2', 'C1QTNF7', 'CACNG4', 'CALN1', 'CCAR2', 'CCDC109B', 'CD34', 'CD7', 'CD9', 'CDH13', 'CITED1', 'CLDN5', 'CNR1', 'COCH', 'CORT', 'COX6A2', 'CPNE5', 'CRISPLD2', 'CSRNP1', 'CTSO', 'CUX2', 'DCDC2C', 'DCN', 'DDIT3', 'DEPDC7', 'DGKB', 'DLX1', 'DLX5', 'DNAJC15', 'DNER', 'DOK5', 'DUSP6', 'E430025E21RIK', 'EFEMP1', 'EFHD2', 'EGR3', 'EGR4', 'EPHX2', 'FAM131A', 'FUT9', 'FXYD1', 'GABRG1', 'GALNT14', 'GAP43', 'GM11549', 'GMPR', 'GPD1', 'GPR3', 'GPR37L1', 'GRP', 'GRPR', 'GSN', 'GSTM6', 'GUCY1B3', 'HAX1', 'HDDC2', 'HMGCS1', 'HMGN1', 'HTR3A', 'HTR5B', 'HTRA1', 'IFIT2', 'IGF1', 'IGFBP4', 'IGTP', 'INA', 'ISCA2', 'ITM2C', 'KCNA1', 'KCNC2', 'KCTD4', 'KCTD6', 'KRT18', 'KRT73', 'LAMP5', 'LAPTM4A', 'LIN7B', 'LMO4', 'LY6E', 'MAB21L1', 'MAL', 'MAL2', 'MAN1A', 'MAT2B', 'METTL14', 'METTL23', 'MGAT4C', 'MIA', 'MICU1', 'MIEN1', 'MT2', 'NDFIP1', 'NEFL', 'NELL2', 'NEUROD1', 'NPTX2', 'NPY2R', 'NR1D1', 'NREP', 'NRIP3', 'NTS', 'NUDT2', 'NXPH2', 'OPRM1', 'PAPSS1', 'PCDH8', 'PCDHA3', 'PCDHAC1', 'PCDHB1', 'PCDHB11', 'PCDHB14', 'PCDHB17', 'PCDHB18', 'PCDHB7', 'PCDHGA3', 'PCDHGA9', 'PDE11A', 'PDP1', 'PER3', 'PHKG2', 'PKIG', 'PLA2G7', 'PLCXD2', 'PLP1', 'PLS3', 'PMP22', 'PNOC', 'PON2', 'PRKCG', 'PRLR', 'PTPRZ1', 'QRFPR', 'RAB15', 'RAB31', 'RAC1', 'RALYL', 'RASL11A', 'RBFOX3', 'RERG', 'RFC2', 'RHEBL1', 'SATB2', 'SCCPDH', 'SDCBP', 'SELM', 'SEMA3E', 'SEPP1', 'SGPP2', 'SH3BGRL', 'SLC17A6', 'SLC1A1', 'SLC1A3', 'SLC25A17', 'SLC25A18', 'SLC25A36', 'SLC50A1', 'SLN', 'SP9', 'ST6GALNAC5', 'STAC', 'SV2B', 'SYNDIG1L', 'TACR1', 'THSD7A', 'TIMP4', 'TM7SF2', 'TMEM130', 'TNFRSF12A', 'TOMM22', 'TPM1', 'TRAIP', 'TRAPPC1', 'TRAPPC2L', 'TSC22D1', 'TSHZ2', 'TUBA8', 'TWISTNB', 'UCMA', 'UROD', 'WT1', 'YTHDF1', 'ZMYM1', 'ZNHIT3']]
+{'pearson_mean': 0.1499, 'spearman_mean_genewise': 0.1366, 'l1_error_mean': 1.0746, 'l2_errors_mean': 2.7091, 'r2_scores_mean': -0.6388, 'pearson_std': 0.1454, 'l2_error_q1': 1.3121, 'l2_error_q2': 2.2035, 'l2_error_q3': 3.3768, 'r2_score_q1': -0.6325, 'r2_score_q2': -0.2094, 'r2_score_q3': -0.0999, 'fold': 3, 'phase': 'val', 'loss': 2.7091}
+[Fold 3] SpaGE val Spearman: 0.1366, Pearson: 0.1499
+
+===== Fold 4 =====
+Number of train genes: 795, Number of test genes: 199
+gene_seq:: [['2900055J20RIK', '3632451O06RIK', 'AAMP', 'ADAMTS2', 'ADCYAP1', 'ADK', 'AEBP1', 'ALDH3A2', 'APOE', 'APRT', 'ARHGAP25', 'ARPP19', 'ATRAID', 'BRINP3', 'BTBD3', 'C1QL3', 'CADPS2', 'CAV1', 'CDK6', 'CEND1', 'CHAT', 'CHCHD3', 'CHRNA6', 'CPLX3', 'CXXC4', 'CYR61', 'DBPHT2', 'DGKG', 'DHRS3', 'DYNC2LI1', 'EEPD1', 'EFNA1', 'EFNA5', 'EID1', 'ELAVL2', 'ELMO1', 'ELOVL5', 'ENC1', 'ESD', 'EXOSC9', 'FABP7', 'FAM107A', 'FAM163B', 'FAM19A1', 'FAM19A2', 'FBXL3', 'FBXO11', 'FEZF2', 'FOXP1', 'FOXP2', 'FRMPD3', 'FXYD6', 'GAA', 'GABRD', 'GAD1', 'GAD2', 'GADD45A', 'GDE1', 'GEMIN7', 'GM5643', 'GM765', 'GNG7', 'GPR22', 'GRIK1', 'GRM3', 'GSS', 'GSTM1', 'HADHB', 'HAPLN1', 'HCRTR1', 'HCRTR2', 'HLF', 'HOMER1', 'HPCAL1', 'HS3ST1', 'HSD11B1', 'HSD17B12', 'HSD3B7', 'IGFBP6', 'IGSF3', 'INHBA', 'INPP4B', 'JUNB', 'KCNAB1', 'KCNIP3', 'KCNS3', 'KIT', 'LHX1', 'LIMS2', 'LMAN1L', 'LMCD1', 'LUZP2', 'LYPD6', 'MAF', 'MAPK3', 'MATN2', 'MBP', 'MDGA1', 'MED21', 'MEF2C', 'MEGF10', 'METTL3', 'MGP', 'MYH8', 'MYLK', 'NCDN', 'NCOA7', 'NDUFB2', 'NEUROD6', 'NGF', 'NR2F2', 'NR5A1', 'NRN1', 'OGFRL1', 'OTUB2', 'PARM1', 'PBX3', 'PCDHA1', 'PCDHA2', 'PCDHA5', 'PCDHB15', 'PCDHB3', 'PCDHGA5', 'PCP4L1', 'PCSK2', 'PDE1C', 'PDLIM1', 'PDZRN3', 'PFN1', 'PIP5K1B', 'PLB1', 'PLEKHB1', 'PLK2', 'PNCK', 'POLR2H', 'POU3F4', 'PRDX6', 'PRSS23', 'PSMB4', 'PTCHD1', 'PTGS2', 'PTHLH', 'PTN', 'PTPN2', 'RAB27B', 'RAB3B', 'RAPGEF6', 'RELN', 'RESP18', 'RGS4', 'RLBP1', 'RND2', 'RND3', 'RPP21', 'RSPO1', 'RSPO2', 'S100A16', 'SAT1', 'SC5D', 'SCML4', 'SCRG1', 'SIRT3', 'SKAP1', 'SLA', 'SLC20A1', 'SLC32A1', 'SLCO1C1', 'SMIM18', 'SOX2OT', 'SOX6', 'SOX9', 'SP8', 'SPARC', 'SPARCL1', 'SPINT2', 'SPOCK3', 'SSTR4', 'SULF2', 'SYNPR', 'SYT6', 'TACSTD2', 'TCEAL1', 'TENM2', 'THSD7B', 'THUMPD3', 'TMEM100', 'TMEM176A', 'TMEM176B', 'TMEM258', 'TMEM91', 'TMTC4', 'TNNI3K', 'TOX3', 'TPH2', 'VAMP1', 'VSTM2A', 'YTHDF2', 'ZDHHC24', 'ZMAT4'], ['1110008P14RIK', '1700019D03RIK', '9130024F11RIK', 'A730017C20RIK', 'ACAT2', 'ACKR1', 'ACRBP', 'ACSBG1', 'AFAP1', 'AGT', 'AGTR1A', 'AIF1', 'AK1', 'ALDOC', 'AMPH', 'ANAPC13', 'ANKRD29', 'ANXA5', 'ARL4D', 'ARPC3', 'ASB11', 'ATP1A2', 'ATP6V0E', 'ATP9A', 'AVP', 'AW549877', 'B2M', 'BATF3', 'BEX1', 'C730002L08RIK', 'CALB1', 'CAMK2A', 'CAMK4', 'CAR12', 'CBLN4', 'CCDC80', 'CD63', 'CDK4', 'CLDN10', 'CLIC1', 'CMTM5', 'CNIH3', 'CNOT6L', 'CNTN4', 'COL25A1', 'CORO6', 'COX20', 'CPNE6', 'CPNE9', 'CRYAB', 'CRYM', 'CTXN3', 'CYB5R1', 'CYGB', 'DDT', 'DNAJA2', 'DYNC1I1', 'EEF1E1', 'EFR3A', 'EGLN3', 'EGR1', 'ELFN1', 'ELOVL1', 'EPHA7', 'ETV1', 'ETV5', 'FGFR3', 'FOSL2', 'FST', 'FTO', 'GARNL3', 'GATM', 'GDA', 'GLT8D2', 'GM2A', 'GMPPA', 'GPC3', 'GPR88', 'GPRASP2', 'GRIA3', 'HAS2', 'HPCA', 'HTR2A', 'IDI1', 'IFITM2', 'IMMP1L', 'ITIH5', 'KCNIP1', 'KCNMB4', 'KLHL13', 'KLHL14', 'KLHL5', 'LGALS1', 'LHX6', 'LMO2', 'LRRC4C', 'LXN', 'LY6D', 'MAP2K1', 'MARCKS', 'MAS1', 'MCEE', 'MEI1', 'MMP16', 'MOBP', 'MRPL22', 'MRPS18C', 'MSANTD2', 'MT1', 'MTFP1', 'MYBPC1', 'MYH1', 'MYH4', 'MYO1C', 'NAA38', 'NDN', 'NDRG2', 'NEUROG2', 'NNAT', 'NOS1', 'NPAS4', 'NR4A1', 'NRM', 'NRSN1', 'NTSR1', 'NXPH1', 'OXT', 'PANTR1', 'PAX6', 'PCDHA12', 'PCDHAC2', 'PCDHB20', 'PCDHB4', 'PCDHB8', 'PCDHGA10', 'PCDHGA2', 'PCDHGA6', 'PCP4', 'PDGFRA', 'PDIA4', 'PFDN4', 'PFKL', 'PHACTR1', 'PPIL3', 'PRC1', 'PROK2', 'PTCHD2', 'PTK2B', 'RASGEF1B', 'RASGRF2', 'RBM18', 'RBP4', 'RGS8', 'RIT2', 'RNF13', 'RORB', 'RPS12', 'RPS2', 'S100B', 'SCG3', 'SDC4', 'SEMA5B', 'SERPINE1', 'SH3BGRL3', 'SIRT2', 'SKIL', 'SLC18A3', 'SLC24A2', 'SLC2A13', 'SLC38A3', 'SLC5A5', 'SMIM8', 'SNX10', 'SORCS3', 'STX1A', 'SULT2B1', 'SYN1', 'SYT17', 'TACC1', 'TBR1', 'TH', 'TIMM8A1', 'TLE4', 'TMEM132C', 'TMEM179B', 'TMEM55A', 'TNMD', 'TPD52L1', 'TRF', 'TRP53I11', 'TSNAX', 'TSPAN12', 'TTYH1', 'UBE2E3', 'WHRN', 'WSB2', 'YTHDC1', 'ZCCHC12', 'ZNRD1'], ['1110008F13RIK', '1700086L19RIK', '2900092D14RIK', '3110035E14RIK', 'ABAT', 'ACSS1', 'ADAMTS18', 'ANO3', 'AQP4', 'ARPC2', 'ARPP21', 'ATP6AP1L', 'BCAR3', 'BCL6', 'BMP3', 'BTBD11', 'BTG2', 'C1QTNF7', 'CACNG4', 'CALN1', 'CCAR2', 'CCDC109B', 'CD34', 'CD7', 'CD9', 'CDH13', 'CITED1', 'CLDN5', 'CNR1', 'COCH', 'CORT', 'COX6A2', 'CPNE5', 'CRISPLD2', 'CSRNP1', 'CTSO', 'CUX2', 'DCDC2C', 'DCN', 'DDIT3', 'DEPDC7', 'DGKB', 'DLX1', 'DLX5', 'DNAJC15', 'DNER', 'DOK5', 'DUSP6', 'E430025E21RIK', 'EFEMP1', 'EFHD2', 'EGR3', 'EGR4', 'EPHX2', 'FAM131A', 'FUT9', 'FXYD1', 'GABRG1', 'GALNT14', 'GAP43', 'GM11549', 'GMPR', 'GPD1', 'GPR3', 'GPR37L1', 'GRP', 'GRPR', 'GSN', 'GSTM6', 'GUCY1B3', 'HAX1', 'HDDC2', 'HMGCS1', 'HMGN1', 'HTR3A', 'HTR5B', 'HTRA1', 'IFIT2', 'IGF1', 'IGFBP4', 'IGTP', 'INA', 'ISCA2', 'ITM2C', 'KCNA1', 'KCNC2', 'KCTD4', 'KCTD6', 'KRT18', 'KRT73', 'LAMP5', 'LAPTM4A', 'LIN7B', 'LMO4', 'LY6E', 'MAB21L1', 'MAL', 'MAL2', 'MAN1A', 'MAT2B', 'METTL14', 'METTL23', 'MGAT4C', 'MIA', 'MICU1', 'MIEN1', 'MT2', 'NDFIP1', 'NEFL', 'NELL2', 'NEUROD1', 'NPTX2', 'NPY2R', 'NR1D1', 'NREP', 'NRIP3', 'NTS', 'NUDT2', 'NXPH2', 'OPRM1', 'PAPSS1', 'PCDH8', 'PCDHA3', 'PCDHAC1', 'PCDHB1', 'PCDHB11', 'PCDHB14', 'PCDHB17', 'PCDHB18', 'PCDHB7', 'PCDHGA3', 'PCDHGA9', 'PDE11A', 'PDP1', 'PER3', 'PHKG2', 'PKIG', 'PLA2G7', 'PLCXD2', 'PLP1', 'PLS3', 'PMP22', 'PNOC', 'PON2', 'PRKCG', 'PRLR', 'PTPRZ1', 'QRFPR', 'RAB15', 'RAB31', 'RAC1', 'RALYL', 'RASL11A', 'RBFOX3', 'RERG', 'RFC2', 'RHEBL1', 'SATB2', 'SCCPDH', 'SDCBP', 'SELM', 'SEMA3E', 'SEPP1', 'SGPP2', 'SH3BGRL', 'SLC17A6', 'SLC1A1', 'SLC1A3', 'SLC25A17', 'SLC25A18', 'SLC25A36', 'SLC50A1', 'SLN', 'SP9', 'ST6GALNAC5', 'STAC', 'SV2B', 'SYNDIG1L', 'TACR1', 'THSD7A', 'TIMP4', 'TM7SF2', 'TMEM130', 'TNFRSF12A', 'TOMM22', 'TPM1', 'TRAIP', 'TRAPPC1', 'TRAPPC2L', 'TSC22D1', 'TSHZ2', 'TUBA8', 'TWISTNB', 'UCMA', 'UROD', 'WT1', 'YTHDF1', 'ZMYM1', 'ZNHIT3'], ['2810468N07RIK', 'A830018L16RIK', 'ABHD3', 'ACTA2', 'ACVR1C', 'ADARB2', 'ADRBK2', 'ALDH1L1', 'ARHGAP24', 'ARL4A', 'ARX', 'ASCL1', 'ATP2B4', 'BACE2', 'BCAP29', 'BGLAP3', 'CACNG3', 'CALB2', 'CALCA', 'CAMK2D', 'CAR10', 'CAR4', 'CARTPT', 'CD164', 'CDCA7', 'CDH18', 'CHL1', 'CHRNA2', 'CIDEA', 'CNP', 'CNTN6', 'CNTNAP4', 'COL14A1', 'COL6A1', 'CPNE2', 'CTGF', 'CTSZ', 'CXCL14', 'CYB5R2', 'DDAH1', 'DEPTOR', 'DKK3', 'DKKL1', 'DLX2', 'DLX6OS1', 'DUSP14', 'DYNLT3', 'EDNRB', 'ELP3', 'FAM46A', 'FAM84A', 'FBXW11', 'FDFT1', 'FGF12', 'FLRT3', 'FMO1', 'FOS', 'FRMD7', 'FSTL5', 'GFRA2', 'GLUL', 'GM15881', 'GNB5', 'GPM6B', 'GPR151', 'GPX1', 'GPX3', 'GRIA1', 'GSTA4', 'HN1', 'HPCAL4', 'ID2', 'ID3', 'IL1RAPL2', 'ITM2A', 'KCNIP2', 'KCNV1', 'KCTD8', 'KLF10', 'KLK8', 'KRT12', 'LCAT', 'LDB2', 'LHFPL3', 'LIPG', 'LRRC61', 'LRRTM4', 'LY6G6E', 'LYPD1', 'MAPRE2', 'MED10', 'MFGE8', 'MMD2', 'MOSPD1', 'MPI', 'MRAP2', 'MRPS28', 'MSMO1', 'MYL4', 'NDNF', 'NDST4', 'NDUFS1', 'NDUFS2', 'NECAB3', 'NEUROD2', 'NGB', 'NKX2-1', 'NPTX1', 'NR4A2', 'NRG1', 'NRIP2', 'NRP1', 'NTSR2', 'NUDT4', 'OLFM3', 'OSBPL1A', 'OTOF', 'PCDHA8', 'PCDHB12', 'PCDHB19', 'PCDHB6', 'PCDHGA7', 'PCDHGA8', 'PCSK5', 'PDE1A', 'PDLIM3', 'PEA15A', 'PENK', 'PGM2L1', 'PGR', 'PHLDA1', 'PHYHIP', 'PLCXD3', 'PPA2', 'PPP1R3C', 'PRDX4', 'PSMA4', 'PTGDS', 'PTGFR', 'PVALB', 'QK', 'QPCT', 'RAB26', 'RAB7', 'RAMP3', 'RASGRF1', 'RASGRP1', 'RGS9', 'RNH1', 'RPRM', 'SCD2', 'SCG2', 'SEC11C', 'SEPT4', 'SERPINI1', 'SLC1A2', 'SLC25A11', 'SLC30A9', 'SLC5A7', 'SLC6A1', 'SLC7A3', 'SLC7A4', 'SMAD3', 'SNCA', 'SNRPE', 'SPP1', 'SPRY4', 'ST3GAL6', 'STAT4', 'STMN4', 'STX12', 'SYT10', 'TAC2', 'TCERG1L', 'TEDDM3', 'TIMP3', 'TMEFF1', 'TMEFF2', 'TMEM215', 'TMEM60', 'TMSB10', 'TMX1', 'TOX', 'TRIM32', 'TRPV6', 'TSC22D3', 'TSPAN13', 'TUBB4B', 'UAP1', 'UGDH', 'USP46', 'VIP', 'VSIG2', 'WFS1', 'YTHDC2', 'YTHDF3', 'ZFAND6', 'ZFP57', 'ZFP637']]
+{'pearson_mean': 0.1519, 'spearman_mean_genewise': 0.1466, 'l1_error_mean': 1.0982, 'l2_errors_mean': 2.7313, 'r2_scores_mean': -0.7459, 'pearson_std': 0.125, 'l2_error_q1': 1.4708, 'l2_error_q2': 2.2832, 'l2_error_q3': 3.504, 'r2_score_q1': -0.8328, 'r2_score_q2': -0.2514, 'r2_score_q3': -0.0999, 'fold': 4, 'phase': 'val', 'loss': 2.7313}
+[Fold 4] SpaGE val Spearman: 0.1466, Pearson: 0.1519
+
+===== Fold 5 =====
+Number of train genes: 796, Number of test genes: 198
+gene_seq:: [['2900055J20RIK', '3632451O06RIK', 'AAMP', 'ADAMTS2', 'ADCYAP1', 'ADK', 'AEBP1', 'ALDH3A2', 'APOE', 'APRT', 'ARHGAP25', 'ARPP19', 'ATRAID', 'BRINP3', 'BTBD3', 'C1QL3', 'CADPS2', 'CAV1', 'CDK6', 'CEND1', 'CHAT', 'CHCHD3', 'CHRNA6', 'CPLX3', 'CXXC4', 'CYR61', 'DBPHT2', 'DGKG', 'DHRS3', 'DYNC2LI1', 'EEPD1', 'EFNA1', 'EFNA5', 'EID1', 'ELAVL2', 'ELMO1', 'ELOVL5', 'ENC1', 'ESD', 'EXOSC9', 'FABP7', 'FAM107A', 'FAM163B', 'FAM19A1', 'FAM19A2', 'FBXL3', 'FBXO11', 'FEZF2', 'FOXP1', 'FOXP2', 'FRMPD3', 'FXYD6', 'GAA', 'GABRD', 'GAD1', 'GAD2', 'GADD45A', 'GDE1', 'GEMIN7', 'GM5643', 'GM765', 'GNG7', 'GPR22', 'GRIK1', 'GRM3', 'GSS', 'GSTM1', 'HADHB', 'HAPLN1', 'HCRTR1', 'HCRTR2', 'HLF', 'HOMER1', 'HPCAL1', 'HS3ST1', 'HSD11B1', 'HSD17B12', 'HSD3B7', 'IGFBP6', 'IGSF3', 'INHBA', 'INPP4B', 'JUNB', 'KCNAB1', 'KCNIP3', 'KCNS3', 'KIT', 'LHX1', 'LIMS2', 'LMAN1L', 'LMCD1', 'LUZP2', 'LYPD6', 'MAF', 'MAPK3', 'MATN2', 'MBP', 'MDGA1', 'MED21', 'MEF2C', 'MEGF10', 'METTL3', 'MGP', 'MYH8', 'MYLK', 'NCDN', 'NCOA7', 'NDUFB2', 'NEUROD6', 'NGF', 'NR2F2', 'NR5A1', 'NRN1', 'OGFRL1', 'OTUB2', 'PARM1', 'PBX3', 'PCDHA1', 'PCDHA2', 'PCDHA5', 'PCDHB15', 'PCDHB3', 'PCDHGA5', 'PCP4L1', 'PCSK2', 'PDE1C', 'PDLIM1', 'PDZRN3', 'PFN1', 'PIP5K1B', 'PLB1', 'PLEKHB1', 'PLK2', 'PNCK', 'POLR2H', 'POU3F4', 'PRDX6', 'PRSS23', 'PSMB4', 'PTCHD1', 'PTGS2', 'PTHLH', 'PTN', 'PTPN2', 'RAB27B', 'RAB3B', 'RAPGEF6', 'RELN', 'RESP18', 'RGS4', 'RLBP1', 'RND2', 'RND3', 'RPP21', 'RSPO1', 'RSPO2', 'S100A16', 'SAT1', 'SC5D', 'SCML4', 'SCRG1', 'SIRT3', 'SKAP1', 'SLA', 'SLC20A1', 'SLC32A1', 'SLCO1C1', 'SMIM18', 'SOX2OT', 'SOX6', 'SOX9', 'SP8', 'SPARC', 'SPARCL1', 'SPINT2', 'SPOCK3', 'SSTR4', 'SULF2', 'SYNPR', 'SYT6', 'TACSTD2', 'TCEAL1', 'TENM2', 'THSD7B', 'THUMPD3', 'TMEM100', 'TMEM176A', 'TMEM176B', 'TMEM258', 'TMEM91', 'TMTC4', 'TNNI3K', 'TOX3', 'TPH2', 'VAMP1', 'VSTM2A', 'YTHDF2', 'ZDHHC24', 'ZMAT4'], ['1110008P14RIK', '1700019D03RIK', '9130024F11RIK', 'A730017C20RIK', 'ACAT2', 'ACKR1', 'ACRBP', 'ACSBG1', 'AFAP1', 'AGT', 'AGTR1A', 'AIF1', 'AK1', 'ALDOC', 'AMPH', 'ANAPC13', 'ANKRD29', 'ANXA5', 'ARL4D', 'ARPC3', 'ASB11', 'ATP1A2', 'ATP6V0E', 'ATP9A', 'AVP', 'AW549877', 'B2M', 'BATF3', 'BEX1', 'C730002L08RIK', 'CALB1', 'CAMK2A', 'CAMK4', 'CAR12', 'CBLN4', 'CCDC80', 'CD63', 'CDK4', 'CLDN10', 'CLIC1', 'CMTM5', 'CNIH3', 'CNOT6L', 'CNTN4', 'COL25A1', 'CORO6', 'COX20', 'CPNE6', 'CPNE9', 'CRYAB', 'CRYM', 'CTXN3', 'CYB5R1', 'CYGB', 'DDT', 'DNAJA2', 'DYNC1I1', 'EEF1E1', 'EFR3A', 'EGLN3', 'EGR1', 'ELFN1', 'ELOVL1', 'EPHA7', 'ETV1', 'ETV5', 'FGFR3', 'FOSL2', 'FST', 'FTO', 'GARNL3', 'GATM', 'GDA', 'GLT8D2', 'GM2A', 'GMPPA', 'GPC3', 'GPR88', 'GPRASP2', 'GRIA3', 'HAS2', 'HPCA', 'HTR2A', 'IDI1', 'IFITM2', 'IMMP1L', 'ITIH5', 'KCNIP1', 'KCNMB4', 'KLHL13', 'KLHL14', 'KLHL5', 'LGALS1', 'LHX6', 'LMO2', 'LRRC4C', 'LXN', 'LY6D', 'MAP2K1', 'MARCKS', 'MAS1', 'MCEE', 'MEI1', 'MMP16', 'MOBP', 'MRPL22', 'MRPS18C', 'MSANTD2', 'MT1', 'MTFP1', 'MYBPC1', 'MYH1', 'MYH4', 'MYO1C', 'NAA38', 'NDN', 'NDRG2', 'NEUROG2', 'NNAT', 'NOS1', 'NPAS4', 'NR4A1', 'NRM', 'NRSN1', 'NTSR1', 'NXPH1', 'OXT', 'PANTR1', 'PAX6', 'PCDHA12', 'PCDHAC2', 'PCDHB20', 'PCDHB4', 'PCDHB8', 'PCDHGA10', 'PCDHGA2', 'PCDHGA6', 'PCP4', 'PDGFRA', 'PDIA4', 'PFDN4', 'PFKL', 'PHACTR1', 'PPIL3', 'PRC1', 'PROK2', 'PTCHD2', 'PTK2B', 'RASGEF1B', 'RASGRF2', 'RBM18', 'RBP4', 'RGS8', 'RIT2', 'RNF13', 'RORB', 'RPS12', 'RPS2', 'S100B', 'SCG3', 'SDC4', 'SEMA5B', 'SERPINE1', 'SH3BGRL3', 'SIRT2', 'SKIL', 'SLC18A3', 'SLC24A2', 'SLC2A13', 'SLC38A3', 'SLC5A5', 'SMIM8', 'SNX10', 'SORCS3', 'STX1A', 'SULT2B1', 'SYN1', 'SYT17', 'TACC1', 'TBR1', 'TH', 'TIMM8A1', 'TLE4', 'TMEM132C', 'TMEM179B', 'TMEM55A', 'TNMD', 'TPD52L1', 'TRF', 'TRP53I11', 'TSNAX', 'TSPAN12', 'TTYH1', 'UBE2E3', 'WHRN', 'WSB2', 'YTHDC1', 'ZCCHC12', 'ZNRD1'], ['1110008F13RIK', '1700086L19RIK', '2900092D14RIK', '3110035E14RIK', 'ABAT', 'ACSS1', 'ADAMTS18', 'ANO3', 'AQP4', 'ARPC2', 'ARPP21', 'ATP6AP1L', 'BCAR3', 'BCL6', 'BMP3', 'BTBD11', 'BTG2', 'C1QTNF7', 'CACNG4', 'CALN1', 'CCAR2', 'CCDC109B', 'CD34', 'CD7', 'CD9', 'CDH13', 'CITED1', 'CLDN5', 'CNR1', 'COCH', 'CORT', 'COX6A2', 'CPNE5', 'CRISPLD2', 'CSRNP1', 'CTSO', 'CUX2', 'DCDC2C', 'DCN', 'DDIT3', 'DEPDC7', 'DGKB', 'DLX1', 'DLX5', 'DNAJC15', 'DNER', 'DOK5', 'DUSP6', 'E430025E21RIK', 'EFEMP1', 'EFHD2', 'EGR3', 'EGR4', 'EPHX2', 'FAM131A', 'FUT9', 'FXYD1', 'GABRG1', 'GALNT14', 'GAP43', 'GM11549', 'GMPR', 'GPD1', 'GPR3', 'GPR37L1', 'GRP', 'GRPR', 'GSN', 'GSTM6', 'GUCY1B3', 'HAX1', 'HDDC2', 'HMGCS1', 'HMGN1', 'HTR3A', 'HTR5B', 'HTRA1', 'IFIT2', 'IGF1', 'IGFBP4', 'IGTP', 'INA', 'ISCA2', 'ITM2C', 'KCNA1', 'KCNC2', 'KCTD4', 'KCTD6', 'KRT18', 'KRT73', 'LAMP5', 'LAPTM4A', 'LIN7B', 'LMO4', 'LY6E', 'MAB21L1', 'MAL', 'MAL2', 'MAN1A', 'MAT2B', 'METTL14', 'METTL23', 'MGAT4C', 'MIA', 'MICU1', 'MIEN1', 'MT2', 'NDFIP1', 'NEFL', 'NELL2', 'NEUROD1', 'NPTX2', 'NPY2R', 'NR1D1', 'NREP', 'NRIP3', 'NTS', 'NUDT2', 'NXPH2', 'OPRM1', 'PAPSS1', 'PCDH8', 'PCDHA3', 'PCDHAC1', 'PCDHB1', 'PCDHB11', 'PCDHB14', 'PCDHB17', 'PCDHB18', 'PCDHB7', 'PCDHGA3', 'PCDHGA9', 'PDE11A', 'PDP1', 'PER3', 'PHKG2', 'PKIG', 'PLA2G7', 'PLCXD2', 'PLP1', 'PLS3', 'PMP22', 'PNOC', 'PON2', 'PRKCG', 'PRLR', 'PTPRZ1', 'QRFPR', 'RAB15', 'RAB31', 'RAC1', 'RALYL', 'RASL11A', 'RBFOX3', 'RERG', 'RFC2', 'RHEBL1', 'SATB2', 'SCCPDH', 'SDCBP', 'SELM', 'SEMA3E', 'SEPP1', 'SGPP2', 'SH3BGRL', 'SLC17A6', 'SLC1A1', 'SLC1A3', 'SLC25A17', 'SLC25A18', 'SLC25A36', 'SLC50A1', 'SLN', 'SP9', 'ST6GALNAC5', 'STAC', 'SV2B', 'SYNDIG1L', 'TACR1', 'THSD7A', 'TIMP4', 'TM7SF2', 'TMEM130', 'TNFRSF12A', 'TOMM22', 'TPM1', 'TRAIP', 'TRAPPC1', 'TRAPPC2L', 'TSC22D1', 'TSHZ2', 'TUBA8', 'TWISTNB', 'UCMA', 'UROD', 'WT1', 'YTHDF1', 'ZMYM1', 'ZNHIT3'], ['2810468N07RIK', 'A830018L16RIK', 'ABHD3', 'ACTA2', 'ACVR1C', 'ADARB2', 'ADRBK2', 'ALDH1L1', 'ARHGAP24', 'ARL4A', 'ARX', 'ASCL1', 'ATP2B4', 'BACE2', 'BCAP29', 'BGLAP3', 'CACNG3', 'CALB2', 'CALCA', 'CAMK2D', 'CAR10', 'CAR4', 'CARTPT', 'CD164', 'CDCA7', 'CDH18', 'CHL1', 'CHRNA2', 'CIDEA', 'CNP', 'CNTN6', 'CNTNAP4', 'COL14A1', 'COL6A1', 'CPNE2', 'CTGF', 'CTSZ', 'CXCL14', 'CYB5R2', 'DDAH1', 'DEPTOR', 'DKK3', 'DKKL1', 'DLX2', 'DLX6OS1', 'DUSP14', 'DYNLT3', 'EDNRB', 'ELP3', 'FAM46A', 'FAM84A', 'FBXW11', 'FDFT1', 'FGF12', 'FLRT3', 'FMO1', 'FOS', 'FRMD7', 'FSTL5', 'GFRA2', 'GLUL', 'GM15881', 'GNB5', 'GPM6B', 'GPR151', 'GPX1', 'GPX3', 'GRIA1', 'GSTA4', 'HN1', 'HPCAL4', 'ID2', 'ID3', 'IL1RAPL2', 'ITM2A', 'KCNIP2', 'KCNV1', 'KCTD8', 'KLF10', 'KLK8', 'KRT12', 'LCAT', 'LDB2', 'LHFPL3', 'LIPG', 'LRRC61', 'LRRTM4', 'LY6G6E', 'LYPD1', 'MAPRE2', 'MED10', 'MFGE8', 'MMD2', 'MOSPD1', 'MPI', 'MRAP2', 'MRPS28', 'MSMO1', 'MYL4', 'NDNF', 'NDST4', 'NDUFS1', 'NDUFS2', 'NECAB3', 'NEUROD2', 'NGB', 'NKX2-1', 'NPTX1', 'NR4A2', 'NRG1', 'NRIP2', 'NRP1', 'NTSR2', 'NUDT4', 'OLFM3', 'OSBPL1A', 'OTOF', 'PCDHA8', 'PCDHB12', 'PCDHB19', 'PCDHB6', 'PCDHGA7', 'PCDHGA8', 'PCSK5', 'PDE1A', 'PDLIM3', 'PEA15A', 'PENK', 'PGM2L1', 'PGR', 'PHLDA1', 'PHYHIP', 'PLCXD3', 'PPA2', 'PPP1R3C', 'PRDX4', 'PSMA4', 'PTGDS', 'PTGFR', 'PVALB', 'QK', 'QPCT', 'RAB26', 'RAB7', 'RAMP3', 'RASGRF1', 'RASGRP1', 'RGS9', 'RNH1', 'RPRM', 'SCD2', 'SCG2', 'SEC11C', 'SEPT4', 'SERPINI1', 'SLC1A2', 'SLC25A11', 'SLC30A9', 'SLC5A7', 'SLC6A1', 'SLC7A3', 'SLC7A4', 'SMAD3', 'SNCA', 'SNRPE', 'SPP1', 'SPRY4', 'ST3GAL6', 'STAT4', 'STMN4', 'STX12', 'SYT10', 'TAC2', 'TCERG1L', 'TEDDM3', 'TIMP3', 'TMEFF1', 'TMEFF2', 'TMEM215', 'TMEM60', 'TMSB10', 'TMX1', 'TOX', 'TRIM32', 'TRPV6', 'TSC22D3', 'TSPAN13', 'TUBB4B', 'UAP1', 'UGDH', 'USP46', 'VIP', 'VSIG2', 'WFS1', 'YTHDC2', 'YTHDF3', 'ZFAND6', 'ZFP57', 'ZFP637'], ['6330403K07RIK', '9430021M05RIK', 'ACOT13', 'ACTA1', 'ADAMTS3', 'ADM', 'AGRP', 'AK5', 'AKR1C18', 'AKR1E1', 'ALKBH5', 'APOD', 'ARC', 'ARF5', 'ASS1', 'ATP1B2', 'B230216N24RIK', 'B3GALT2', 'BAIAP2', 'BC1', 'BCAN', 'BDNF', 'BHLHE40', 'BLNK', 'BSG', 'BTBD10', 'CAMK2N1', 'CAR2', 'CBLN2', 'CCK', 'CD200', 'CD302', 'CDH9', 'CENPW', 'CHODL', 'CHRM2', 'CHRNB3', 'COMMD3', 'CPLX1', 'CPNE4', 'CPNE7', 'CRH', 'CRHBP', 'CRIP2', 'CTXN1', 'CYB561', 'CYP2J9', 'DBI', 'DDIT4L', 'DTWD1', 'DUSP1', 'EGR2', 'EIF4E', 'ENPP2', 'EPHA4', 'EPHX4', 'F3', 'FAM134A', 'FAM3C', 'FAM81A', 'FAM84B', 'FBXO44', 'FKBP1A', 'FMNL1', 'FOSB', 'FOSL1', 'FREM1', 'FXYD7', 'GABRA5', 'GALNTL6', 'GFAP', 'GJA1', 'GJB6', 'GM13629', 'GNAI1', 'GSTM5', 'HDAC9', 'HERC3', 'HHATL', 'HMGCR', 'HNRNPH2', 'HS3ST4', 'HSPA2', 'HSPD1', 'IFI27', 'IFIT3', 'INSL6', 'IPCEF1', 'KCNK2', 'KIF5A', 'KIFC2', 'LAMTOR5', 'LAPTM4B', 'LGMN', 'LHFPL5', 'LMO3', 'LPAR1', 'LYPD6B', 'MC4R', 'MCTS1', 'MRPL13', 'MRPL33', 'MRPS5', 'MYO5B', 'NDUFAF2', 'NEK7', 'NELL1', 'NFIA', 'NFIB', 'NIPSNAP3B', 'NKAIN4', 'NOV', 'NPAS1', 'NPDC1', 'NPY', 'NRGN', 'NRSN2', 'NXPH4', 'OSGIN2', 'PACSIN2', 'PALMD', 'PAMR1', 'PCBD1', 'PCDH15', 'PCDHA10', 'PCDHA11', 'PCDHA9', 'PCDHB10', 'PCDHB2', 'PCDHB5', 'PCDHB9', 'PCDHGA12', 'PDXK', 'PDYN', 'PITPNC1', 'PLA2G4A', 'PLLP', 'PNPO', 'PPM1H', 'PPP1R1B', 'PPP3CB', 'PRMT2', 'PRSS22', 'PSAT1', 'PTER', 'PTK2', 'PTPRK', 'RAB3C', 'RAP1GDS1', 'RCAN2', 'RGS10', 'RGS12', 'RGS2', 'RLN1', 'RPP25', 'RSPH9', 'RWDD2A', 'S100A1', 'S100A10', 'S1PR1', 'SCNN1A', 'SEMA3C', 'SERPINB11', 'SERPINE2', 'SGK1', 'SLC17A7', 'SLC6A11', 'SLC6A15', 'SNCG', 'SNHG4', 'SNRPB2', 'SNRPG', 'SNURF', 'SOSTDC1', 'SPINK8', 'SPON1', 'SST', 'SSTR2', 'ST3GAL5', 'SYNDIG1', 'TAC1', 'TACR3', 'TCEAL5', 'THRSP', 'TMBIM6', 'TMEM159', 'TMEM97', 'TNFAIP6', 'TNFAIP8L3', 'TPBG', 'TPM2', 'TRAP1', 'TSPAN6', 'TUSC3', 'UCP2', 'VGF', 'WDPCP', 'WLS']]INFO:root:795 training genes are saved in `uns``training_genes` of both single cell and spatial Anndatas.
+INFO:root:795 overlapped genes are saved in `uns``overlap_genes` of both single cell and spatial Anndatas.
+INFO:root:uniform based density prior is calculated and saved in `obs``uniform_density` of the spatial Anndata.
+INFO:root:rna count based density prior is calculated and saved in `obs``rna_count_based_density` of the spatial Anndata.
+INFO:root:Allocate tensors for mapping.
+INFO:root:Begin training with 795 genes and rna_count_based density_prior in clusters mode...
+INFO:root:Printing scores every 100 epochs.
+INFO:root:Saving results..
+INFO:root:795 training genes are saved in `uns``training_genes` of both single cell and spatial Anndatas.
+INFO:root:795 overlapped genes are saved in `uns``overlap_genes` of both single cell and spatial Anndatas.
+INFO:root:uniform based density prior is calculated and saved in `obs``uniform_density` of the spatial Anndata.
+INFO:root:rna count based density prior is calculated and saved in `obs``rna_count_based_density` of the spatial Anndata.
+INFO:root:Allocate tensors for mapping.
+INFO:root:Begin training with 795 genes and rna_count_based density_prior in clusters mode...
+INFO:root:Printing scores every 100 epochs.
+INFO:root:Saving results..
+INFO:root:795 training genes are saved in `uns``training_genes` of both single cell and spatial Anndatas.
+INFO:root:795 overlapped genes are saved in `uns``overlap_genes` of both single cell and spatial Anndatas.
+INFO:root:uniform based density prior is calculated and saved in `obs``uniform_density` of the spatial Anndata.
+INFO:root:rna count based density prior is calculated and saved in `obs``rna_count_based_density` of the spatial Anndata.
+INFO:root:Allocate tensors for mapping.
+INFO:root:Begin training with 795 genes and rna_count_based density_prior in clusters mode...
+INFO:root:Printing scores every 100 epochs.
+INFO:root:Saving results..
+INFO:root:795 training genes are saved in `uns``training_genes` of both single cell and spatial Anndatas.
+INFO:root:795 overlapped genes are saved in `uns``overlap_genes` of both single cell and spatial Anndatas.
+INFO:root:uniform based density prior is calculated and saved in `obs``uniform_density` of the spatial Anndata.
+INFO:root:rna count based density prior is calculated and saved in `obs``rna_count_based_density` of the spatial Anndata.
+INFO:root:Allocate tensors for mapping.
+INFO:root:Begin training with 795 genes and rna_count_based density_prior in clusters mode...
+INFO:root:Printing scores every 100 epochs.
+INFO:root:Saving results..
+INFO:root:796 training genes are saved in `uns``training_genes` of both single cell and spatial Anndatas.
+INFO:root:796 overlapped genes are saved in `uns``overlap_genes` of both single cell and spatial Anndatas.
+INFO:root:uniform based density prior is calculated and saved in `obs``uniform_density` of the spatial Anndata.
+INFO:root:rna count based density prior is calculated and saved in `obs``rna_count_based_density` of the spatial Anndata.
+INFO:root:Allocate tensors for mapping.
+INFO:root:Begin training with 796 genes and rna_count_based density_prior in clusters mode...
+INFO:root:Printing scores every 100 epochs.
+INFO:root:Saving results..
+
+{'pearson_mean': 0.1546, 'spearman_mean_genewise': 0.1427, 'l1_error_mean': 1.1276, 'l2_errors_mean': 2.8104, 'r2_scores_mean': -0.7113, 'pearson_std': 0.1394, 'l2_error_q1': 1.5838, 'l2_error_q2': 2.4412, 'l2_error_q3': 3.4145, 'r2_score_q1': -0.6854, 'r2_score_q2': -0.2747, 'r2_score_q3': -0.124, 'fold': 5, 'phase': 'val', 'loss': 2.8104}
+[Fold 5] SpaGE val Spearman: 0.1427, Pearson: 0.1546
+Saved all fold metrics to Result/starMAPbaseline/spage/fold_results/fold_metrics.csv
+Saved mean and std metrics to Result/starMAPbaseline/spage/fold_results/metrics_summary.csv
+all_pred_res :::: (310, 994)
+Result/starMAPbaseline//SpaGE_impute.csv
+We run Tangram for this data
+
+
+===== Fold 1 =====
+Number of train genes: 795, Number of test genes: 199
+Score: 0.407, KL reg: 0.081
+Score: 0.488, KL reg: 0.000
+Score: 0.489, KL reg: 0.000
+Score: 0.490, KL reg: 0.000
+Score: 0.490, KL reg: 0.000
+Score: 0.490, KL reg: 0.000
+Score: 0.490, KL reg: 0.000
+Score: 0.490, KL reg: 0.000
+Score: 0.490, KL reg: 0.000
+Score: 0.490, KL reg: 0.000
+{'fold': 1, 'phase': 'val', 'loss': 197.0864, 'pearson_mean': 0.1749, 'spearman_mean_genewise': 0.1761, 'l1_error_mean': 9.8241, 'l2_errors_mean': 197.0864, 'r2_scores_mean': -115.1189, 'pearson_std': 0.12, 'l2_error_q1': 4.968, 'l2_error_q2': 54.0919, 'l2_error_q3': 274.6753, 'r2_score_q1': -171.3844, 'r2_score_q2': -33.5058, 'r2_score_q3': -2.5721}
+[Fold 1] Spearman: 0.1761, Pearson: 0.1749, L2 loss: 197.0864
+
+===== Fold 2 =====
+Number of train genes: 795, Number of test genes: 199
+Score: 0.407, KL reg: 0.084
+Score: 0.486, KL reg: 0.000
+Score: 0.488, KL reg: 0.000
+Score: 0.488, KL reg: 0.000
+Score: 0.489, KL reg: 0.000
+Score: 0.489, KL reg: 0.000
+Score: 0.489, KL reg: 0.000
+Score: 0.489, KL reg: 0.000
+Score: 0.489, KL reg: 0.000
+Score: 0.489, KL reg: 0.000
+{'fold': 2, 'phase': 'val', 'loss': 196.4178, 'pearson_mean': 0.1678, 'spearman_mean_genewise': 0.1701, 'l1_error_mean': 9.9635, 'l2_errors_mean': 196.4178, 'r2_scores_mean': -121.9703, 'pearson_std': 0.1095, 'l2_error_q1': 5.0011, 'l2_error_q2': 65.3938, 'l2_error_q3': 279.69, 'r2_score_q1': -172.2716, 'r2_score_q2': -41.5053, 'r2_score_q3': -2.863}
+[Fold 2] Spearman: 0.1701, Pearson: 0.1678, L2 loss: 196.4178
+
+===== Fold 3 =====
+Number of train genes: 795, Number of test genes: 199
+Score: 0.405, KL reg: 0.087
+Score: 0.488, KL reg: 0.000
+Score: 0.490, KL reg: 0.000
+Score: 0.490, KL reg: 0.000
+Score: 0.490, KL reg: 0.000
+Score: 0.490, KL reg: 0.000
+Score: 0.491, KL reg: 0.000
+Score: 0.491, KL reg: 0.000
+Score: 0.491, KL reg: 0.000
+Score: 0.491, KL reg: 0.000
+{'fold': 3, 'phase': 'val', 'loss': 203.8825, 'pearson_mean': 0.1876, 'spearman_mean_genewise': 0.188, 'l1_error_mean': 9.8352, 'l2_errors_mean': 203.8825, 'r2_scores_mean': -119.8117, 'pearson_std': 0.1129, 'l2_error_q1': 4.8857, 'l2_error_q2': 47.8198, 'l2_error_q3': 289.8992, 'r2_score_q1': -157.7472, 'r2_score_q2': -32.608, 'r2_score_q3': -2.2006}
+[Fold 3] Spearman: 0.1880, Pearson: 0.1876, L2 loss: 203.8825
+
+===== Fold 4 =====
+Number of train genes: 795, Number of test genes: 199
+Score: 0.409, KL reg: 0.080
+Score: 0.491, KL reg: 0.000
+Score: 0.492, KL reg: 0.000
+Score: 0.493, KL reg: 0.000
+Score: 0.493, KL reg: 0.000
+Score: 0.493, KL reg: 0.000
+Score: 0.493, KL reg: 0.000
+Score: 0.493, KL reg: 0.000
+Score: 0.493, KL reg: 0.000
+Score: 0.493, KL reg: 0.000
+{'fold': 4, 'phase': 'val', 'loss': 225.5762, 'pearson_mean': 0.1756, 'spearman_mean_genewise': 0.178, 'l1_error_mean': 10.6515, 'l2_errors_mean': 225.5762, 'r2_scores_mean': -129.3357, 'pearson_std': 0.1191, 'l2_error_q1': 8.8873, 'l2_error_q2': 66.7837, 'l2_error_q3': 339.564, 'r2_score_q1': -188.2233, 'r2_score_q2': -41.7119, 'r2_score_q3': -5.2329}
+[Fold 4] Spearman: 0.1780, Pearson: 0.1756, L2 loss: 225.5762
+
+===== Fold 5 =====
+Number of train genes: 796, Number of test genes: 198
+Score: 0.404, KL reg: 0.085
+Score: 0.488, KL reg: 0.000
+Score: 0.490, KL reg: 0.000
+Score: 0.490, KL reg: 0.000
+Score: 0.490, KL reg: 0.000
+Score: 0.491, KL reg: 0.000
+Score: 0.491, KL reg: 0.000
+Score: 0.491, KL reg: 0.000
+Score: 0.491, KL reg: 0.000
+Score: 0.491, KL reg: 0.000
+{'fold': 5, 'phase': 'val', 'loss': 220.3856, 'pearson_mean': 0.1738, 'spearman_mean_genewise': 0.1738, 'l1_error_mean': 10.6065, 'l2_errors_mean': 220.3856, 'r2_scores_mean': -125.8965, 'pearson_std': 0.1254, 'l2_error_q1': 7.5579, 'l2_error_q2': 77.3075, 'l2_error_q3': 313.4076, 'r2_score_q1': -151.6412, 'r2_score_q2': -53.1696, 'r2_score_q3': -3.3408}
+[Fold 5] Spearman: 0.1738, Pearson: 0.1738, L2 loss: 220.3856
+Saved all fold metrics to Result/starMAPbaseline/tangram/fold_results/fold_metrics.csv
+Saved mean and std metrics to Result/starMAPbaseline/tangram/fold_results/metrics_summary.csv
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+outdir1: Result/starMAPbaseline/stplus
+
+===== Fold 1 =====
+Number of train genes: 795, Number of test genes: 199
+Models will be saved in: Result/starMAPbaseline/process_file/stPlus-demo-5min*.pt
+
+Spatial transcriptomics data: 1549 cells * 795 genes
+Reference scRNA-seq data:     14249 cells * 994 genes
+199 genes to be predicted
+
+Start initialization
+⚙️  Selected physical GPU 1 (22.05 GB free)
+Start embedding
+	[1] recon_loss: 9953.546, pred_loss: 5186.643, total_loss: 15140.189
+	[2] recon_loss: 8764.706, pred_loss: 3430.791, total_loss: 12195.497
+	[3] recon_loss: 8392.715, pred_loss: 2969.313, total_loss: 11362.028
+	[4] recon_loss: 8076.607, pred_loss: 2828.640, total_loss: 10905.247
+	[5] recon_loss: 7753.749, pred_loss: 2757.850, total_loss: 10511.599
+	[6] recon_loss: 7473.027, pred_loss: 2708.615, total_loss: 10181.642
+	[7] recon_loss: 7222.870, pred_loss: 2672.843, total_loss: 9895.713
+	[8] recon_loss: 6989.432, pred_loss: 2646.654, total_loss: 9636.086
+	[9] recon_loss: 6773.889, pred_loss: 2624.992, total_loss: 9398.880
+	[10] recon_loss: 6566.912, pred_loss: 2607.863, total_loss: 9174.775
+	[11] recon_loss: 6378.227, pred_loss: 2594.716, total_loss: 8972.943
+	[12] recon_loss: 6204.063, pred_loss: 2526.130, total_loss: 8730.193
+	[13] recon_loss: 6039.435, pred_loss: 2306.975, total_loss: 8346.409
+	[14] recon_loss: 5884.756, pred_loss: 2273.797, total_loss: 8158.554
+	[15] recon_loss: 5739.415, pred_loss: 2265.732, total_loss: 8005.148
+	[16] recon_loss: 5599.597, pred_loss: 2258.526, total_loss: 7858.123
+	[17] recon_loss: 5465.903, pred_loss: 2253.677, total_loss: 7719.580
+	[18] recon_loss: 5337.117, pred_loss: 2249.020, total_loss: 7586.137
+	[19] recon_loss: 5211.142, pred_loss: 2221.363, total_loss: 7432.505
+	[20] recon_loss: 5094.082, pred_loss: 2199.546, total_loss: 7293.628
+	[21] recon_loss: 4981.470, pred_loss: 2194.830, total_loss: 7176.301
+	[22] recon_loss: 4874.189, pred_loss: 2190.960, total_loss: 7065.149
+	[23] recon_loss: 4770.566, pred_loss: 2187.977, total_loss: 6958.543
+	[24] recon_loss: 4672.446, pred_loss: 2184.773, total_loss: 6857.219
+	[25] recon_loss: 4579.946, pred_loss: 2182.842, total_loss: 6762.788
+	[26] recon_loss: 4489.391, pred_loss: 2180.870, total_loss: 6670.261
+	[27] recon_loss: 4403.673, pred_loss: 2178.302, total_loss: 6581.975
+	[28] recon_loss: 4320.229, pred_loss: 2176.399, total_loss: 6496.628
+	[29] recon_loss: 4241.652, pred_loss: 2174.229, total_loss: 6415.881
+	[30] recon_loss: 4166.516, pred_loss: 2172.542, total_loss: 6339.058
+	[31] recon_loss: 4095.366, pred_loss: 2171.333, total_loss: 6266.698
+	[32] recon_loss: 4025.476, pred_loss: 2169.672, total_loss: 6195.147
+	[33] recon_loss: 3961.046, pred_loss: 2167.927, total_loss: 6128.972
+	[34] recon_loss: 3898.169, pred_loss: 2166.184, total_loss: 6064.353
+	[35] recon_loss: 3838.374, pred_loss: 2164.482, total_loss: 6002.856
+	[36] recon_loss: 3779.179, pred_loss: 2162.146, total_loss: 5941.325
+	[37] recon_loss: 3724.294, pred_loss: 2161.196, total_loss: 5885.491
+	[38] recon_loss: 3655.766, pred_loss: 2159.166, total_loss: 5814.932
+	[39] recon_loss: 3603.202, pred_loss: 2157.319, total_loss: 5760.521
+	[40] recon_loss: 3552.537, pred_loss: 2155.304, total_loss: 5707.841
+	[41] recon_loss: 3506.137, pred_loss: 2154.127, total_loss: 5660.264
+	[42] recon_loss: 3459.451, pred_loss: 2135.883, total_loss: 5595.334
+	[43] recon_loss: 3415.530, pred_loss: 1890.741, total_loss: 5306.271
+	[44] recon_loss: 3372.762, pred_loss: 1877.521, total_loss: 5250.283
+	[45] recon_loss: 3334.397, pred_loss: 1874.697, total_loss: 5209.093
+	[46] recon_loss: 3294.130, pred_loss: 1872.515, total_loss: 5166.645
+	[47] recon_loss: 3256.735, pred_loss: 1870.552, total_loss: 5127.287
+	[48] recon_loss: 3220.855, pred_loss: 1868.740, total_loss: 5089.595
+	[49] recon_loss: 3186.340, pred_loss: 1838.994, total_loss: 5025.333
+	[50] recon_loss: 3153.477, pred_loss: 1829.977, total_loss: 4983.454
+	[51] recon_loss: 3121.347, pred_loss: 1828.025, total_loss: 4949.372
+	[52] recon_loss: 3088.184, pred_loss: 1825.630, total_loss: 4913.814
+	[53] recon_loss: 3058.051, pred_loss: 1823.452, total_loss: 4881.503
+	[54] recon_loss: 3030.141, pred_loss: 1821.436, total_loss: 4851.577
+	[55] recon_loss: 3000.905, pred_loss: 1819.462, total_loss: 4820.367
+	[56] recon_loss: 2972.308, pred_loss: 1817.626, total_loss: 4789.934
+	[57] recon_loss: 2944.526, pred_loss: 1815.418, total_loss: 4759.944
+	[58] recon_loss: 2919.411, pred_loss: 1813.767, total_loss: 4733.178
+	[59] recon_loss: 2893.674, pred_loss: 1811.388, total_loss: 4705.062
+	[60] recon_loss: 2869.363, pred_loss: 1810.073, total_loss: 4679.436
+	[61] recon_loss: 2845.253, pred_loss: 1807.990, total_loss: 4653.243
+	[62] recon_loss: 2822.650, pred_loss: 1806.167, total_loss: 4628.817
+	[63] recon_loss: 2796.295, pred_loss: 1804.416, total_loss: 4600.711
+	[64] recon_loss: 2774.134, pred_loss: 1802.073, total_loss: 4576.207
+	[65] recon_loss: 2751.611, pred_loss: 1800.623, total_loss: 4552.234
+	[66] recon_loss: 2732.068, pred_loss: 1799.464, total_loss: 4531.531
+	[67] recon_loss: 2710.548, pred_loss: 1797.684, total_loss: 4508.232
+	[68] recon_loss: 2692.287, pred_loss: 1796.203, total_loss: 4488.490
+	[69] recon_loss: 2672.160, pred_loss: 1793.806, total_loss: 4465.966
+	[70] recon_loss: 2653.384, pred_loss: 1792.211, total_loss: 4445.595
+	[71] recon_loss: 2634.789, pred_loss: 1790.336, total_loss: 4425.124
+	[72] recon_loss: 2618.702, pred_loss: 1789.053, total_loss: 4407.755
+Start prediction
+	Using model 1 to predict
+	Using model 2 to predict
+	Using model 3 to predict
+	Using model 4 to predict
+	Using model 5 to predict
+stPlus_res type ++++++++++++++++++++++++++ : <class 'tuple'>
+stPlus_df:  (1549, 199)
+stPlus_df type:  <class 'pandas.core.frame.DataFrame'>
+all_pred_res shape:  (310, 994)
+my_test (310, 199)
+{'fold': 1, 'phase': 'val', 'loss': 2.7975, 'pearson_mean': 0.09, 'spearman_mean_genewise': 0.0959, 'l1_error_mean': 1.0716, 'l2_errors_mean': 2.7975, 'r2_scores_mean': -0.5542, 'pearson_std': 0.1027, 'l2_error_q1': 1.4213, 'l2_error_q2': 2.0023, 'l2_error_q3': 3.3459, 'r2_score_q1': -0.3763, 'r2_score_q2': -0.1796, 'r2_score_q3': -0.0906}
+
+===== Fold 2 =====
+Number of train genes: 795, Number of test genes: 199
+Models will be saved in: Result/starMAPbaseline/process_file/stPlus-demo-5min*.pt
+
+Spatial transcriptomics data: 1549 cells * 795 genes
+Reference scRNA-seq data:     14249 cells * 994 genes
+199 genes to be predicted
+
+Start initialization
+⚙️  Selected physical GPU 1 (22.05 GB free)
+Start embedding
+	[1] recon_loss: 9859.033, pred_loss: 6090.817, total_loss: 15949.850
+	[2] recon_loss: 8803.634, pred_loss: 4288.332, total_loss: 13091.966
+	[3] recon_loss: 8405.292, pred_loss: 3869.847, total_loss: 12275.139
+	[4] recon_loss: 8059.005, pred_loss: 3475.241, total_loss: 11534.246
+	[5] recon_loss: 7763.298, pred_loss: 3354.607, total_loss: 11117.905
+	[6] recon_loss: 7480.425, pred_loss: 3306.516, total_loss: 10786.941
+	[7] recon_loss: 7218.898, pred_loss: 3272.859, total_loss: 10491.757
+	[8] recon_loss: 6975.521, pred_loss: 3247.154, total_loss: 10222.675
+	[9] recon_loss: 6749.617, pred_loss: 3227.844, total_loss: 9977.462
+	[10] recon_loss: 6545.997, pred_loss: 3212.466, total_loss: 9758.463
+	[11] recon_loss: 6357.276, pred_loss: 3200.474, total_loss: 9557.750
+	[12] recon_loss: 6165.525, pred_loss: 3191.105, total_loss: 9356.630
+	[13] recon_loss: 5983.007, pred_loss: 3182.824, total_loss: 9165.831
+	[14] recon_loss: 5732.921, pred_loss: 3177.010, total_loss: 8909.931
+	[15] recon_loss: 5580.037, pred_loss: 3171.411, total_loss: 8751.448
+	[16] recon_loss: 5432.377, pred_loss: 3166.606, total_loss: 8598.983
+	[17] recon_loss: 5289.144, pred_loss: 3162.787, total_loss: 8451.931
+	[18] recon_loss: 5160.346, pred_loss: 3159.635, total_loss: 8319.981
+	[19] recon_loss: 5034.820, pred_loss: 3156.718, total_loss: 8191.538
+	[20] recon_loss: 4918.245, pred_loss: 3154.322, total_loss: 8072.567
+	[21] recon_loss: 4804.691, pred_loss: 3152.186, total_loss: 7956.877
+	[22] recon_loss: 4696.342, pred_loss: 3114.171, total_loss: 7810.513
+	[23] recon_loss: 4593.853, pred_loss: 2964.070, total_loss: 7557.923
+	[24] recon_loss: 4495.667, pred_loss: 2961.544, total_loss: 7457.210
+	[25] recon_loss: 4401.615, pred_loss: 2959.301, total_loss: 7360.916
+	[26] recon_loss: 4309.962, pred_loss: 2957.820, total_loss: 7267.782
+	[27] recon_loss: 4222.422, pred_loss: 2956.417, total_loss: 7178.839
+	[28] recon_loss: 4141.246, pred_loss: 2955.251, total_loss: 7096.497
+	[29] recon_loss: 4062.133, pred_loss: 2854.544, total_loss: 6916.677
+	[30] recon_loss: 3986.149, pred_loss: 2686.493, total_loss: 6672.643
+	[31] recon_loss: 3914.178, pred_loss: 2683.937, total_loss: 6598.116
+	[32] recon_loss: 3843.244, pred_loss: 2678.678, total_loss: 6521.922
+	[33] recon_loss: 3773.621, pred_loss: 2675.649, total_loss: 6449.270
+	[34] recon_loss: 3709.294, pred_loss: 2674.309, total_loss: 6383.603
+	[35] recon_loss: 3648.107, pred_loss: 2672.091, total_loss: 6320.199
+	[36] recon_loss: 3588.212, pred_loss: 2670.484, total_loss: 6258.695
+	[37] recon_loss: 3531.649, pred_loss: 2632.694, total_loss: 6164.343
+	[38] recon_loss: 3477.064, pred_loss: 2431.955, total_loss: 5909.019
+	[39] recon_loss: 3427.634, pred_loss: 2427.658, total_loss: 5855.292
+	[40] recon_loss: 3377.204, pred_loss: 2424.711, total_loss: 5801.914
+	[41] recon_loss: 3328.265, pred_loss: 2423.207, total_loss: 5751.472
+	[42] recon_loss: 3285.014, pred_loss: 2420.481, total_loss: 5705.495
+	[43] recon_loss: 3242.382, pred_loss: 2419.179, total_loss: 5661.561
+	[44] recon_loss: 3200.949, pred_loss: 2417.180, total_loss: 5618.129
+	[45] recon_loss: 3160.753, pred_loss: 2415.623, total_loss: 5576.375
+	[46] recon_loss: 3120.901, pred_loss: 2413.668, total_loss: 5534.569
+	[47] recon_loss: 3082.902, pred_loss: 2411.880, total_loss: 5494.782
+	[48] recon_loss: 3047.929, pred_loss: 2410.468, total_loss: 5458.398
+	[49] recon_loss: 3014.330, pred_loss: 2407.682, total_loss: 5422.012
+	[50] recon_loss: 2980.443, pred_loss: 2406.625, total_loss: 5387.068
+	[51] recon_loss: 2948.850, pred_loss: 2404.700, total_loss: 5353.551
+	[52] recon_loss: 2916.622, pred_loss: 2403.334, total_loss: 5319.955
+	[53] recon_loss: 2886.142, pred_loss: 2401.328, total_loss: 5287.470
+	[54] recon_loss: 2858.832, pred_loss: 2399.222, total_loss: 5258.055
+	[55] recon_loss: 2830.183, pred_loss: 2397.846, total_loss: 5228.029
+	[56] recon_loss: 2803.078, pred_loss: 2396.368, total_loss: 5199.446
+	[57] recon_loss: 2777.590, pred_loss: 2394.189, total_loss: 5171.779
+	[58] recon_loss: 2751.282, pred_loss: 2393.318, total_loss: 5144.600
+	[59] recon_loss: 2726.668, pred_loss: 2390.995, total_loss: 5117.664
+	[60] recon_loss: 2701.345, pred_loss: 2389.417, total_loss: 5090.762
+	[61] recon_loss: 2676.180, pred_loss: 2387.432, total_loss: 5063.612
+	[62] recon_loss: 2650.352, pred_loss: 2385.734, total_loss: 5036.086
+	[63] recon_loss: 2629.095, pred_loss: 2384.240, total_loss: 5013.334
+	[64] recon_loss: 2607.824, pred_loss: 2382.682, total_loss: 4990.505
+	[65] recon_loss: 2587.305, pred_loss: 2380.537, total_loss: 4967.843
+	[66] recon_loss: 2566.057, pred_loss: 2317.154, total_loss: 4883.211
+	[67] recon_loss: 2545.370, pred_loss: 2213.804, total_loss: 4759.174
+	[68] recon_loss: 2527.479, pred_loss: 2210.598, total_loss: 4738.077
+	[69] recon_loss: 2507.558, pred_loss: 2208.742, total_loss: 4716.300
+	[70] recon_loss: 2489.475, pred_loss: 2207.277, total_loss: 4696.752
+	[71] recon_loss: 2470.879, pred_loss: 2205.053, total_loss: 4675.932
+	[72] recon_loss: 2454.685, pred_loss: 2203.547, total_loss: 4658.232
+Start prediction
+	Using model 1 to predict
+	Using model 2 to predict
+	Using model 3 to predict
+	Using model 4 to predict
+	Using model 5 to predict
+stPlus_res type ++++++++++++++++++++++++++ : <class 'tuple'>
+stPlus_df:  (1549, 199)
+stPlus_df type:  <class 'pandas.core.frame.DataFrame'>
+all_pred_res shape:  (310, 994)
+my_test (310, 199)
+{'fold': 2, 'phase': 'val', 'loss': 2.6049, 'pearson_mean': 0.092, 'spearman_mean_genewise': 0.1023, 'l1_error_mean': 1.0309, 'l2_errors_mean': 2.6049, 'r2_scores_mean': -1.6477, 'pearson_std': 0.0936, 'l2_error_q1': 1.2651, 'l2_error_q2': 2.0799, 'l2_error_q3': 2.9239, 'r2_score_q1': -0.3021, 'r2_score_q2': -0.1424, 'r2_score_q3': -0.0801}
+
+===== Fold 3 =====
+Number of train genes: 795, Number of test genes: 199
+Models will be saved in: Result/starMAPbaseline/process_file/stPlus-demo-5min*.pt
+
+Spatial transcriptomics data: 1549 cells * 795 genes
+Reference scRNA-seq data:     14249 cells * 994 genes
+199 genes to be predicted
+
+Start initialization
+⚙️  Selected physical GPU 1 (22.05 GB free)
+Start embedding
+	[1] recon_loss: 10041.808, pred_loss: 4710.696, total_loss: 14752.505
+	[2] recon_loss: 8847.490, pred_loss: 3188.725, total_loss: 12036.215
+	[3] recon_loss: 8480.432, pred_loss: 2973.703, total_loss: 11454.135
+	[4] recon_loss: 8172.439, pred_loss: 2872.105, total_loss: 11044.544
+	[5] recon_loss: 7886.186, pred_loss: 2791.405, total_loss: 10677.591
+	[6] recon_loss: 7612.482, pred_loss: 2746.168, total_loss: 10358.649
+	[7] recon_loss: 7353.276, pred_loss: 2715.007, total_loss: 10068.284
+	[8] recon_loss: 7105.710, pred_loss: 2691.387, total_loss: 9797.097
+	[9] recon_loss: 6868.354, pred_loss: 2673.391, total_loss: 9541.744
+	[10] recon_loss: 6648.790, pred_loss: 2659.047, total_loss: 9307.837
+	[11] recon_loss: 6457.605, pred_loss: 2547.231, total_loss: 9004.836
+	[12] recon_loss: 6282.034, pred_loss: 2534.183, total_loss: 8816.217
+	[13] recon_loss: 6114.822, pred_loss: 2526.051, total_loss: 8640.873
+	[14] recon_loss: 5958.591, pred_loss: 2519.666, total_loss: 8478.257
+	[15] recon_loss: 5810.990, pred_loss: 2514.228, total_loss: 8325.218
+	[16] recon_loss: 5670.407, pred_loss: 2509.291, total_loss: 8179.698
+	[17] recon_loss: 5537.106, pred_loss: 2505.727, total_loss: 8042.833
+	[18] recon_loss: 5407.697, pred_loss: 2503.042, total_loss: 7910.739
+	[19] recon_loss: 5285.598, pred_loss: 2500.223, total_loss: 7785.821
+	[20] recon_loss: 5170.070, pred_loss: 2496.733, total_loss: 7666.804
+	[21] recon_loss: 5056.884, pred_loss: 2494.665, total_loss: 7551.549
+	[22] recon_loss: 4948.973, pred_loss: 2486.517, total_loss: 7435.490
+	[23] recon_loss: 4840.350, pred_loss: 2395.173, total_loss: 7235.523
+	[24] recon_loss: 4739.110, pred_loss: 2387.041, total_loss: 7126.152
+	[25] recon_loss: 4643.396, pred_loss: 2382.976, total_loss: 7026.372
+	[26] recon_loss: 4548.490, pred_loss: 2380.176, total_loss: 6928.665
+	[27] recon_loss: 4460.622, pred_loss: 2375.729, total_loss: 6836.352
+	[28] recon_loss: 4378.228, pred_loss: 2362.555, total_loss: 6740.782
+	[29] recon_loss: 4298.330, pred_loss: 2359.853, total_loss: 6658.183
+	[30] recon_loss: 4223.318, pred_loss: 2358.373, total_loss: 6581.691
+	[31] recon_loss: 4152.719, pred_loss: 2356.835, total_loss: 6509.555
+	[32] recon_loss: 4083.178, pred_loss: 2355.122, total_loss: 6438.300
+	[33] recon_loss: 4015.549, pred_loss: 2353.678, total_loss: 6369.227
+	[34] recon_loss: 3947.007, pred_loss: 2352.225, total_loss: 6299.232
+	[35] recon_loss: 3885.810, pred_loss: 2350.878, total_loss: 6236.688
+	[36] recon_loss: 3827.948, pred_loss: 2349.169, total_loss: 6177.116
+	[37] recon_loss: 3769.988, pred_loss: 2347.704, total_loss: 6117.693
+	[38] recon_loss: 3718.739, pred_loss: 2346.591, total_loss: 6065.330
+	[39] recon_loss: 3666.925, pred_loss: 2322.890, total_loss: 5989.815
+	[40] recon_loss: 3612.964, pred_loss: 2303.526, total_loss: 5916.490
+	[41] recon_loss: 3563.349, pred_loss: 2301.213, total_loss: 5864.561
+	[42] recon_loss: 3517.910, pred_loss: 2299.504, total_loss: 5817.413
+	[43] recon_loss: 3474.802, pred_loss: 2297.786, total_loss: 5772.588
+	[44] recon_loss: 3432.331, pred_loss: 2295.447, total_loss: 5727.778
+	[45] recon_loss: 3386.088, pred_loss: 2293.281, total_loss: 5679.369
+	[46] recon_loss: 3346.230, pred_loss: 2291.925, total_loss: 5638.155
+	[47] recon_loss: 3306.923, pred_loss: 2289.067, total_loss: 5595.991
+	[48] recon_loss: 3270.761, pred_loss: 2236.614, total_loss: 5507.374
+	[49] recon_loss: 3236.516, pred_loss: 2117.174, total_loss: 5353.690
+	[50] recon_loss: 3205.206, pred_loss: 2104.335, total_loss: 5309.541
+	[51] recon_loss: 3169.327, pred_loss: 2101.063, total_loss: 5270.390
+	[52] recon_loss: 3137.299, pred_loss: 2098.397, total_loss: 5235.695
+	[53] recon_loss: 3108.370, pred_loss: 2096.276, total_loss: 5204.647
+	[54] recon_loss: 3079.406, pred_loss: 2093.990, total_loss: 5173.396
+	[55] recon_loss: 3050.081, pred_loss: 2092.078, total_loss: 5142.159
+	[56] recon_loss: 3023.749, pred_loss: 2090.232, total_loss: 5113.980
+	[57] recon_loss: 2996.035, pred_loss: 2087.917, total_loss: 5083.952
+	[58] recon_loss: 2971.209, pred_loss: 2085.818, total_loss: 5057.027
+	[59] recon_loss: 2945.381, pred_loss: 2084.297, total_loss: 5029.678
+	[60] recon_loss: 2921.312, pred_loss: 2082.834, total_loss: 5004.146
+	[61] recon_loss: 2897.367, pred_loss: 2080.996, total_loss: 4978.363
+	[62] recon_loss: 2874.497, pred_loss: 2078.933, total_loss: 4953.430
+	[63] recon_loss: 2853.644, pred_loss: 2077.268, total_loss: 4930.912
+	[64] recon_loss: 2832.781, pred_loss: 2075.260, total_loss: 4908.041
+	[65] recon_loss: 2812.345, pred_loss: 2074.316, total_loss: 4886.662
+	[66] recon_loss: 2791.315, pred_loss: 2072.521, total_loss: 4863.837
+	[67] recon_loss: 2772.898, pred_loss: 2070.612, total_loss: 4843.511
+	[68] recon_loss: 2753.063, pred_loss: 2068.893, total_loss: 4821.956
+	[69] recon_loss: 2729.894, pred_loss: 2067.694, total_loss: 4797.588
+	[70] recon_loss: 2711.816, pred_loss: 2055.651, total_loss: 4767.467
+	[71] recon_loss: 2694.571, pred_loss: 2034.588, total_loss: 4729.160
+	[72] recon_loss: 2676.256, pred_loss: 2032.494, total_loss: 4708.750
+	[73] recon_loss: 2652.876, pred_loss: 2030.793, total_loss: 4683.669
+	[74] recon_loss: 2635.229, pred_loss: 2029.461, total_loss: 4664.690
+	[75] recon_loss: 2620.562, pred_loss: 2027.883, total_loss: 4648.444
+Start prediction
+	Using model 1 to predict
+	Using model 2 to predict
+	Using model 3 to predict
+	Using model 4 to predict
+	Using model 5 to predict
+stPlus_res type ++++++++++++++++++++++++++ : <class 'tuple'>
+stPlus_df:  (1549, 199)
+stPlus_df type:  <class 'pandas.core.frame.DataFrame'>
+all_pred_res shape:  (310, 994)
+my_test (310, 199)
+{'fold': 3, 'phase': 'val', 'loss': 2.5275, 'pearson_mean': 0.0906, 'spearman_mean_genewise': 0.096, 'l1_error_mean': 1.0206, 'l2_errors_mean': 2.5275, 'r2_scores_mean': -0.4392, 'pearson_std': 0.1098, 'l2_error_q1': 1.2497, 'l2_error_q2': 1.9238, 'l2_error_q3': 3.0232, 'r2_score_q1': -0.3845, 'r2_score_q2': -0.1504, 'r2_score_q3': -0.0812}
+
+===== Fold 4 =====
+Number of train genes: 795, Number of test genes: 199
+Models will be saved in: Result/starMAPbaseline/process_file/stPlus-demo-5min*.pt
+
+Spatial transcriptomics data: 1549 cells * 795 genes
+Reference scRNA-seq data:     14249 cells * 994 genes
+199 genes to be predicted
+
+Start initialization
+⚙️  Selected physical GPU 1 (22.05 GB free)
+Start embedding
+	[1] recon_loss: 10193.037, pred_loss: 6232.454, total_loss: 16425.491
+	[2] recon_loss: 9067.144, pred_loss: 4183.132, total_loss: 13250.276
+	[3] recon_loss: 8676.906, pred_loss: 3759.054, total_loss: 12435.960
+	[4] recon_loss: 8363.159, pred_loss: 3605.579, total_loss: 11968.738
+	[5] recon_loss: 8005.335, pred_loss: 3523.385, total_loss: 11528.720
+	[6] recon_loss: 7680.380, pred_loss: 3462.300, total_loss: 11142.680
+	[7] recon_loss: 7377.927, pred_loss: 3415.689, total_loss: 10793.616
+	[8] recon_loss: 7056.732, pred_loss: 3383.844, total_loss: 10440.576
+	[9] recon_loss: 6837.652, pred_loss: 3360.599, total_loss: 10198.251
+	[10] recon_loss: 6632.825, pred_loss: 3342.889, total_loss: 9975.713
+	[11] recon_loss: 6435.183, pred_loss: 3328.721, total_loss: 9763.904
+	[12] recon_loss: 6256.569, pred_loss: 3317.188, total_loss: 9573.758
+	[13] recon_loss: 6092.358, pred_loss: 3308.151, total_loss: 9400.509
+	[14] recon_loss: 5937.115, pred_loss: 3300.320, total_loss: 9237.435
+	[15] recon_loss: 5790.258, pred_loss: 3294.017, total_loss: 9084.276
+	[16] recon_loss: 5651.208, pred_loss: 3288.594, total_loss: 8939.801
+	[17] recon_loss: 5518.724, pred_loss: 3283.754, total_loss: 8802.478
+	[18] recon_loss: 5391.012, pred_loss: 3279.280, total_loss: 8670.292
+	[19] recon_loss: 5271.223, pred_loss: 3275.945, total_loss: 8547.167
+	[20] recon_loss: 5154.420, pred_loss: 3273.273, total_loss: 8427.693
+	[21] recon_loss: 5043.999, pred_loss: 3270.113, total_loss: 8314.113
+	[22] recon_loss: 4935.515, pred_loss: 3257.473, total_loss: 8192.988
+	[23] recon_loss: 4831.809, pred_loss: 3206.433, total_loss: 8038.242
+	[24] recon_loss: 4732.728, pred_loss: 3202.041, total_loss: 7934.770
+	[25] recon_loss: 4636.310, pred_loss: 3198.634, total_loss: 7834.943
+	[26] recon_loss: 4546.425, pred_loss: 3196.568, total_loss: 7742.993
+	[27] recon_loss: 4459.114, pred_loss: 3195.034, total_loss: 7654.148
+	[28] recon_loss: 4377.701, pred_loss: 3192.636, total_loss: 7570.337
+	[29] recon_loss: 4297.997, pred_loss: 3190.930, total_loss: 7488.927
+	[30] recon_loss: 4222.494, pred_loss: 3189.472, total_loss: 7411.967
+	[31] recon_loss: 4152.486, pred_loss: 3187.611, total_loss: 7340.098
+	[32] recon_loss: 4082.725, pred_loss: 3185.987, total_loss: 7268.712
+	[33] recon_loss: 4017.612, pred_loss: 3185.208, total_loss: 7202.820
+	[34] recon_loss: 3953.867, pred_loss: 3183.015, total_loss: 7136.882
+	[35] recon_loss: 3895.366, pred_loss: 3181.704, total_loss: 7077.069
+	[36] recon_loss: 3836.223, pred_loss: 3179.509, total_loss: 7015.733
+	[37] recon_loss: 3781.791, pred_loss: 3177.664, total_loss: 6959.455
+	[38] recon_loss: 3727.783, pred_loss: 3176.536, total_loss: 6904.319
+	[39] recon_loss: 3676.903, pred_loss: 3174.916, total_loss: 6851.819
+	[40] recon_loss: 3628.445, pred_loss: 3172.966, total_loss: 6801.411
+	[41] recon_loss: 3577.721, pred_loss: 3171.338, total_loss: 6749.059
+	[42] recon_loss: 3534.623, pred_loss: 3167.753, total_loss: 6702.376
+	[43] recon_loss: 3490.649, pred_loss: 3137.647, total_loss: 6628.296
+	[44] recon_loss: 3449.154, pred_loss: 3120.256, total_loss: 6569.410
+	[45] recon_loss: 3408.596, pred_loss: 3117.720, total_loss: 6526.317
+	[46] recon_loss: 3369.002, pred_loss: 3114.905, total_loss: 6483.906
+	[47] recon_loss: 3330.936, pred_loss: 3113.485, total_loss: 6444.422
+	[48] recon_loss: 3297.145, pred_loss: 3111.310, total_loss: 6408.455
+	[49] recon_loss: 3261.937, pred_loss: 3108.934, total_loss: 6370.871
+	[50] recon_loss: 3228.888, pred_loss: 3106.968, total_loss: 6335.856
+	[51] recon_loss: 3196.598, pred_loss: 3105.088, total_loss: 6301.686
+	[52] recon_loss: 3164.350, pred_loss: 3102.786, total_loss: 6267.137
+	[53] recon_loss: 3136.261, pred_loss: 3100.958, total_loss: 6237.218
+	[54] recon_loss: 3105.499, pred_loss: 3099.091, total_loss: 6204.590
+	[55] recon_loss: 3075.727, pred_loss: 3097.775, total_loss: 6173.502
+	[56] recon_loss: 3047.649, pred_loss: 3095.902, total_loss: 6143.551
+	[57] recon_loss: 3021.820, pred_loss: 3093.542, total_loss: 6115.362
+	[58] recon_loss: 2996.135, pred_loss: 3092.247, total_loss: 6088.382
+	[59] recon_loss: 2970.651, pred_loss: 3090.606, total_loss: 6061.257
+	[60] recon_loss: 2947.033, pred_loss: 3087.947, total_loss: 6034.980
+	[61] recon_loss: 2923.723, pred_loss: 3086.596, total_loss: 6010.319
+	[62] recon_loss: 2899.281, pred_loss: 3084.678, total_loss: 5983.959
+	[63] recon_loss: 2878.836, pred_loss: 3082.758, total_loss: 5961.594
+Start prediction
+	Using model 1 to predict
+	Using model 2 to predict
+	Using model 3 to predict
+	Using model 4 to predict
+	Using model 5 to predict
+stPlus_res type ++++++++++++++++++++++++++ : <class 'tuple'>
+stPlus_df:  (1549, 199)
+stPlus_df type:  <class 'pandas.core.frame.DataFrame'>
+all_pred_res shape:  (310, 994)
+my_test (310, 199)
+{'fold': 4, 'phase': 'val', 'loss': 2.6669, 'pearson_mean': 0.1087, 'spearman_mean_genewise': 0.12, 'l1_error_mean': 1.0555, 'l2_errors_mean': 2.6669, 'r2_scores_mean': -0.6787, 'pearson_std': 0.1032, 'l2_error_q1': 1.3356, 'l2_error_q2': 2.0535, 'l2_error_q3': 2.9502, 'r2_score_q1': -0.4912, 'r2_score_q2': -0.1614, 'r2_score_q3': -0.0801}
+
+===== Fold 5 =====
+Number of train genes: 796, Number of test genes: 198
+Models will be saved in: Result/starMAPbaseline/process_file/stPlus-demo-5min*.pt
+
+Spatial transcriptomics data: 1549 cells * 796 genes
+Reference scRNA-seq data:     14249 cells * 994 genes
+198 genes to be predicted
+
+Start initialization
+⚙️  Selected physical GPU 1 (22.05 GB free)
+Start embedding
+	[1] recon_loss: 9938.658, pred_loss: 7406.685, total_loss: 17345.342
+	[2] recon_loss: 8802.173, pred_loss: 5157.058, total_loss: 13959.231
+	[3] recon_loss: 8423.635, pred_loss: 4751.316, total_loss: 13174.950
+	[4] recon_loss: 8112.442, pred_loss: 4411.146, total_loss: 12523.588
+	[5] recon_loss: 7805.914, pred_loss: 4239.626, total_loss: 12045.539
+	[6] recon_loss: 7492.399, pred_loss: 4026.096, total_loss: 11518.495
+	[7] recon_loss: 7234.834, pred_loss: 3843.248, total_loss: 11078.082
+	[8] recon_loss: 6993.356, pred_loss: 3788.596, total_loss: 10781.952
+	[9] recon_loss: 6777.011, pred_loss: 3567.014, total_loss: 10344.025
+	[10] recon_loss: 6580.532, pred_loss: 3340.271, total_loss: 9920.804
+	[11] recon_loss: 6397.725, pred_loss: 3194.310, total_loss: 9592.034
+	[12] recon_loss: 6227.285, pred_loss: 3118.010, total_loss: 9345.295
+	[13] recon_loss: 6068.094, pred_loss: 3107.145, total_loss: 9175.239
+	[14] recon_loss: 5912.092, pred_loss: 3098.184, total_loss: 9010.276
+	[15] recon_loss: 5762.138, pred_loss: 3091.852, total_loss: 8853.990
+	[16] recon_loss: 5624.451, pred_loss: 3085.022, total_loss: 8709.473
+	[17] recon_loss: 5492.459, pred_loss: 3007.045, total_loss: 8499.504
+	[18] recon_loss: 5365.851, pred_loss: 2916.091, total_loss: 8281.942
+	[19] recon_loss: 5247.778, pred_loss: 2910.916, total_loss: 8158.694
+	[20] recon_loss: 5131.969, pred_loss: 2907.264, total_loss: 8039.233
+	[21] recon_loss: 5021.520, pred_loss: 2904.428, total_loss: 7925.948
+	[22] recon_loss: 4915.304, pred_loss: 2896.750, total_loss: 7812.054
+	[23] recon_loss: 4805.078, pred_loss: 2717.119, total_loss: 7522.197
+	[24] recon_loss: 4704.744, pred_loss: 2705.109, total_loss: 7409.853
+	[25] recon_loss: 4608.793, pred_loss: 2702.008, total_loss: 7310.800
+	[26] recon_loss: 4519.124, pred_loss: 2699.530, total_loss: 7218.654
+	[27] recon_loss: 4431.928, pred_loss: 2697.321, total_loss: 7129.250
+	[28] recon_loss: 4352.176, pred_loss: 2694.711, total_loss: 7046.886
+	[29] recon_loss: 4273.175, pred_loss: 2693.138, total_loss: 6966.313
+	[30] recon_loss: 4199.621, pred_loss: 2691.142, total_loss: 6890.763
+	[31] recon_loss: 4126.463, pred_loss: 2690.004, total_loss: 6816.467
+	[32] recon_loss: 4055.561, pred_loss: 2687.660, total_loss: 6743.221
+	[33] recon_loss: 3988.820, pred_loss: 2686.769, total_loss: 6675.590
+	[34] recon_loss: 3925.633, pred_loss: 2472.150, total_loss: 6397.783
+	[35] recon_loss: 3866.484, pred_loss: 2463.065, total_loss: 6329.549
+	[36] recon_loss: 3807.975, pred_loss: 2461.256, total_loss: 6269.231
+	[37] recon_loss: 3754.305, pred_loss: 2459.313, total_loss: 6213.618
+	[38] recon_loss: 3702.222, pred_loss: 2456.760, total_loss: 6158.982
+	[39] recon_loss: 3652.389, pred_loss: 2453.927, total_loss: 6106.316
+	[40] recon_loss: 3603.969, pred_loss: 2444.307, total_loss: 6048.276
+	[41] recon_loss: 3558.497, pred_loss: 2433.590, total_loss: 5992.088
+	[42] recon_loss: 3512.909, pred_loss: 2431.497, total_loss: 5944.406
+	[43] recon_loss: 3470.817, pred_loss: 2429.688, total_loss: 5900.506
+	[44] recon_loss: 3429.206, pred_loss: 2428.132, total_loss: 5857.338
+	[45] recon_loss: 3389.844, pred_loss: 2425.862, total_loss: 5815.705
+	[46] recon_loss: 3350.397, pred_loss: 2314.636, total_loss: 5665.033
+	[47] recon_loss: 3313.648, pred_loss: 2260.214, total_loss: 5573.862
+	[48] recon_loss: 3279.200, pred_loss: 2256.048, total_loss: 5535.248
+	[49] recon_loss: 3244.678, pred_loss: 2253.567, total_loss: 5498.246
+	[50] recon_loss: 3212.189, pred_loss: 2251.405, total_loss: 5463.594
+	[51] recon_loss: 3180.283, pred_loss: 2249.549, total_loss: 5429.832
+	[52] recon_loss: 3150.463, pred_loss: 2246.837, total_loss: 5397.300
+	[53] recon_loss: 3121.666, pred_loss: 2245.538, total_loss: 5367.205
+	[54] recon_loss: 3092.111, pred_loss: 2243.891, total_loss: 5336.001
+	[55] recon_loss: 3060.277, pred_loss: 2241.259, total_loss: 5301.535
+	[56] recon_loss: 3026.121, pred_loss: 2239.644, total_loss: 5265.765
+	[57] recon_loss: 2997.685, pred_loss: 2237.842, total_loss: 5235.527
+	[58] recon_loss: 2972.919, pred_loss: 2235.755, total_loss: 5208.674
+	[59] recon_loss: 2947.605, pred_loss: 2234.178, total_loss: 5181.783
+	[60] recon_loss: 2919.085, pred_loss: 2232.302, total_loss: 5151.386
+	[61] recon_loss: 2894.665, pred_loss: 2206.333, total_loss: 5100.999
+	[62] recon_loss: 2872.532, pred_loss: 2169.000, total_loss: 5041.532
+	[63] recon_loss: 2851.330, pred_loss: 2166.136, total_loss: 5017.466
+	[64] recon_loss: 2828.918, pred_loss: 2164.299, total_loss: 4993.217
+	[65] recon_loss: 2808.706, pred_loss: 2162.302, total_loss: 4971.008
+	[66] recon_loss: 2788.931, pred_loss: 2159.894, total_loss: 4948.825
+	[67] recon_loss: 2770.853, pred_loss: 2158.375, total_loss: 4929.229
+Start prediction
+	Using model 1 to predict
+	Using model 2 to predict
+	Using model 3 to predict
+	Using model 4 to predict
+	Using model 5 to predict
+stPlus_res type ++++++++++++++++++++++++++ : <class 'tuple'>
+stPlus_df:  (1549, 198)
+stPlus_df type:  <class 'pandas.core.frame.DataFrame'>
+all_pred_res shape:  (310, 994)
+my_test (310, 198)
+{'fold': 5, 'phase': 'val', 'loss': 3.0333, 'pearson_mean': 0.079, 'spearman_mean_genewise': 0.0844, 'l1_error_mean': 1.1217, 'l2_errors_mean': 3.0333, 'r2_scores_mean': -0.6873, 'pearson_std': 0.092, 'l2_error_q1': 1.3804, 'l2_error_q2': 2.2298, 'l2_error_q3': 3.285, 'r2_score_q1': -0.4558, 'r2_score_q2': -0.1871, 'r2_score_q3': -0.0754}
+Saved all fold metrics to Result/starMAPbaseline/stplus/fold_results/fold_metrics.csv
+Saved mean and std metrics to Result/starMAPbaseline/stplus/fold_results/metrics_summary.csv

@@ -1,0 +1,300 @@
+nohup: ignoring input
+INFO:root:123 training genes are saved in `uns``training_genes` of both single cell and spatial Anndatas.
+INFO:root:123 overlapped genes are saved in `uns``overlap_genes` of both single cell and spatial Anndatas.
+INFO:root:uniform based density prior is calculated and saved in `obs``uniform_density` of the spatial Anndata.
+INFO:root:rna count based density prior is calculated and saved in `obs``rna_count_based_density` of the spatial Anndata.
+INFO:root:Allocate tensors for mapping.
+INFO:root:Begin training with 123 genes and rna_count_based density_prior in clusters mode...
+INFO:root:Printing scores every 100 epochs.
+INFO:root:Saving results..
+INFO:root:123 training genes are saved in `uns``training_genes` of both single cell and spatial Anndatas.
+INFO:root:123 overlapped genes are saved in `uns``overlap_genes` of both single cell and spatial Anndatas.
+INFO:root:uniform based density prior is calculated and saved in `obs``uniform_density` of the spatial Anndata.
+INFO:root:rna count based density prior is calculated and saved in `obs``rna_count_based_density` of the spatial Anndata.
+INFO:root:Allocate tensors for mapping.
+INFO:root:Begin training with 123 genes and rna_count_based density_prior in clusters mode...
+INFO:root:Printing scores every 100 epochs.
+adata_spatial:  /home/maninder/AmitCode/data/processedData/merFISH/spatial.h5ad
+adata_seq:  /home/maninder/AmitCode/data/processedData/merFISH/scRNA_common.h5ad
+sp shape (64373, 154)
+sc shape (31299, 154)
+The number of common genes:: 154
+sp_data: (64373, 154), sc_data: (31297, 154)
+sp_idx_test: [13468 20118 48411 ...   860 15795 56422]
+scRNA split -> Train: (51498, 154), Test: (12875, 154)
+We run SpaGE for this data
+
+
+===== Fold 1 =====
+Number of train genes: 123, Number of test genes: 31
+gene_seq:: [['AR', 'ARHGAP36', 'CARTPT', 'CDKN1A', 'CHAT', 'CRHBP', 'CXCL14', 'CYR61', 'ERMN', 'GAL', 'GALR2', 'GLRA3', 'KISS1R', 'MC4R', 'NDRG1', 'NNAT', 'NPY2R', 'OMP', 'OPRD1', 'OXTR', 'PLIN3', 'PNOC', 'POU3F2', 'SERPINB1B', 'SLC15A3', 'SOX8', 'SYNPR', 'SYT2', 'SYTL4', 'TIPARP', 'TTYH2']]
+{'pearson_mean': 0.3288, 'spearman_mean_genewise': 0.3011, 'l1_error_mean': 1.6487, 'l2_errors_mean': 5.8236, 'r2_scores_mean': -1.1378, 'pearson_std': 0.1749, 'l2_error_q1': 3.835, 'l2_error_q2': 5.5546, 'l2_error_q3': 7.8705, 'r2_score_q1': -0.5686, 'r2_score_q2': -0.3332, 'r2_score_q3': -0.0963, 'fold': 1, 'phase': 'val', 'loss': 5.8236}
+[Fold 1] SpaGE val Spearman: 0.3011, Pearson: 0.3288
+
+===== Fold 2 =====
+Number of train genes: 123, Number of test genes: 31
+gene_seq:: [['AR', 'ARHGAP36', 'CARTPT', 'CDKN1A', 'CHAT', 'CRHBP', 'CXCL14', 'CYR61', 'ERMN', 'GAL', 'GALR2', 'GLRA3', 'KISS1R', 'MC4R', 'NDRG1', 'NNAT', 'NPY2R', 'OMP', 'OPRD1', 'OXTR', 'PLIN3', 'PNOC', 'POU3F2', 'SERPINB1B', 'SLC15A3', 'SOX8', 'SYNPR', 'SYT2', 'SYTL4', 'TIPARP', 'TTYH2'], ['ADORA2A', 'AVPR2', 'CBLN2', 'CCK', 'CCND2', 'COCH', 'CPNE5', 'EGR2', 'ESR1', 'GABRA1', 'GEM', 'GJC3', 'GNRH1', 'GPR165', 'HTR2C', 'LEPR', 'MLC1', 'NTNG1', 'NUP62CL', 'ONECUT2', 'OXT', 'PENK', 'PGR', 'SERPINE1', 'SLC17A7', 'SLCO1A4', 'SLN', 'SYT4', 'TAC2', 'TACR3', 'TRH']]
+{'pearson_mean': 0.3076, 'spearman_mean_genewise': 0.2574, 'l1_error_mean': 1.3841, 'l2_errors_mean': 4.8096, 'r2_scores_mean': -0.563, 'pearson_std': 0.2343, 'l2_error_q1': 2.2781, 'l2_error_q2': 3.7853, 'l2_error_q3': 5.7172, 'r2_score_q1': -0.4697, 'r2_score_q2': -0.1448, 'r2_score_q3': -0.0977, 'fold': 2, 'phase': 'val', 'loss': 4.8096}
+[Fold 2] SpaGE val Spearman: 0.2574, Pearson: 0.3076
+
+===== Fold 3 =====
+Number of train genes: 123, Number of test genes: 31
+gene_seq:: [['AR', 'ARHGAP36', 'CARTPT', 'CDKN1A', 'CHAT', 'CRHBP', 'CXCL14', 'CYR61', 'ERMN', 'GAL', 'GALR2', 'GLRA3', 'KISS1R', 'MC4R', 'NDRG1', 'NNAT', 'NPY2R', 'OMP', 'OPRD1', 'OXTR', 'PLIN3', 'PNOC', 'POU3F2', 'SERPINB1B', 'SLC15A3', 'SOX8', 'SYNPR', 'SYT2', 'SYTL4', 'TIPARP', 'TTYH2'], ['ADORA2A', 'AVPR2', 'CBLN2', 'CCK', 'CCND2', 'COCH', 'CPNE5', 'EGR2', 'ESR1', 'GABRA1', 'GEM', 'GJC3', 'GNRH1', 'GPR165', 'HTR2C', 'LEPR', 'MLC1', 'NTNG1', 'NUP62CL', 'ONECUT2', 'OXT', 'PENK', 'PGR', 'SERPINE1', 'SLC17A7', 'SLCO1A4', 'SLN', 'SYT4', 'TAC2', 'TACR3', 'TRH'], ['ALDH1L1', 'AQP4', 'BDNF', 'BMP7', 'BRS3', 'CALCR', 'CCKAR', 'FEZF1', 'FN1', 'FST', 'GABRG1', 'GREB1', 'IGF2R', 'IRS4', 'MAN1A', 'NECAB1', 'NOS1', 'NTS', 'NTSR1', 'OPALIN', 'OPRK1', 'PAK3', 'PRLR', 'RAMP3', 'RGS2', 'SELPLG', 'SEMA4D', 'SST', 'TTN', 'UCN3', 'VGF']]
+{'pearson_mean': 0.3533, 'spearman_mean_genewise': 0.2999, 'l1_error_mean': 1.5494, 'l2_errors_mean': 5.5919, 'r2_scores_mean': -0.8602, 'pearson_std': 0.1714, 'l2_error_q1': 2.9977, 'l2_error_q2': 4.2886, 'l2_error_q3': 6.4932, 'r2_score_q1': -0.5503, 'r2_score_q2': -0.247, 'r2_score_q3': -0.0493, 'fold': 3, 'phase': 'val', 'loss': 5.5919}
+[Fold 3] SpaGE val Spearman: 0.2999, Pearson: 0.3533
+
+===== Fold 4 =====
+Number of train genes: 123, Number of test genes: 31
+gene_seq:: [['AR', 'ARHGAP36', 'CARTPT', 'CDKN1A', 'CHAT', 'CRHBP', 'CXCL14', 'CYR61', 'ERMN', 'GAL', 'GALR2', 'GLRA3', 'KISS1R', 'MC4R', 'NDRG1', 'NNAT', 'NPY2R', 'OMP', 'OPRD1', 'OXTR', 'PLIN3', 'PNOC', 'POU3F2', 'SERPINB1B', 'SLC15A3', 'SOX8', 'SYNPR', 'SYT2', 'SYTL4', 'TIPARP', 'TTYH2'], ['ADORA2A', 'AVPR2', 'CBLN2', 'CCK', 'CCND2', 'COCH', 'CPNE5', 'EGR2', 'ESR1', 'GABRA1', 'GEM', 'GJC3', 'GNRH1', 'GPR165', 'HTR2C', 'LEPR', 'MLC1', 'NTNG1', 'NUP62CL', 'ONECUT2', 'OXT', 'PENK', 'PGR', 'SERPINE1', 'SLC17A7', 'SLCO1A4', 'SLN', 'SYT4', 'TAC2', 'TACR3', 'TRH'], ['ALDH1L1', 'AQP4', 'BDNF', 'BMP7', 'BRS3', 'CALCR', 'CCKAR', 'FEZF1', 'FN1', 'FST', 'GABRG1', 'GREB1', 'IGF2R', 'IRS4', 'MAN1A', 'NECAB1', 'NOS1', 'NTS', 'NTSR1', 'OPALIN', 'OPRK1', 'PAK3', 'PRLR', 'RAMP3', 'RGS2', 'SELPLG', 'SEMA4D', 'SST', 'TTN', 'UCN3', 'VGF'], ['ACE2', 'ADCYAP1', 'AMIGO2', 'ANO3', 'BAIAP2', 'CBLN1', 'CD24A', 'COL25A1', 'CREB3L1', 'CRHR1', 'CRHR2', 'CYP19A1', 'DGKK', 'EBF3', 'ETV1', 'GAD1', 'GALR1', 'LMOD1', 'LPAR1', 'PDGFRA', 'RGS5', 'RND3', 'SCG2', 'SEMA3C', 'SGK1', 'SLC17A6', 'SLC17A8', 'SOX4', 'SOX6', 'TACR1', 'TRAF4']]
+{'pearson_mean': 0.374, 'spearman_mean_genewise': 0.3248, 'l1_error_mean': 1.6103, 'l2_errors_mean': 5.9268, 'r2_scores_mean': -0.6807, 'pearson_std': 0.132, 'l2_error_q1': 3.3466, 'l2_error_q2': 6.172, 'l2_error_q3': 7.0641, 'r2_score_q1': -0.3756, 'r2_score_q2': -0.2025, 'r2_score_q3': -0.0504, 'fold': 4, 'phase': 'val', 'loss': 5.9268}
+[Fold 4] SpaGE val Spearman: 0.3248, Pearson: 0.3740
+
+===== Fold 5 =====
+Number of train genes: 124, Number of test genes: 30
+gene_seq:: [['AR', 'ARHGAP36', 'CARTPT', 'CDKN1A', 'CHAT', 'CRHBP', 'CXCL14', 'CYR61', 'ERMN', 'GAL', 'GALR2', 'GLRA3', 'KISS1R', 'MC4R', 'NDRG1', 'NNAT', 'NPY2R', 'OMP', 'OPRD1', 'OXTR', 'PLIN3', 'PNOC', 'POU3F2', 'SERPINB1B', 'SLC15A3', 'SOX8', 'SYNPR', 'SYT2', 'SYTL4', 'TIPARP', 'TTYH2'], ['ADORA2A', 'AVPR2', 'CBLN2', 'CCK', 'CCND2', 'COCH', 'CPNE5', 'EGR2', 'ESR1', 'GABRA1', 'GEM', 'GJC3', 'GNRH1', 'GPR165', 'HTR2C', 'LEPR', 'MLC1', 'NTNG1', 'NUP62CL', 'ONECUT2', 'OXT', 'PENK', 'PGR', 'SERPINE1', 'SLC17A7', 'SLCO1A4', 'SLN', 'SYT4', 'TAC2', 'TACR3', 'TRH'], ['ALDH1L1', 'AQP4', 'BDNF', 'BMP7', 'BRS3', 'CALCR', 'CCKAR', 'FEZF1', 'FN1', 'FST', 'GABRG1', 'GREB1', 'IGF2R', 'IRS4', 'MAN1A', 'NECAB1', 'NOS1', 'NTS', 'NTSR1', 'OPALIN', 'OPRK1', 'PAK3', 'PRLR', 'RAMP3', 'RGS2', 'SELPLG', 'SEMA4D', 'SST', 'TTN', 'UCN3', 'VGF'], ['ACE2', 'ADCYAP1', 'AMIGO2', 'ANO3', 'BAIAP2', 'CBLN1', 'CD24A', 'COL25A1', 'CREB3L1', 'CRHR1', 'CRHR2', 'CYP19A1', 'DGKK', 'EBF3', 'ETV1', 'GAD1', 'GALR1', 'LMOD1', 'LPAR1', 'PDGFRA', 'RGS5', 'RND3', 'SCG2', 'SEMA3C', 'SGK1', 'SLC17A6', 'SLC17A8', 'SOX4', 'SOX6', 'TACR1', 'TRAF4'], ['AVPR1A', 'CCKBR', 'CENPE', 'CPLX3', 'CRH', 'CSPG5', 'CYP26A1', 'FBXW13', 'GBX2', 'GDA', 'GRPR', 'IGF1R', 'ISL1', 'KLF4', 'MBP', 'MKI67', 'MYH11', 'NDNF', 'NPAS1', 'NPY1R', 'OPRL1', 'PCDH11X', 'RXFP1', 'SCGN', 'SLC18A2', 'SP9', 'TAC1', 'TH', 'TMEM108', 'TRHR']]
+{'pearson_mean': 0.3051, 'spearman_mean_genewise': 0.2416, 'l1_error_mean': 1.2921, 'l2_errors_mean': 4.4828, 'r2_scores_mean': -0.6789, 'pearson_std': 0.2023, 'l2_error_q1': 2.3546, 'l2_error_q2': 3.2212, 'l2_error_q3': 5.2437, 'r2_score_q1': -0.3331, 'r2_score_q2': -0.1377, 'r2_score_q3': -0.0191, 'fold': 5, 'phase': 'val', 'loss': 4.4828}
+[Fold 5] SpaGE val Spearman: 0.2416, Pearson: 0.3051
+Saved all fold metrics to Result/merFISHBaseline_new/spage/fold_results/fold_metrics.csv
+Saved mean and std metrics to Result/merFISHBaseline_new/spage/fold_results/metrics_summary.csv
+all_pred_res :::: (12875, 154)
+Result/merFISHBaseline_new//SpaGE_impute.csv
+We run Tangram for this data
+
+
+===== Fold 1 =====
+Number of train genes: 123, Number of test genes: 31
+Score: 0.518, KL reg: 0.106
+Score: 0.725, KL reg: 0.001
+Score: 0.728, KL reg: 0.001
+Score: 0.728, KL reg: 0.001
+Score: 0.728, KL reg: 0.001
+Score: 0.729, KL reg: 0.001
+Score: 0.729, KL reg: 0.001
+Score: 0.729, KL reg: 0.001
+Score: 0.729, KL reg: 0.001
+Score: 0.729, KL reg: 0.001
+{'fold': 1, 'phase': 'val', 'loss': 6.6405, 'pearson_mean': 0.2753, 'spearman_mean_genewise': 0.2678, 'l1_error_mean': 1.678, 'l2_errors_mean': 6.6405, 'r2_scores_mean': -0.5845, 'pearson_std': 0.1283, 'l2_error_q1': 4.0944, 'l2_error_q2': 5.7481, 'l2_error_q3': 9.485, 'r2_score_q1': -0.763, 'r2_score_q2': -0.4691, 'r2_score_q3': -0.2525}
+[Fold 1] Spearman: 0.2678, Pearson: 0.2753, L2 loss: 6.6405
+
+===== Fold 2 =====
+Number of train genes: 123, Number of test genes: 31
+Score: 0.526, KL reg: 0.094
+Score: 0.722, KL reg: 0.001
+Score: 0.724, KL reg: 0.001
+Score: 0.725, KL reg: 0.001
+INFO:root:Saving results..
+INFO:root:123 training genes are saved in `uns``training_genes` of both single cell and spatial Anndatas.
+INFO:root:123 overlapped genes are saved in `uns``overlap_genes` of both single cell and spatial Anndatas.
+INFO:root:uniform based density prior is calculated and saved in `obs``uniform_density` of the spatial Anndata.
+INFO:root:rna count based density prior is calculated and saved in `obs``rna_count_based_density` of the spatial Anndata.
+INFO:root:Allocate tensors for mapping.
+INFO:root:Begin training with 123 genes and rna_count_based density_prior in clusters mode...
+INFO:root:Printing scores every 100 epochs.
+INFO:root:Saving results..
+INFO:root:123 training genes are saved in `uns``training_genes` of both single cell and spatial Anndatas.
+INFO:root:123 overlapped genes are saved in `uns``overlap_genes` of both single cell and spatial Anndatas.
+INFO:root:uniform based density prior is calculated and saved in `obs``uniform_density` of the spatial Anndata.
+INFO:root:rna count based density prior is calculated and saved in `obs``rna_count_based_density` of the spatial Anndata.
+INFO:root:Allocate tensors for mapping.
+INFO:root:Begin training with 123 genes and rna_count_based density_prior in clusters mode...
+INFO:root:Printing scores every 100 epochs.
+INFO:root:Saving results..
+INFO:root:124 training genes are saved in `uns``training_genes` of both single cell and spatial Anndatas.
+INFO:root:124 overlapped genes are saved in `uns``overlap_genes` of both single cell and spatial Anndatas.
+INFO:root:uniform based density prior is calculated and saved in `obs``uniform_density` of the spatial Anndata.
+INFO:root:rna count based density prior is calculated and saved in `obs``rna_count_based_density` of the spatial Anndata.
+INFO:root:Allocate tensors for mapping.
+INFO:root:Begin training with 124 genes and rna_count_based density_prior in clusters mode...
+INFO:root:Printing scores every 100 epochs.
+INFO:root:Saving results..
+Score: 0.725, KL reg: 0.001
+Score: 0.725, KL reg: 0.001
+Score: 0.725, KL reg: 0.001
+Score: 0.725, KL reg: 0.001
+Score: 0.726, KL reg: 0.001
+Score: 0.726, KL reg: 0.001
+{'fold': 2, 'phase': 'val', 'loss': 6.025, 'pearson_mean': 0.3049, 'spearman_mean_genewise': 0.2843, 'l1_error_mean': 1.5247, 'l2_errors_mean': 6.025, 'r2_scores_mean': -0.6012, 'pearson_std': 0.2346, 'l2_error_q1': 2.1111, 'l2_error_q2': 4.0257, 'l2_error_q3': 8.307, 'r2_score_q1': -0.5545, 'r2_score_q2': -0.3244, 'r2_score_q3': -0.1931}
+[Fold 2] Spearman: 0.2843, Pearson: 0.3049, L2 loss: 6.0250
+
+===== Fold 3 =====
+Number of train genes: 123, Number of test genes: 31
+Score: 0.522, KL reg: 0.095
+Score: 0.715, KL reg: 0.001
+Score: 0.717, KL reg: 0.001
+Score: 0.718, KL reg: 0.001
+Score: 0.718, KL reg: 0.001
+Score: 0.718, KL reg: 0.001
+Score: 0.718, KL reg: 0.001
+Score: 0.719, KL reg: 0.001
+Score: 0.719, KL reg: 0.001
+Score: 0.719, KL reg: 0.001
+{'fold': 3, 'phase': 'val', 'loss': 6.75, 'pearson_mean': 0.3451, 'spearman_mean_genewise': 0.3072, 'l1_error_mean': 1.6593, 'l2_errors_mean': 6.75, 'r2_scores_mean': -0.6276, 'pearson_std': 0.1741, 'l2_error_q1': 3.0353, 'l2_error_q2': 5.705, 'l2_error_q3': 8.5233, 'r2_score_q1': -0.8755, 'r2_score_q2': -0.3624, 'r2_score_q3': -0.2112}
+[Fold 3] Spearman: 0.3072, Pearson: 0.3451, L2 loss: 6.7500
+
+===== Fold 4 =====
+Number of train genes: 123, Number of test genes: 31
+Score: 0.520, KL reg: 0.096
+Score: 0.719, KL reg: 0.001
+Score: 0.721, KL reg: 0.001
+Score: 0.722, KL reg: 0.001
+Score: 0.722, KL reg: 0.001
+Score: 0.722, KL reg: 0.001
+Score: 0.722, KL reg: 0.001
+Score: 0.722, KL reg: 0.001
+Score: 0.722, KL reg: 0.001
+Score: 0.722, KL reg: 0.001
+{'fold': 4, 'phase': 'val', 'loss': 6.8706, 'pearson_mean': 0.3465, 'spearman_mean_genewise': 0.3209, 'l1_error_mean': 1.6997, 'l2_errors_mean': 6.8706, 'r2_scores_mean': -0.521, 'pearson_std': 0.125, 'l2_error_q1': 3.4923, 'l2_error_q2': 6.6085, 'l2_error_q3': 9.5682, 'r2_score_q1': -0.7328, 'r2_score_q2': -0.4127, 'r2_score_q3': -0.2261}
+[Fold 4] Spearman: 0.3209, Pearson: 0.3465, L2 loss: 6.8706
+
+===== Fold 5 =====
+Number of train genes: 124, Number of test genes: 30
+Score: 0.531, KL reg: 0.095
+Score: 0.738, KL reg: 0.001
+Score: 0.740, KL reg: 0.001
+Score: 0.741, KL reg: 0.001
+Score: 0.741, KL reg: 0.001
+Score: 0.741, KL reg: 0.001
+Score: 0.741, KL reg: 0.001
+Score: 0.741, KL reg: 0.001
+Score: 0.741, KL reg: 0.001
+Score: 0.741, KL reg: 0.001
+{'fold': 5, 'phase': 'val', 'loss': 5.1431, 'pearson_mean': 0.2623, 'spearman_mean_genewise': 0.2511, 'l1_error_mean': 1.352, 'l2_errors_mean': 5.1431, 'r2_scores_mean': -0.5927, 'pearson_std': 0.1624, 'l2_error_q1': 2.7118, 'l2_error_q2': 3.6716, 'l2_error_q3': 6.5669, 'r2_score_q1': -0.4607, 'r2_score_q2': -0.289, 'r2_score_q3': -0.1587}
+[Fold 5] Spearman: 0.2511, Pearson: 0.2623, L2 loss: 5.1431
+Saved all fold metrics to Result/merFISHBaseline_new/tangram/fold_results/fold_metrics.csv
+Saved mean and std metrics to Result/merFISHBaseline_new/tangram/fold_results/metrics_summary.csv
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+outdir1: Result/merFISHBaseline_new/stplus
+
+===== Fold 1 =====
+Number of train genes: 123, Number of test genes: 31
+Models will be saved in: Result/merFISHBaseline_new/process_file/stPlus-demo-5min*.pt
+
+Spatial transcriptomics data: 64373 cells * 123 genes
+Reference scRNA-seq data:     31297 cells * 154 genes
+31 genes to be predicted
+
+Start initialization
+⚙️  Selected physical GPU 1 (22.05 GB free)
+Start embedding
+	[1] recon_loss: 10902.654, pred_loss: 7932.029, total_loss: 18834.683
+	[2] recon_loss: 2415.915, pred_loss: 6317.669, total_loss: 8733.584
+	[3] recon_loss: 623.073, pred_loss: 5856.157, total_loss: 6479.230
+	[4] recon_loss: 327.940, pred_loss: 5722.145, total_loss: 6050.085
+	[5] recon_loss: 268.459, pred_loss: 5643.523, total_loss: 5911.982
+	[6] recon_loss: 240.453, pred_loss: 5584.713, total_loss: 5825.166
+	[7] recon_loss: 220.661, pred_loss: 5542.973, total_loss: 5763.634
+	[8] recon_loss: 206.293, pred_loss: 5511.599, total_loss: 5717.892
+	[9] recon_loss: 195.385, pred_loss: 5485.942, total_loss: 5681.327
+	[10] recon_loss: 187.407, pred_loss: 5466.837, total_loss: 5654.244
+	[11] recon_loss: 181.384, pred_loss: 5450.631, total_loss: 5632.015
+Start prediction
+	Using model 1 to predict
+	Using model 2 to predict
+	Using model 3 to predict
+	Using model 4 to predict
+	Using model 5 to predict
+stPlus_res type ++++++++++++++++++++++++++ : <class 'tuple'>
+stPlus_df:  (64373, 31)
+stPlus_df type:  <class 'pandas.core.frame.DataFrame'>
+all_pred_res shape:  (12875, 154)
+my_test (12875, 31)
+{'fold': 1, 'phase': 'val', 'loss': 5.5281, 'pearson_mean': 0.2982, 'spearman_mean_genewise': 0.2848, 'l1_error_mean': 1.7193, 'l2_errors_mean': 5.5281, 'r2_scores_mean': -1.4464, 'pearson_std': 0.1892, 'l2_error_q1': 3.7958, 'l2_error_q2': 4.835, 'l2_error_q3': 6.2322, 'r2_score_q1': -0.3767, 'r2_score_q2': -0.1876, 'r2_score_q3': 0.0144}
+
+===== Fold 2 =====
+Number of train genes: 123, Number of test genes: 31
+Models will be saved in: Result/merFISHBaseline_new/process_file/stPlus-demo-5min*.pt
+
+Spatial transcriptomics data: 64373 cells * 123 genes
+Reference scRNA-seq data:     31297 cells * 154 genes
+31 genes to be predicted
+
+Start initialization
+⚙️  Selected physical GPU 1 (22.05 GB free)
+Start embedding
+	[1] recon_loss: 12191.255, pred_loss: 6536.433, total_loss: 18727.688
+	[2] recon_loss: 3332.672, pred_loss: 5191.842, total_loss: 8524.514
+	[3] recon_loss: 1443.535, pred_loss: 5010.151, total_loss: 6453.686
+	[4] recon_loss: 1157.807, pred_loss: 4895.772, total_loss: 6053.579
+	[5] recon_loss: 1105.932, pred_loss: 4811.114, total_loss: 5917.047
+	[6] recon_loss: 1080.717, pred_loss: 4749.512, total_loss: 5830.229
+	[7] recon_loss: 1062.502, pred_loss: 4703.704, total_loss: 5766.205
+	[8] recon_loss: 1048.003, pred_loss: 4672.182, total_loss: 5720.185
+	[9] recon_loss: 1036.514, pred_loss: 4646.504, total_loss: 5683.019
+	[10] recon_loss: 1022.877, pred_loss: 4623.888, total_loss: 5646.765
+	[11] recon_loss: 966.832, pred_loss: 4607.016, total_loss: 5573.848
+	[12] recon_loss: 935.248, pred_loss: 4591.410, total_loss: 5526.658
+	[13] recon_loss: 925.459, pred_loss: 4577.765, total_loss: 5503.225
+	[14] recon_loss: 921.623, pred_loss: 4564.602, total_loss: 5486.225
+Start prediction
+	Using model 1 to predict
+	Using model 2 to predict
+	Using model 3 to predict
+	Using model 4 to predict
+	Using model 5 to predict
+stPlus_res type ++++++++++++++++++++++++++ : <class 'tuple'>
+stPlus_df:  (64373, 31)
+stPlus_df type:  <class 'pandas.core.frame.DataFrame'>
+all_pred_res shape:  (12875, 154)
+my_test (12875, 31)
+{'fold': 2, 'phase': 'val', 'loss': 4.386, 'pearson_mean': 0.2872, 'spearman_mean_genewise': 0.2488, 'l1_error_mean': 1.429, 'l2_errors_mean': 4.386, 'r2_scores_mean': -0.5202, 'pearson_std': 0.2582, 'l2_error_q1': 2.2713, 'l2_error_q2': 3.4463, 'l2_error_q3': 4.8472, 'r2_score_q1': -0.4862, 'r2_score_q2': -0.1161, 'r2_score_q3': 0.004}
+
+===== Fold 3 =====
+Number of train genes: 123, Number of test genes: 31
+Models will be saved in: Result/merFISHBaseline_new/process_file/stPlus-demo-5min*.pt
+
+Spatial transcriptomics data: 64373 cells * 123 genes
+Reference scRNA-seq data:     31297 cells * 154 genes
+31 genes to be predicted
+
+Start initialization
+⚙️  Selected physical GPU 1 (22.05 GB free)
+Start embedding
+	[1] recon_loss: 11943.636, pred_loss: 6921.380, total_loss: 18865.016
+	[2] recon_loss: 3444.524, pred_loss: 5612.377, total_loss: 9056.900
+	[3] recon_loss: 1773.459, pred_loss: 5463.184, total_loss: 7236.643
+	[4] recon_loss: 1533.710, pred_loss: 5360.393, total_loss: 6894.103
+	[5] recon_loss: 1485.108, pred_loss: 5288.031, total_loss: 6773.139
+	[6] recon_loss: 1460.550, pred_loss: 5234.321, total_loss: 6694.871
+	[7] recon_loss: 1442.854, pred_loss: 5193.984, total_loss: 6636.839
+	[8] recon_loss: 1429.627, pred_loss: 5162.143, total_loss: 6591.770
+	[9] recon_loss: 1419.455, pred_loss: 5138.869, total_loss: 6558.325
+	[10] recon_loss: 1411.992, pred_loss: 5119.072, total_loss: 6531.064
+	[11] recon_loss: 1405.982, pred_loss: 5102.959, total_loss: 6508.942
+Start prediction
+	Using model 1 to predict
+	Using model 2 to predict
+	Using model 3 to predict
+	Using model 4 to predict
+	Using model 5 to predict
+stPlus_res type ++++++++++++++++++++++++++ : <class 'tuple'>
+stPlus_df:  (64373, 31)
+stPlus_df type:  <class 'pandas.core.frame.DataFrame'>
+all_pred_res shape:  (12875, 154)
+my_test (12875, 31)
+{'fold': 3, 'phase': 'val', 'loss': 5.4867, 'pearson_mean': 0.3257, 'spearman_mean_genewise': 0.2931, 'l1_error_mean': 1.6267, 'l2_errors_mean': 5.4867, 'r2_scores_mean': -0.8278, 'pearson_std': 0.1851, 'l2_error_q1': 2.9191, 'l2_error_q2': 4.1405, 'l2_error_q3': 7.2256, 'r2_score_q1': -0.6545, 'r2_score_q2': -0.2011, 'r2_score_q3': -0.0423}
+
+===== Fold 4 =====
+Number of train genes: 123, Number of test genes: 31
+Models will be saved in: Result/merFISHBaseline_new/process_file/stPlus-demo-5min*.pt
+
+Spatial transcriptomics data: 64373 cells * 123 genes
+Reference scRNA-seq data:     31297 cells * 154 genes
+31 genes to be predicted
+
+Start initialization
+⚙️  Selected physical GPU 1 (22.05 GB free)
+Start embedding
+	[1] recon_loss: 11531.111, pred_loss: 7306.514, total_loss: 18837.625
+	[2] recon_loss: 3325.254, pred_loss: 5373.831, total_loss: 8699.086
+	[3] recon_loss: 1592.238, pred_loss: 5146.179, total_loss: 6738.417
+	[4] recon_loss: 1308.988, pred_loss: 5001.948, total_loss: 6310.936
+	[5] recon_loss: 1251.856, pred_loss: 4900.537, total_loss: 6152.393
+	[6] recon_loss: 1222.076, pred_loss: 4833.082, total_loss: 6055.158
+	[7] recon_loss: 1199.477, pred_loss: 4786.634, total_loss: 5986.110
+	[8] recon_loss: 1182.294, pred_loss: 4754.279, total_loss: 5936.573
+	[9] recon_loss: 1169.226, pred_loss: 4731.276, total_loss: 5900.503
+	[10] recon_loss: 1159.695, pred_loss: 4710.929, total_loss: 5870.623
+	[11] recon_loss: 1152.560, pred_loss: 4694.875, total_loss: 5847.434
+Start prediction
+	Using model 1 to predict
+	Using model 2 to predict

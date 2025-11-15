@@ -1,0 +1,45 @@
+
+######################################## cscc ###########################################################
+python 1_inspect_files.py
+
+python 1_data_explore.py \
+  --base_dir /home/puneet/maninder/data/GSE144240_RAW_scCC \
+  --show_samples 3 \
+  --n_neighbors 5 \
+  --out_dir /home/puneet/maninder/output/spot_distances
+
+python 2_visualize_factor.py \
+  --base_dir /home/puneet/maninder/data/GSE144240_RAW_scCC \
+  --sample_id GSM4284316 \
+  --out_dir /home/puneet/maninder/output
+
+python 3_generate_h5_h5ad.py \
+  --base_dir /home/puneet/maninder/data/GSE144240_RAW_scCC \
+  --sample_index 1 \
+  --patch_size 112 \
+  --out_dir /home/puneet/maninder/data/cscc_dataset
+
+
+######################################## her2st ############################################################################
+python 1_inspect_files.py
+python 1_inspect_files.py --sample_ids A1 A2 B1
+
+python 2_compute_spot_distance.py --sample_ids A1 A2 A3
+
+python 3_generate_h5_h5ad.py --sample_ids A1 A2 A3 A4 A5 A6 B1 B2 B3 B4 B5 B6 C1 C2 C3 C4 C5 C6 D1 D2 D3 D4 D5 D6 E1 E2 E3 F1 F2 F3 G1 G2 G3 H1 H2 H3 --out_dir /home/puneet/maninder/data/her2st_dataset/224 --patch_size 224
+######################################## Xenium ############################################################################
+
+python generate_h5_h5ad_from_xenium.py \
+  --cells_zarr /home/puneet/maninder/data/10X_HumandBreastCancer_data/Xenium_output/outs/cells.zarr.zip \
+  --input_files /home/puneet/maninder/data/10X_HumandBreastCancer_data/Xenium_output/outs \
+  --he_image /home/puneet/maninder/data/10X_HumandBreastCancer_data/Xenium_FFPE_Human_Breast_Cancer_Rep1_he_image.ome.tif \
+  --gene_expr /home/puneet/maninder/data/10X_HumandBreastCancer_data/Xenium_output/outs/cell_feature_matrix.h5 \
+  --alignment_csv /home/puneet/maninder/data/10X_HumandBreastCancer_data/Xenium_FFPE_Human_Breast_Cancer_Rep1_he_imagealignment.csv \
+  --output_dir /home/puneet/maninder/data/10X_HumandBreastCancer_data/Processed_Output \
+  --patch_size 128 \
+  --log_file /home/puneet/maninder/data/10X_HumandBreastCancer_data/Processed_Output/xenium_processing.log
+
+
+######################################## main.py ############################################################################
+
+  nohup python3 main2.py --config parameters_cscc.json > log_outs/vgg_224_her2st.out 2>&1 &
