@@ -1,5 +1,5 @@
 import sys
-sys.path.append('/home/puneet/maninder/amitCode/models/TCGN')
+sys.path.append('/home/puneet/maninder/code_model_training/models/TCGN')
 
 from CMT_block import *
 from gnn_block import Graph_Encoding_Block_big, Graph_Encoding_Block

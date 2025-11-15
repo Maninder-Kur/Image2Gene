@@ -128,8 +128,8 @@ sp_idx_train, sp_idx_test = train_test_split(
 )
 
 
-np.save(f"/home/maninder/AmitCode/stDiff/process/{args.filename}_train_indices.npy", sp_idx_train)
-np.save(f"/home/maninder/AmitCode/stDiff/process/{args.filename}_test_indices.npy", sp_idx_test)
+np.save(f"/home/maninder/code_model_training/stDiff/process/{args.filename}_train_indices.npy", sp_idx_train)
+np.save(f"/home/maninder/code_model_training/stDiff/process/{args.filename}_test_indices.npy", sp_idx_test)
 
 print(f"sp_idx_test: {sp_idx_test}")
 

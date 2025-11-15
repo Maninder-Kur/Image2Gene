@@ -1,6 +1,6 @@
 nohup: ignoring input
 2025-11-14 16:48:59,736 - INFO - Logging setup complete.
-2025-11-14 16:48:59,736 - INFO - Experiment information saved to the path: /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/experiment_info.json
+2025-11-14 16:48:59,736 - INFO - Experiment information saved to the path: /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/experiment_info.json
 2025-11-14 16:48:59,736 - INFO - Total samples: 36
 2025-11-14 16:48:59,736 - INFO -   - A1.h5 ↔ A1.h5ad
 2025-11-14 16:48:59,736 - INFO -   - A2.h5 ↔ A2.h5ad
@@ -42,7 +42,7 @@ nohup: ignoring input
 2025-11-14 16:48:59,737 - INFO - 
 ===== Starting Fold 1/5 =====
 2025-11-14 16:48:59,737 - INFO - Fold 1: Train=28, Val=8
-+++++++++++++++++++++++++++++++ /home/puneet/maninder/amitCode/gene_outputs/her2.npy
++++++++++++++++++++++++++++++++ /home/puneet/maninder/code_model_training/gene_outputs/her2.npy
 Initializing PatchDataset...
 Image file: /home/puneet/maninder/data/her2st_dataset/224/A1.h5
 Gene file:  /home/puneet/maninder/data/her2st_dataset/224/A1.h5ad
@@ -1013,7 +1013,7 @@ Batch 73 Pearson correlation: 0.4539
 2025-11-14 16:50:11,914 - INFO - Fold 1 Val Epoch 1/200, Val Loss: 9.8975, Pearson Mean: 0.3798, Spearman Mean: 0.3971
 2025-11-14 16:50:11,914 - INFO - Validation Metrics: {'pearson_mean_genewise': 0.2487, 'spearman_mean_genewise': 0.2246, 'l1_error_mean': 2.0087, 'l2_errors_mean': 9.9357, 'r2_scores_mean': -0.2603, 'pearson_std': 0.0966, 'l2_error_q1': 4.8127, 'l2_error_q2': 7.6315, 'l2_error_q3': 12.4296, 'r2_score_q1': -0.0247, 'r2_score_q2': 0.0221, 'r2_score_q3': 0.0553, 'mape_mean': 76.6667, 'mape_std': 11.2698, 'rmse_mean': 2.9764, 'rmse_std': 1.0377}
 2025-11-14 16:50:11,914 - INFO - Learning rate for epoch 1: 0.0001
-2025-11-14 16:50:11,957 - INFO - Saved best model to /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_1/best_model.pth
+2025-11-14 16:50:11,957 - INFO - Saved best model to /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_1/best_model.pth
 2025-11-14 16:50:12,643 - INFO - Fold 1 Train Epoch 2/200, Batch 0, Loss: 8.9838, Pearson: 0.5161, Spearman: 0.4993
 2025-11-14 16:50:18,503 - INFO - Fold 1 Train Epoch 2/200, Batch 10, Loss: 9.1342, Pearson: 0.5105, Spearman: 0.4943
 2025-11-14 16:50:24,367 - INFO - Fold 1 Train Epoch 2/200, Batch 20, Loss: 8.9634, Pearson: 0.5141, Spearman: 0.5043
@@ -1152,7 +1152,7 @@ Batch 42 Pearson correlation: 0.5266
 2025-11-14 16:51:08,176 - INFO - Fold 1 Val Epoch 2/200, Val Loss: 8.5482, Pearson Mean: 0.4704, Spearman Mean: 0.4843
 2025-11-14 16:51:08,176 - INFO - Validation Metrics: {'pearson_mean_genewise': 0.2698, 'spearman_mean_genewise': 0.2432, 'l1_error_mean': 2.0389, 'l2_errors_mean': 8.5649, 'r2_scores_mean': -0.0476, 'pearson_std': 0.0968, 'l2_error_q1': 4.7064, 'l2_error_q2': 7.2997, 'l2_error_q3': 11.6959, 'r2_score_q1': 0.0125, 'r2_score_q2': 0.052, 'r2_score_q3': 0.095, 'mape_mean': 67.3286, 'mape_std': 16.0803, 'rmse_mean': 2.8209, 'rmse_std': 0.7793}
 2025-11-14 16:51:08,176 - INFO - Learning rate for epoch 2: 0.0001
-2025-11-14 16:51:08,236 - INFO - Saved best model to /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_1/best_model.pth
+2025-11-14 16:51:08,236 - INFO - Saved best model to /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_1/best_model.pth
 2025-11-14 16:51:08,951 - INFO - Fold 1 Train Epoch 3/200, Batch 0, Loss: 8.4204, Pearson: 0.5509, Spearman: 0.5240
 2025-11-14 16:51:14,924 - INFO - Fold 1 Train Epoch 3/200, Batch 10, Loss: 8.7654, Pearson: 0.5631, Spearman: 0.5354
 image : torch.Size([128, 3, 224, 224]), y_true: torch.Size([128, 785]), y_pred: torch.Size([128, 785])
@@ -1407,7 +1407,7 @@ Batch 69 Pearson correlation: 0.5789
 2025-11-14 16:52:05,256 - INFO - Fold 1 Val Epoch 3/200, Val Loss: 8.0943, Pearson Mean: 0.5072, Spearman Mean: 0.5120
 2025-11-14 16:52:05,256 - INFO - Validation Metrics: {'pearson_mean_genewise': 0.2945, 'spearman_mean_genewise': 0.2636, 'l1_error_mean': 2.0159, 'l2_errors_mean': 8.109, 'r2_scores_mean': 0.016, 'pearson_std': 0.1015, 'l2_error_q1': 4.632, 'l2_error_q2': 7.2148, 'l2_error_q3': 11.1919, 'r2_score_q1': 0.0327, 'r2_score_q2': 0.0732, 'r2_score_q3': 0.1207, 'mape_mean': 66.7165, 'mape_std': 16.4448, 'rmse_mean': 2.7579, 'rmse_std': 0.7093}
 2025-11-14 16:52:05,256 - INFO - Learning rate for epoch 3: 0.0001
-2025-11-14 16:52:05,316 - INFO - Saved best model to /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_1/best_model.pth
+2025-11-14 16:52:05,316 - INFO - Saved best model to /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_1/best_model.pth
 2025-11-14 16:52:06,043 - INFO - Fold 1 Train Epoch 4/200, Batch 0, Loss: 8.1731, Pearson: 0.5611, Spearman: 0.5401
 2025-11-14 16:52:11,987 - INFO - Fold 1 Train Epoch 4/200, Batch 10, Loss: 8.3886, Pearson: 0.5774, Spearman: 0.5464
 2025-11-14 16:52:17,879 - INFO - Fold 1 Train Epoch 4/200, Batch 20, Loss: 8.6234, Pearson: 0.5730, Spearman: 0.5513
@@ -1546,7 +1546,7 @@ Batch 38 Pearson correlation: 0.5713
 2025-11-14 16:53:02,059 - INFO - Fold 1 Val Epoch 4/200, Val Loss: 7.9653, Pearson Mean: 0.5203, Spearman Mean: 0.5233
 2025-11-14 16:53:02,060 - INFO - Validation Metrics: {'pearson_mean_genewise': 0.2976, 'spearman_mean_genewise': 0.2669, 'l1_error_mean': 1.9948, 'l2_errors_mean': 7.9738, 'r2_scores_mean': 0.0427, 'pearson_std': 0.1005, 'l2_error_q1': 4.623, 'l2_error_q2': 7.224, 'l2_error_q3': 11.2113, 'r2_score_q1': 0.0378, 'r2_score_q2': 0.076, 'r2_score_q3': 0.1217, 'mape_mean': 66.5181, 'mape_std': 17.2578, 'rmse_mean': 2.7393, 'rmse_std': 0.6855}
 2025-11-14 16:53:02,060 - INFO - Learning rate for epoch 4: 0.0001
-2025-11-14 16:53:02,121 - INFO - Saved best model to /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_1/best_model.pth
+2025-11-14 16:53:02,121 - INFO - Saved best model to /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_1/best_model.pth
 2025-11-14 16:53:02,826 - INFO - Fold 1 Train Epoch 5/200, Batch 0, Loss: 8.1821, Pearson: 0.5871, Spearman: 0.5527
 image : torch.Size([128, 3, 224, 224]), y_true: torch.Size([128, 785]), y_pred: torch.Size([128, 785])
 Batch 39 Pearson correlation: 0.5788
@@ -1940,7 +1940,7 @@ Batch 34 Pearson correlation: 0.6065
 2025-11-14 16:54:56,356 - INFO - Fold 1 Val Epoch 6/200, Val Loss: 7.8008, Pearson Mean: 0.5371, Spearman Mean: 0.5400
 2025-11-14 16:54:56,357 - INFO - Validation Metrics: {'pearson_mean_genewise': 0.3056, 'spearman_mean_genewise': 0.2781, 'l1_error_mean': 2.0181, 'l2_errors_mean': 7.8261, 'r2_scores_mean': 0.0648, 'pearson_std': 0.1007, 'l2_error_q1': 4.6258, 'l2_error_q2': 7.1788, 'l2_error_q3': 10.8804, 'r2_score_q1': 0.0381, 'r2_score_q2': 0.0758, 'r2_score_q3': 0.1235, 'mape_mean': 63.0016, 'mape_std': 17.7472, 'rmse_mean': 2.7181, 'rmse_std': 0.6617}
 2025-11-14 16:54:56,357 - INFO - Learning rate for epoch 6: 0.0001
-2025-11-14 16:54:56,418 - INFO - Saved best model to /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_1/best_model.pth
+2025-11-14 16:54:56,418 - INFO - Saved best model to /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_1/best_model.pth
 2025-11-14 16:54:57,176 - INFO - Fold 1 Train Epoch 7/200, Batch 0, Loss: 7.9499, Pearson: 0.6100, Spearman: 0.5708
 image : torch.Size([128, 3, 224, 224]), y_true: torch.Size([128, 785]), y_pred: torch.Size([128, 785])
 Batch 35 Pearson correlation: 0.5950
@@ -2334,7 +2334,7 @@ Batch 30 Pearson correlation: 0.6093
 2025-11-14 16:56:50,592 - INFO - Fold 1 Val Epoch 8/200, Val Loss: 7.6100, Pearson Mean: 0.5525, Spearman Mean: 0.5545
 2025-11-14 16:56:50,592 - INFO - Validation Metrics: {'pearson_mean_genewise': 0.3192, 'spearman_mean_genewise': 0.2866, 'l1_error_mean': 1.9116, 'l2_errors_mean': 7.6381, 'r2_scores_mean': 0.0891, 'pearson_std': 0.1042, 'l2_error_q1': 4.5801, 'l2_error_q2': 7.0144, 'l2_error_q3': 10.5895, 'r2_score_q1': 0.0475, 'r2_score_q2': 0.0879, 'r2_score_q3': 0.1357, 'mape_mean': 65.4108, 'mape_std': 17.28, 'rmse_mean': 2.6884, 'rmse_std': 0.6409}
 2025-11-14 16:56:50,592 - INFO - Learning rate for epoch 8: 0.0001
-2025-11-14 16:56:50,645 - INFO - Saved best model to /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_1/best_model.pth
+2025-11-14 16:56:50,645 - INFO - Saved best model to /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_1/best_model.pth
 image : torch.Size([128, 3, 224, 224]), y_true: torch.Size([128, 785]), y_pred: torch.Size([128, 785])
 Batch 31 Pearson correlation: 0.6146
 image : torch.Size([128, 3, 224, 224]), y_true: torch.Size([128, 785]), y_pred: torch.Size([128, 785])
@@ -2589,7 +2589,7 @@ Batch 57 Pearson correlation: 0.6283
 2025-11-14 16:57:47,994 - INFO - Fold 1 Val Epoch 9/200, Val Loss: 7.5266, Pearson Mean: 0.5634, Spearman Mean: 0.5635
 2025-11-14 16:57:47,994 - INFO - Validation Metrics: {'pearson_mean_genewise': 0.3202, 'spearman_mean_genewise': 0.2892, 'l1_error_mean': 1.9488, 'l2_errors_mean': 7.5468, 'r2_scores_mean': 0.1028, 'pearson_std': 0.1075, 'l2_error_q1': 4.5263, 'l2_error_q2': 7.0016, 'l2_error_q3': 10.4558, 'r2_score_q1': 0.051, 'r2_score_q2': 0.0903, 'r2_score_q3': 0.1398, 'mape_mean': 63.1527, 'mape_std': 18.6944, 'rmse_mean': 2.673, 'rmse_std': 0.6337}
 2025-11-14 16:57:47,994 - INFO - Learning rate for epoch 9: 0.0001
-2025-11-14 16:57:48,055 - INFO - Saved best model to /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_1/best_model.pth
+2025-11-14 16:57:48,055 - INFO - Saved best model to /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_1/best_model.pth
 2025-11-14 16:57:48,786 - INFO - Fold 1 Train Epoch 10/200, Batch 0, Loss: 7.6569, Pearson: 0.6144, Spearman: 0.5790
 2025-11-14 16:57:54,835 - INFO - Fold 1 Train Epoch 10/200, Batch 10, Loss: 7.5988, Pearson: 0.6131, Spearman: 0.5813
 2025-11-14 16:58:00,929 - INFO - Fold 1 Train Epoch 10/200, Batch 20, Loss: 7.6698, Pearson: 0.6287, Spearman: 0.5842
@@ -2983,7 +2983,7 @@ Batch 53 Pearson correlation: 0.6112
 2025-11-14 17:00:03,520 - INFO - Fold 1 Val Epoch 11/200, Val Loss: 7.5037, Pearson Mean: 0.5627, Spearman Mean: 0.5624
 2025-11-14 17:00:03,520 - INFO - Validation Metrics: {'pearson_mean_genewise': 0.3257, 'spearman_mean_genewise': 0.2943, 'l1_error_mean': 1.9328, 'l2_errors_mean': 7.5164, 'r2_scores_mean': 0.1042, 'pearson_std': 0.1071, 'l2_error_q1': 4.5266, 'l2_error_q2': 6.9531, 'l2_error_q3': 10.4024, 'r2_score_q1': 0.0546, 'r2_score_q2': 0.0942, 'r2_score_q3': 0.1459, 'mape_mean': 63.3309, 'mape_std': 18.9875, 'rmse_mean': 2.6686, 'rmse_std': 0.6285}
 2025-11-14 17:00:03,520 - INFO - Learning rate for epoch 11: 0.0001
-2025-11-14 17:00:03,581 - INFO - Saved best model to /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_1/best_model.pth
+2025-11-14 17:00:03,581 - INFO - Saved best model to /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_1/best_model.pth
 2025-11-14 17:00:04,612 - INFO - Fold 1 Train Epoch 12/200, Batch 0, Loss: 7.5842, Pearson: 0.6154, Spearman: 0.5771
 2025-11-14 17:00:14,777 - INFO - Fold 1 Train Epoch 12/200, Batch 10, Loss: 7.3976, Pearson: 0.6328, Spearman: 0.5952
 2025-11-14 17:00:24,921 - INFO - Fold 1 Train Epoch 12/200, Batch 20, Loss: 7.2597, Pearson: 0.6259, Spearman: 0.5808
@@ -3238,7 +3238,7 @@ Batch 80 Pearson correlation: 0.6141
 2025-11-14 17:01:33,092 - INFO - Fold 1 Val Epoch 12/200, Val Loss: 7.4360, Pearson Mean: 0.5691, Spearman Mean: 0.5683
 2025-11-14 17:01:33,092 - INFO - Validation Metrics: {'pearson_mean_genewise': 0.3289, 'spearman_mean_genewise': 0.2962, 'l1_error_mean': 1.9217, 'l2_errors_mean': 7.4555, 'r2_scores_mean': 0.1117, 'pearson_std': 0.109, 'l2_error_q1': 4.4973, 'l2_error_q2': 6.8557, 'l2_error_q3': 10.3199, 'r2_score_q1': 0.0555, 'r2_score_q2': 0.0971, 'r2_score_q3': 0.1463, 'mape_mean': 63.5578, 'mape_std': 18.8294, 'rmse_mean': 2.658, 'rmse_std': 0.625}
 2025-11-14 17:01:33,093 - INFO - Learning rate for epoch 12: 0.0001
-2025-11-14 17:01:33,154 - INFO - Saved best model to /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_1/best_model.pth
+2025-11-14 17:01:33,154 - INFO - Saved best model to /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_1/best_model.pth
 2025-11-14 17:01:34,083 - INFO - Fold 1 Train Epoch 13/200, Batch 0, Loss: 7.2611, Pearson: 0.6225, Spearman: 0.5871
 2025-11-14 17:01:41,506 - INFO - Fold 1 Train Epoch 13/200, Batch 10, Loss: 7.6143, Pearson: 0.6173, Spearman: 0.5799
 2025-11-14 17:01:47,440 - INFO - Fold 1 Train Epoch 13/200, Batch 20, Loss: 7.6847, Pearson: 0.6337, Spearman: 0.5957
@@ -3632,7 +3632,7 @@ Batch 76 Pearson correlation: 0.6231
 2025-11-14 17:03:29,161 - INFO - Fold 1 Val Epoch 14/200, Val Loss: 7.4214, Pearson Mean: 0.5711, Spearman Mean: 0.5706
 2025-11-14 17:03:29,162 - INFO - Validation Metrics: {'pearson_mean_genewise': 0.3316, 'spearman_mean_genewise': 0.3005, 'l1_error_mean': 1.8949, 'l2_errors_mean': 7.4399, 'r2_scores_mean': 0.1138, 'pearson_std': 0.1102, 'l2_error_q1': 4.5052, 'l2_error_q2': 6.863, 'l2_error_q3': 10.2898, 'r2_score_q1': 0.056, 'r2_score_q2': 0.0985, 'r2_score_q3': 0.1497, 'mape_mean': 63.6248, 'mape_std': 18.6077, 'rmse_mean': 2.6551, 'rmse_std': 0.6246}
 2025-11-14 17:03:29,162 - INFO - Learning rate for epoch 14: 0.0001
-2025-11-14 17:03:29,222 - INFO - Saved best model to /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_1/best_model.pth
+2025-11-14 17:03:29,222 - INFO - Saved best model to /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_1/best_model.pth
 2025-11-14 17:03:29,938 - INFO - Fold 1 Train Epoch 15/200, Batch 0, Loss: 7.4580, Pearson: 0.6283, Spearman: 0.5986
 2025-11-14 17:03:35,974 - INFO - Fold 1 Train Epoch 15/200, Batch 10, Loss: 7.4432, Pearson: 0.6345, Spearman: 0.5891
 2025-11-14 17:03:42,005 - INFO - Fold 1 Train Epoch 15/200, Batch 20, Loss: 7.8298, Pearson: 0.6278, Spearman: 0.5908
@@ -10640,7 +10640,7 @@ Batch 65 Pearson correlation: 0.4700
 2025-11-14 17:51:25,552 - INFO - Fold 2 Val Epoch 1/200, Val Loss: 9.8002, Pearson Mean: 0.4318, Spearman Mean: 0.4213
 2025-11-14 17:51:25,553 - INFO - Validation Metrics: {'pearson_mean_genewise': 0.2552, 'spearman_mean_genewise': 0.2349, 'l1_error_mean': 2.128, 'l2_errors_mean': 9.8033, 'r2_scores_mean': -0.0094, 'pearson_std': 0.1113, 'l2_error_q1': 5.3707, 'l2_error_q2': 8.3065, 'l2_error_q3': 12.8226, 'r2_score_q1': -0.0048, 'r2_score_q2': 0.0248, 'r2_score_q3': 0.057, 'mape_mean': 73.5559, 'mape_std': 12.4676, 'rmse_mean': 3.0087, 'rmse_std': 0.8667}
 2025-11-14 17:51:25,553 - INFO - Learning rate for epoch 1: 0.0001
-2025-11-14 17:51:25,597 - INFO - Saved best model to /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_2/best_model.pth
+2025-11-14 17:51:25,597 - INFO - Saved best model to /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_2/best_model.pth
 2025-11-14 17:51:26,547 - INFO - Fold 2 Train Epoch 2/200, Batch 0, Loss: 9.3929, Pearson: 0.4894, Spearman: 0.4875
 2025-11-14 17:51:36,730 - INFO - Fold 2 Train Epoch 2/200, Batch 10, Loss: 8.9808, Pearson: 0.5326, Spearman: 0.5087
 2025-11-14 17:51:46,927 - INFO - Fold 2 Train Epoch 2/200, Batch 20, Loss: 8.7095, Pearson: 0.5421, Spearman: 0.5174
@@ -10779,7 +10779,7 @@ Batch 34 Pearson correlation: 0.5356
 2025-11-14 17:52:55,575 - INFO - Fold 2 Val Epoch 2/200, Val Loss: 8.9130, Pearson Mean: 0.4897, Spearman Mean: 0.4822
 2025-11-14 17:52:55,575 - INFO - Validation Metrics: {'pearson_mean_genewise': 0.2753, 'spearman_mean_genewise': 0.2587, 'l1_error_mean': 2.145, 'l2_errors_mean': 8.9235, 'r2_scores_mean': 0.0544, 'pearson_std': 0.1055, 'l2_error_q1': 5.2711, 'l2_error_q2': 8.2538, 'l2_error_q3': 12.3071, 'r2_score_q1': 0.0239, 'r2_score_q2': 0.0496, 'r2_score_q3': 0.0838, 'mape_mean': 69.0495, 'mape_std': 16.1595, 'rmse_mean': 2.9026, 'rmse_std': 0.706}
 2025-11-14 17:52:55,576 - INFO - Learning rate for epoch 2: 0.0001
-2025-11-14 17:52:55,637 - INFO - Saved best model to /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_2/best_model.pth
+2025-11-14 17:52:55,637 - INFO - Saved best model to /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_2/best_model.pth
 2025-11-14 17:52:56,616 - INFO - Fold 2 Train Epoch 3/200, Batch 0, Loss: 8.1295, Pearson: 0.5513, Spearman: 0.5381
 image : torch.Size([128, 3, 224, 224]), y_true: torch.Size([128, 785]), y_pred: torch.Size([128, 785])
 Batch 35 Pearson correlation: 0.5332
@@ -11034,7 +11034,7 @@ Batch 61 Pearson correlation: 0.5830
 2025-11-14 17:54:25,530 - INFO - Fold 2 Val Epoch 3/200, Val Loss: 8.5867, Pearson Mean: 0.5178, Spearman Mean: 0.5087
 2025-11-14 17:54:25,531 - INFO - Validation Metrics: {'pearson_mean_genewise': 0.2916, 'spearman_mean_genewise': 0.2711, 'l1_error_mean': 2.1877, 'l2_errors_mean': 8.6008, 'r2_scores_mean': 0.0781, 'pearson_std': 0.1108, 'l2_error_q1': 5.2489, 'l2_error_q2': 8.1418, 'l2_error_q3': 11.946, 'r2_score_q1': 0.0326, 'r2_score_q2': 0.0627, 'r2_score_q3': 0.1024, 'mape_mean': 66.1531, 'mape_std': 17.2274, 'rmse_mean': 2.859, 'rmse_std': 0.6534}
 2025-11-14 17:54:25,531 - INFO - Learning rate for epoch 3: 0.0001
-2025-11-14 17:54:25,598 - INFO - Saved best model to /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_2/best_model.pth
+2025-11-14 17:54:25,598 - INFO - Saved best model to /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_2/best_model.pth
 2025-11-14 17:54:26,556 - INFO - Fold 2 Train Epoch 4/200, Batch 0, Loss: 8.3203, Pearson: 0.5615, Spearman: 0.5369
 2025-11-14 17:54:36,781 - INFO - Fold 2 Train Epoch 4/200, Batch 10, Loss: 7.8269, Pearson: 0.5978, Spearman: 0.5512
 2025-11-14 17:54:46,967 - INFO - Fold 2 Train Epoch 4/200, Batch 20, Loss: 7.7899, Pearson: 0.5842, Spearman: 0.5492
@@ -11173,7 +11173,7 @@ Batch 30 Pearson correlation: 0.5652
 2025-11-14 17:55:55,413 - INFO - Fold 2 Val Epoch 4/200, Val Loss: 8.7198, Pearson Mean: 0.4987, Spearman Mean: 0.4946
 2025-11-14 17:55:55,414 - INFO - Validation Metrics: {'pearson_mean_genewise': 0.2932, 'spearman_mean_genewise': 0.2727, 'l1_error_mean': 2.1319, 'l2_errors_mean': 8.7151, 'r2_scores_mean': 0.074, 'pearson_std': 0.1054, 'l2_error_q1': 5.2083, 'l2_error_q2': 8.0886, 'l2_error_q3': 11.9915, 'r2_score_q1': 0.0347, 'r2_score_q2': 0.064, 'r2_score_q3': 0.1045, 'mape_mean': 66.568, 'mape_std': 17.3175, 'rmse_mean': 2.8708, 'rmse_std': 0.6881}
 2025-11-14 17:55:55,414 - INFO - Learning rate for epoch 4: 0.0001
-2025-11-14 17:55:55,476 - INFO - Saved best model to /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_2/best_model.pth
+2025-11-14 17:55:55,476 - INFO - Saved best model to /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_2/best_model.pth
 image : torch.Size([128, 3, 224, 224]), y_true: torch.Size([128, 785]), y_pred: torch.Size([128, 785])
 Batch 31 Pearson correlation: 0.5785
 image : torch.Size([128, 3, 224, 224]), y_true: torch.Size([128, 785]), y_pred: torch.Size([128, 785])
@@ -11428,7 +11428,7 @@ Batch 57 Pearson correlation: 0.6078
 2025-11-14 17:57:25,352 - INFO - Fold 2 Val Epoch 5/200, Val Loss: 8.4775, Pearson Mean: 0.5288, Spearman Mean: 0.5199
 2025-11-14 17:57:25,352 - INFO - Validation Metrics: {'pearson_mean_genewise': 0.292, 'spearman_mean_genewise': 0.276, 'l1_error_mean': 2.1202, 'l2_errors_mean': 8.4923, 'r2_scores_mean': 0.0869, 'pearson_std': 0.115, 'l2_error_q1': 5.2213, 'l2_error_q2': 8.1024, 'l2_error_q3': 11.7405, 'r2_score_q1': 0.0359, 'r2_score_q2': 0.0658, 'r2_score_q3': 0.1089, 'mape_mean': 67.5456, 'mape_std': 17.9981, 'rmse_mean': 2.8423, 'rmse_std': 0.643}
 2025-11-14 17:57:25,352 - INFO - Learning rate for epoch 5: 0.0001
-2025-11-14 17:57:25,412 - INFO - Saved best model to /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_2/best_model.pth
+2025-11-14 17:57:25,412 - INFO - Saved best model to /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_2/best_model.pth
 2025-11-14 17:57:26,342 - INFO - Fold 2 Train Epoch 6/200, Batch 0, Loss: 7.5514, Pearson: 0.5903, Spearman: 0.5627
 2025-11-14 17:57:36,579 - INFO - Fold 2 Train Epoch 6/200, Batch 10, Loss: 7.6427, Pearson: 0.6163, Spearman: 0.5780
 2025-11-14 17:57:46,746 - INFO - Fold 2 Train Epoch 6/200, Batch 20, Loss: 7.7656, Pearson: 0.6002, Spearman: 0.5718
@@ -11685,7 +11685,7 @@ all_y_pred: <class 'numpy.ndarray'>
 2025-11-14 17:58:55,170 - INFO - Fold 2 Val Epoch 6/200, Val Loss: 8.5313, Pearson Mean: 0.5222, Spearman Mean: 0.5150
 2025-11-14 17:58:55,171 - INFO - Validation Metrics: {'pearson_mean_genewise': 0.302, 'spearman_mean_genewise': 0.2813, 'l1_error_mean': 2.059, 'l2_errors_mean': 8.539, 'r2_scores_mean': 0.0835, 'pearson_std': 0.1156, 'l2_error_q1': 5.2086, 'l2_error_q2': 8.112, 'l2_error_q3': 11.8, 'r2_score_q1': 0.0323, 'r2_score_q2': 0.0641, 'r2_score_q3': 0.1117, 'mape_mean': 66.4185, 'mape_std': 17.5891, 'rmse_mean': 2.8484, 'rmse_std': 0.6523}
 2025-11-14 17:58:55,171 - INFO - Learning rate for epoch 6: 0.0001
-2025-11-14 17:58:55,234 - INFO - Saved best model to /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_2/best_model.pth
+2025-11-14 17:58:55,234 - INFO - Saved best model to /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_2/best_model.pth
 2025-11-14 17:58:56,157 - INFO - Fold 2 Train Epoch 7/200, Batch 0, Loss: 7.6183, Pearson: 0.6156, Spearman: 0.5756
 2025-11-14 17:59:06,387 - INFO - Fold 2 Train Epoch 7/200, Batch 10, Loss: 7.6696, Pearson: 0.6127, Spearman: 0.5797
 2025-11-14 17:59:16,605 - INFO - Fold 2 Train Epoch 7/200, Batch 20, Loss: 7.7105, Pearson: 0.6158, Spearman: 0.5804
@@ -12079,7 +12079,7 @@ Batch 81 Pearson correlation: 0.6147
 2025-11-14 18:01:54,968 - INFO - Fold 2 Val Epoch 8/200, Val Loss: 8.3792, Pearson Mean: 0.5420, Spearman Mean: 0.5339
 2025-11-14 18:01:54,969 - INFO - Validation Metrics: {'pearson_mean_genewise': 0.3034, 'spearman_mean_genewise': 0.2833, 'l1_error_mean': 2.0761, 'l2_errors_mean': 8.4009, 'r2_scores_mean': 0.0898, 'pearson_std': 0.1224, 'l2_error_q1': 5.2865, 'l2_error_q2': 8.0604, 'l2_error_q3': 11.4746, 'r2_score_q1': 0.0304, 'r2_score_q2': 0.0666, 'r2_score_q3': 0.1198, 'mape_mean': 64.784, 'mape_std': 18.592, 'rmse_mean': 2.8307, 'rmse_std': 0.623}
 2025-11-14 18:01:54,969 - INFO - Learning rate for epoch 8: 0.0001
-2025-11-14 18:01:55,031 - INFO - Saved best model to /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_2/best_model.pth
+2025-11-14 18:01:55,031 - INFO - Saved best model to /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_2/best_model.pth
 2025-11-14 18:01:56,005 - INFO - Fold 2 Train Epoch 9/200, Batch 0, Loss: 7.6406, Pearson: 0.6268, Spearman: 0.5907
 2025-11-14 18:02:06,223 - INFO - Fold 2 Train Epoch 9/200, Batch 10, Loss: 7.2799, Pearson: 0.6188, Spearman: 0.5816
 2025-11-14 18:02:16,406 - INFO - Fold 2 Train Epoch 9/200, Batch 20, Loss: 7.5175, Pearson: 0.6275, Spearman: 0.5842
@@ -12218,7 +12218,7 @@ Batch 50 Pearson correlation: 0.6255
 2025-11-14 18:03:24,956 - INFO - Fold 2 Val Epoch 9/200, Val Loss: 8.3375, Pearson Mean: 0.5418, Spearman Mean: 0.5337
 2025-11-14 18:03:24,956 - INFO - Validation Metrics: {'pearson_mean_genewise': 0.3084, 'spearman_mean_genewise': 0.2881, 'l1_error_mean': 2.0977, 'l2_errors_mean': 8.3573, 'r2_scores_mean': 0.094, 'pearson_std': 0.1221, 'l2_error_q1': 5.2409, 'l2_error_q2': 8.0458, 'l2_error_q3': 11.3921, 'r2_score_q1': 0.0343, 'r2_score_q2': 0.0693, 'r2_score_q3': 0.1215, 'mape_mean': 64.2483, 'mape_std': 18.7799, 'rmse_mean': 2.8235, 'rmse_std': 0.6206}
 2025-11-14 18:03:24,956 - INFO - Learning rate for epoch 9: 0.0001
-2025-11-14 18:03:25,019 - INFO - Saved best model to /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_2/best_model.pth
+2025-11-14 18:03:25,019 - INFO - Saved best model to /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_2/best_model.pth
 2025-11-14 18:03:25,996 - INFO - Fold 2 Train Epoch 10/200, Batch 0, Loss: 7.4010, Pearson: 0.6238, Spearman: 0.5846
 2025-11-14 18:03:36,215 - INFO - Fold 2 Train Epoch 10/200, Batch 10, Loss: 7.2171, Pearson: 0.6303, Spearman: 0.5859
 image : torch.Size([128, 3, 224, 224]), y_true: torch.Size([128, 785]), y_pred: torch.Size([128, 785])
@@ -12473,7 +12473,7 @@ Batch 77 Pearson correlation: 0.6234
 2025-11-14 18:04:54,859 - INFO - Fold 2 Val Epoch 10/200, Val Loss: 8.3199, Pearson Mean: 0.5414, Spearman Mean: 0.5338
 2025-11-14 18:04:54,859 - INFO - Validation Metrics: {'pearson_mean_genewise': 0.3119, 'spearman_mean_genewise': 0.2904, 'l1_error_mean': 2.0711, 'l2_errors_mean': 8.3371, 'r2_scores_mean': 0.0968, 'pearson_std': 0.1217, 'l2_error_q1': 5.2293, 'l2_error_q2': 8.0326, 'l2_error_q3': 11.3273, 'r2_score_q1': 0.0365, 'r2_score_q2': 0.073, 'r2_score_q3': 0.1257, 'mape_mean': 64.6843, 'mape_std': 18.7958, 'rmse_mean': 2.8198, 'rmse_std': 0.6213}
 2025-11-14 18:04:54,859 - INFO - Learning rate for epoch 10: 0.0001
-2025-11-14 18:04:54,922 - INFO - Saved best model to /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_2/best_model.pth
+2025-11-14 18:04:54,922 - INFO - Saved best model to /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_2/best_model.pth
 2025-11-14 18:04:55,908 - INFO - Fold 2 Train Epoch 11/200, Batch 0, Loss: 7.3311, Pearson: 0.6299, Spearman: 0.5942
 2025-11-14 18:05:06,122 - INFO - Fold 2 Train Epoch 11/200, Batch 10, Loss: 7.2571, Pearson: 0.6282, Spearman: 0.5897
 2025-11-14 18:05:16,328 - INFO - Fold 2 Train Epoch 11/200, Batch 20, Loss: 6.9740, Pearson: 0.6401, Spearman: 0.5944
@@ -12867,7 +12867,7 @@ Batch 73 Pearson correlation: 0.6296
 2025-11-14 18:07:54,842 - INFO - Fold 2 Val Epoch 12/200, Val Loss: 8.3682, Pearson Mean: 0.5453, Spearman Mean: 0.5369
 2025-11-14 18:07:54,843 - INFO - Validation Metrics: {'pearson_mean_genewise': 0.3125, 'spearman_mean_genewise': 0.2912, 'l1_error_mean': 2.0945, 'l2_errors_mean': 8.3898, 'r2_scores_mean': 0.0884, 'pearson_std': 0.1245, 'l2_error_q1': 5.2688, 'l2_error_q2': 8.0945, 'l2_error_q3': 11.4276, 'r2_score_q1': 0.0269, 'r2_score_q2': 0.0645, 'r2_score_q3': 0.122, 'mape_mean': 62.3839, 'mape_std': 19.0572, 'rmse_mean': 2.8299, 'rmse_std': 0.6177}
 2025-11-14 18:07:54,843 - INFO - Learning rate for epoch 12: 0.0001
-2025-11-14 18:07:54,905 - INFO - Saved best model to /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_2/best_model.pth
+2025-11-14 18:07:54,905 - INFO - Saved best model to /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_2/best_model.pth
 2025-11-14 18:07:55,856 - INFO - Fold 2 Train Epoch 13/200, Batch 0, Loss: 7.4410, Pearson: 0.6256, Spearman: 0.5840
 2025-11-14 18:08:06,084 - INFO - Fold 2 Train Epoch 13/200, Batch 10, Loss: 7.8087, Pearson: 0.6214, Spearman: 0.5885
 2025-11-14 18:08:16,291 - INFO - Fold 2 Train Epoch 13/200, Batch 20, Loss: 7.3652, Pearson: 0.6201, Spearman: 0.5904
@@ -13261,7 +13261,7 @@ Batch 69 Pearson correlation: 0.6382
 2025-11-14 18:10:54,887 - INFO - Fold 2 Val Epoch 14/200, Val Loss: 8.2733, Pearson Mean: 0.5459, Spearman Mean: 0.5377
 2025-11-14 18:10:54,887 - INFO - Validation Metrics: {'pearson_mean_genewise': 0.312, 'spearman_mean_genewise': 0.2927, 'l1_error_mean': 2.0215, 'l2_errors_mean': 8.2928, 'r2_scores_mean': 0.1009, 'pearson_std': 0.1246, 'l2_error_q1': 5.2056, 'l2_error_q2': 8.015, 'l2_error_q3': 11.289, 'r2_score_q1': 0.039, 'r2_score_q2': 0.0756, 'r2_score_q3': 0.1319, 'mape_mean': 66.3573, 'mape_std': 18.6943, 'rmse_mean': 2.8124, 'rmse_std': 0.6189}
 2025-11-14 18:10:54,887 - INFO - Learning rate for epoch 14: 0.0001
-2025-11-14 18:10:54,955 - INFO - Saved best model to /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_2/best_model.pth
+2025-11-14 18:10:54,955 - INFO - Saved best model to /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_2/best_model.pth
 2025-11-14 18:10:55,868 - INFO - Fold 2 Train Epoch 15/200, Batch 0, Loss: 7.2491, Pearson: 0.6297, Spearman: 0.5896
 2025-11-14 18:11:06,110 - INFO - Fold 2 Train Epoch 15/200, Batch 10, Loss: 7.4821, Pearson: 0.6403, Spearman: 0.6047
 2025-11-14 18:11:16,271 - INFO - Fold 2 Train Epoch 15/200, Batch 20, Loss: 7.0529, Pearson: 0.6417, Spearman: 0.6047
@@ -14048,7 +14048,7 @@ Batch 61 Pearson correlation: 0.6345
 2025-11-14 18:16:52,727 - INFO - Fold 2 Val Epoch 18/200, Val Loss: 8.2453, Pearson Mean: 0.5489, Spearman Mean: 0.5398
 2025-11-14 18:16:52,727 - INFO - Validation Metrics: {'pearson_mean_genewise': 0.316, 'spearman_mean_genewise': 0.2954, 'l1_error_mean': 2.0589, 'l2_errors_mean': 8.2688, 'r2_scores_mean': 0.1007, 'pearson_std': 0.1274, 'l2_error_q1': 5.2258, 'l2_error_q2': 8.0063, 'l2_error_q3': 11.2742, 'r2_score_q1': 0.0357, 'r2_score_q2': 0.0747, 'r2_score_q3': 0.1355, 'mape_mean': 63.9121, 'mape_std': 19.2561, 'rmse_mean': 2.8096, 'rmse_std': 0.6124}
 2025-11-14 18:16:52,727 - INFO - Learning rate for epoch 18: 0.0001
-2025-11-14 18:16:52,786 - INFO - Saved best model to /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_2/best_model.pth
+2025-11-14 18:16:52,786 - INFO - Saved best model to /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_2/best_model.pth
 2025-11-14 18:16:53,820 - INFO - Fold 2 Train Epoch 19/200, Batch 0, Loss: 7.2149, Pearson: 0.6407, Spearman: 0.6057
 2025-11-14 18:17:03,992 - INFO - Fold 2 Train Epoch 19/200, Batch 10, Loss: 7.2155, Pearson: 0.6509, Spearman: 0.6124
 2025-11-14 18:17:14,195 - INFO - Fold 2 Train Epoch 19/200, Batch 20, Loss: 7.4527, Pearson: 0.6402, Spearman: 0.6109
@@ -21053,7 +21053,7 @@ image : torch.Size([128, 3, 224, 224]), y_true: torch.Size([128, 785]), y_pred: 
 2025-11-14 19:04:39,680 - INFO - Fold 3 Val Epoch 1/200, Val Loss: 9.7920, Pearson Mean: 0.4787, Spearman Mean: 0.4777
 2025-11-14 19:04:39,680 - INFO - Validation Metrics: {'pearson_mean_genewise': 0.2356, 'spearman_mean_genewise': 0.2278, 'l1_error_mean': 2.436, 'l2_errors_mean': 9.8233, 'r2_scores_mean': 0.0078, 'pearson_std': 0.1021, 'l2_error_q1': 6.2899, 'l2_error_q2': 9.3312, 'l2_error_q3': 12.9082, 'r2_score_q1': 0.011, 'r2_score_q2': 0.0335, 'r2_score_q3': 0.0609, 'mape_mean': 70.0383, 'mape_std': 14.9872, 'rmse_mean': 3.0624, 'rmse_std': 0.6672}
 2025-11-14 19:04:39,680 - INFO - Learning rate for epoch 1: 0.0001
-2025-11-14 19:04:39,728 - INFO - Saved best model to /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_3/best_model.pth
+2025-11-14 19:04:39,728 - INFO - Saved best model to /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_3/best_model.pth
 2025-11-14 19:04:40,704 - INFO - Fold 3 Train Epoch 2/200, Batch 0, Loss: 8.6230, Pearson: 0.5114, Spearman: 0.4931
 2025-11-14 19:04:50,844 - INFO - Fold 3 Train Epoch 2/200, Batch 10, Loss: 8.9059, Pearson: 0.5199, Spearman: 0.5005
 Batch 50 Pearson correlation: 0.3859
@@ -21308,7 +21308,7 @@ Batch 74 Pearson correlation: 0.5602
 2025-11-14 19:06:12,160 - INFO - Fold 3 Val Epoch 2/200, Val Loss: 9.0683, Pearson Mean: 0.5233, Spearman Mean: 0.5177
 2025-11-14 19:06:12,160 - INFO - Validation Metrics: {'pearson_mean_genewise': 0.2843, 'spearman_mean_genewise': 0.2695, 'l1_error_mean': 2.3527, 'l2_errors_mean': 9.0994, 'r2_scores_mean': 0.0699, 'pearson_std': 0.1142, 'l2_error_q1': 6.1608, 'l2_error_q2': 8.9521, 'l2_error_q3': 11.79, 'r2_score_q1': 0.0327, 'r2_score_q2': 0.0611, 'r2_score_q3': 0.1049, 'mape_mean': 64.5348, 'mape_std': 18.0975, 'rmse_mean': 2.9625, 'rmse_std': 0.5683}
 2025-11-14 19:06:12,161 - INFO - Learning rate for epoch 2: 0.0001
-2025-11-14 19:06:12,232 - INFO - Saved best model to /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_3/best_model.pth
+2025-11-14 19:06:12,232 - INFO - Saved best model to /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_3/best_model.pth
 2025-11-14 19:06:13,126 - INFO - Fold 3 Train Epoch 3/200, Batch 0, Loss: 8.1730, Pearson: 0.5456, Spearman: 0.5199
 2025-11-14 19:06:22,878 - INFO - Fold 3 Train Epoch 3/200, Batch 10, Loss: 8.4524, Pearson: 0.5676, Spearman: 0.5381
 2025-11-14 19:06:33,055 - INFO - Fold 3 Train Epoch 3/200, Batch 20, Loss: 8.9890, Pearson: 0.5681, Spearman: 0.5482
@@ -21446,7 +21446,7 @@ Batch 40 Pearson correlation: 0.5652
 2025-11-14 19:07:44,012 - INFO - Fold 3 Val Epoch 3/200, Val Loss: 8.8283, Pearson Mean: 0.5384, Spearman Mean: 0.5364
 2025-11-14 19:07:44,013 - INFO - Validation Metrics: {'pearson_mean_genewise': 0.3026, 'spearman_mean_genewise': 0.2851, 'l1_error_mean': 2.2481, 'l2_errors_mean': 8.8586, 'r2_scores_mean': 0.0886, 'pearson_std': 0.1248, 'l2_error_q1': 6.1326, 'l2_error_q2': 8.752, 'l2_error_q3': 11.3409, 'r2_score_q1': 0.0366, 'r2_score_q2': 0.0669, 'r2_score_q3': 0.1214, 'mape_mean': 62.8892, 'mape_std': 19.6486, 'rmse_mean': 2.9263, 'rmse_std': 0.5434}
 2025-11-14 19:07:44,013 - INFO - Learning rate for epoch 3: 0.0001
-2025-11-14 19:07:44,071 - INFO - Saved best model to /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_3/best_model.pth
+2025-11-14 19:07:44,071 - INFO - Saved best model to /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_3/best_model.pth
 2025-11-14 19:07:44,986 - INFO - Fold 3 Train Epoch 4/200, Batch 0, Loss: 7.8635, Pearson: 0.5660, Spearman: 0.5320
 image : torch.Size([128, 3, 224, 224]), y_true: torch.Size([128, 785]), y_pred: torch.Size([128, 785])
 Batch 41 Pearson correlation: 0.5671
@@ -21700,7 +21700,7 @@ Batch 64 Pearson correlation: 0.5833
 2025-11-14 19:09:16,151 - INFO - Fold 3 Val Epoch 4/200, Val Loss: 8.6703, Pearson Mean: 0.5517, Spearman Mean: 0.5465
 2025-11-14 19:09:16,152 - INFO - Validation Metrics: {'pearson_mean_genewise': 0.3132, 'spearman_mean_genewise': 0.2887, 'l1_error_mean': 2.2273, 'l2_errors_mean': 8.6983, 'r2_scores_mean': 0.1009, 'pearson_std': 0.1288, 'l2_error_q1': 6.0923, 'l2_error_q2': 8.6435, 'l2_error_q3': 11.0634, 'r2_score_q1': 0.0419, 'r2_score_q2': 0.0765, 'r2_score_q3': 0.1297, 'mape_mean': 64.0871, 'mape_std': 19.3143, 'rmse_mean': 2.9028, 'rmse_std': 0.5218}
 2025-11-14 19:09:16,152 - INFO - Learning rate for epoch 4: 0.0001
-2025-11-14 19:09:16,202 - INFO - Saved best model to /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_3/best_model.pth
+2025-11-14 19:09:16,202 - INFO - Saved best model to /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_3/best_model.pth
 2025-11-14 19:09:17,120 - INFO - Fold 3 Train Epoch 5/200, Batch 0, Loss: 7.7561, Pearson: 0.5920, Spearman: 0.5597
 2025-11-14 19:09:27,265 - INFO - Fold 3 Train Epoch 5/200, Batch 10, Loss: 7.6224, Pearson: 0.5848, Spearman: 0.5533
 2025-11-14 19:09:37,412 - INFO - Fold 3 Train Epoch 5/200, Batch 20, Loss: 8.1454, Pearson: 0.5831, Spearman: 0.5632
@@ -22092,7 +22092,7 @@ Batch 54 Pearson correlation: 0.5984
 2025-11-14 19:12:20,530 - INFO - Fold 3 Val Epoch 6/200, Val Loss: 8.5983, Pearson Mean: 0.5577, Spearman Mean: 0.5549
 2025-11-14 19:12:20,531 - INFO - Validation Metrics: {'pearson_mean_genewise': 0.3213, 'spearman_mean_genewise': 0.2967, 'l1_error_mean': 2.2561, 'l2_errors_mean': 8.6264, 'r2_scores_mean': 0.1072, 'pearson_std': 0.1306, 'l2_error_q1': 6.0949, 'l2_error_q2': 8.5404, 'l2_error_q3': 10.9029, 'r2_score_q1': 0.0422, 'r2_score_q2': 0.0756, 'r2_score_q3': 0.1394, 'mape_mean': 59.9249, 'mape_std': 20.0012, 'rmse_mean': 2.8902, 'rmse_std': 0.5225}
 2025-11-14 19:12:20,531 - INFO - Learning rate for epoch 6: 0.0001
-2025-11-14 19:12:20,592 - INFO - Saved best model to /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_3/best_model.pth
+2025-11-14 19:12:20,592 - INFO - Saved best model to /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_3/best_model.pth
 2025-11-14 19:12:21,632 - INFO - Fold 3 Train Epoch 7/200, Batch 0, Loss: 7.1716, Pearson: 0.6077, Spearman: 0.5677
 2025-11-14 19:12:31,679 - INFO - Fold 3 Train Epoch 7/200, Batch 10, Loss: 7.5857, Pearson: 0.6091, Spearman: 0.5673
 2025-11-14 19:12:41,832 - INFO - Fold 3 Train Epoch 7/200, Batch 20, Loss: 7.3763, Pearson: 0.6073, Spearman: 0.5709
@@ -22346,7 +22346,7 @@ Batch 78 Pearson correlation: 0.6077
 2025-11-14 19:13:52,844 - INFO - Fold 3 Val Epoch 7/200, Val Loss: 8.5887, Pearson Mean: 0.5606, Spearman Mean: 0.5571
 2025-11-14 19:13:52,844 - INFO - Validation Metrics: {'pearson_mean_genewise': 0.3194, 'spearman_mean_genewise': 0.2976, 'l1_error_mean': 2.2407, 'l2_errors_mean': 8.6161, 'r2_scores_mean': 0.1084, 'pearson_std': 0.1336, 'l2_error_q1': 6.0602, 'l2_error_q2': 8.4769, 'l2_error_q3': 10.9179, 'r2_score_q1': 0.0427, 'r2_score_q2': 0.0792, 'r2_score_q3': 0.1379, 'mape_mean': 61.4294, 'mape_std': 20.5838, 'rmse_mean': 2.8883, 'rmse_std': 0.5231}
 2025-11-14 19:13:52,844 - INFO - Learning rate for epoch 7: 0.0001
-2025-11-14 19:13:52,911 - INFO - Saved best model to /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_3/best_model.pth
+2025-11-14 19:13:52,911 - INFO - Saved best model to /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_3/best_model.pth
 2025-11-14 19:13:53,837 - INFO - Fold 3 Train Epoch 8/200, Batch 0, Loss: 7.5360, Pearson: 0.6224, Spearman: 0.5898
 2025-11-14 19:14:04,001 - INFO - Fold 3 Train Epoch 8/200, Batch 10, Loss: 7.3769, Pearson: 0.6237, Spearman: 0.5762
 2025-11-14 19:14:14,149 - INFO - Fold 3 Train Epoch 8/200, Batch 20, Loss: 7.2487, Pearson: 0.6187, Spearman: 0.5814
@@ -23130,7 +23130,7 @@ Batch 58 Pearson correlation: 0.6203
 2025-11-14 19:20:02,002 - INFO - Fold 3 Val Epoch 11/200, Val Loss: 8.5760, Pearson Mean: 0.5572, Spearman Mean: 0.5546
 2025-11-14 19:20:02,002 - INFO - Validation Metrics: {'pearson_mean_genewise': 0.3232, 'spearman_mean_genewise': 0.3025, 'l1_error_mean': 2.2016, 'l2_errors_mean': 8.6085, 'r2_scores_mean': 0.1094, 'pearson_std': 0.1329, 'l2_error_q1': 6.0907, 'l2_error_q2': 8.51, 'l2_error_q3': 10.9069, 'r2_score_q1': 0.043, 'r2_score_q2': 0.0781, 'r2_score_q3': 0.1387, 'mape_mean': 62.2113, 'mape_std': 20.6453, 'rmse_mean': 2.8878, 'rmse_std': 0.519}
 2025-11-14 19:20:02,002 - INFO - Learning rate for epoch 11: 0.0001
-2025-11-14 19:20:02,060 - INFO - Saved best model to /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_3/best_model.pth
+2025-11-14 19:20:02,060 - INFO - Saved best model to /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_3/best_model.pth
 2025-11-14 19:20:02,952 - INFO - Fold 3 Train Epoch 12/200, Batch 0, Loss: 7.2185, Pearson: 0.6168, Spearman: 0.5801
 2025-11-14 19:20:13,136 - INFO - Fold 3 Train Epoch 12/200, Batch 10, Loss: 7.6520, Pearson: 0.6212, Spearman: 0.5841
 2025-11-14 19:20:23,297 - INFO - Fold 3 Train Epoch 12/200, Batch 20, Loss: 7.2762, Pearson: 0.6355, Spearman: 0.5882
@@ -23384,7 +23384,7 @@ Batch 82 Pearson correlation: 0.6204
 2025-11-14 19:21:34,412 - INFO - Fold 3 Val Epoch 12/200, Val Loss: 8.5065, Pearson Mean: 0.5633, Spearman Mean: 0.5603
 2025-11-14 19:21:34,412 - INFO - Validation Metrics: {'pearson_mean_genewise': 0.3256, 'spearman_mean_genewise': 0.3067, 'l1_error_mean': 2.1914, 'l2_errors_mean': 8.5378, 'r2_scores_mean': 0.1146, 'pearson_std': 0.1371, 'l2_error_q1': 6.0933, 'l2_error_q2': 8.4281, 'l2_error_q3': 10.8025, 'r2_score_q1': 0.0478, 'r2_score_q2': 0.0807, 'r2_score_q3': 0.1412, 'mape_mean': 62.7836, 'mape_std': 20.7562, 'rmse_mean': 2.8761, 'rmse_std': 0.5157}
 2025-11-14 19:21:34,412 - INFO - Learning rate for epoch 12: 0.0001
-2025-11-14 19:21:34,472 - INFO - Saved best model to /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_3/best_model.pth
+2025-11-14 19:21:34,472 - INFO - Saved best model to /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_3/best_model.pth
 2025-11-14 19:21:35,387 - INFO - Fold 3 Train Epoch 13/200, Batch 0, Loss: 7.2461, Pearson: 0.6271, Spearman: 0.5897
 2025-11-14 19:21:45,574 - INFO - Fold 3 Train Epoch 13/200, Batch 10, Loss: 7.3712, Pearson: 0.6307, Spearman: 0.5926
 2025-11-14 19:21:55,721 - INFO - Fold 3 Train Epoch 13/200, Batch 20, Loss: 7.0780, Pearson: 0.6324, Spearman: 0.5886
@@ -23913,7 +23913,7 @@ Batch 38 Pearson correlation: 0.6246
 2025-11-14 19:25:58,628 - INFO - Fold 3 Val Epoch 15/200, Val Loss: 8.4818, Pearson Mean: 0.5649, Spearman Mean: 0.5615
 2025-11-14 19:25:58,629 - INFO - Validation Metrics: {'pearson_mean_genewise': 0.3316, 'spearman_mean_genewise': 0.3121, 'l1_error_mean': 2.179, 'l2_errors_mean': 8.5122, 'r2_scores_mean': 0.1173, 'pearson_std': 0.137, 'l2_error_q1': 6.0387, 'l2_error_q2': 8.4131, 'l2_error_q3': 10.7464, 'r2_score_q1': 0.0452, 'r2_score_q2': 0.0817, 'r2_score_q3': 0.1481, 'mape_mean': 60.8341, 'mape_std': 21.0225, 'rmse_mean': 2.8714, 'rmse_std': 0.5169}
 2025-11-14 19:25:58,629 - INFO - Learning rate for epoch 15: 0.0001
-2025-11-14 19:25:58,689 - INFO - Saved best model to /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_3/best_model.pth
+2025-11-14 19:25:58,689 - INFO - Saved best model to /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_3/best_model.pth
 2025-11-14 19:25:59,642 - INFO - Fold 3 Train Epoch 16/200, Batch 0, Loss: 7.3005, Pearson: 0.6179, Spearman: 0.5919
 image : torch.Size([128, 3, 224, 224]), y_true: torch.Size([128, 785]), y_pred: torch.Size([128, 785])
 Batch 39 Pearson correlation: 0.6267
@@ -31117,7 +31117,7 @@ Batch 47 Pearson correlation: 0.4395
 2025-11-14 20:13:56,107 - INFO - Fold 4 Val Epoch 1/200, Val Loss: 9.5050, Pearson Mean: 0.4318, Spearman Mean: 0.4484
 2025-11-14 20:13:56,107 - INFO - Validation Metrics: {'pearson_mean_genewise': 0.2293, 'spearman_mean_genewise': 0.2096, 'l1_error_mean': 2.2445, 'l2_errors_mean': 9.5149, 'r2_scores_mean': -0.0322, 'pearson_std': 0.0949, 'l2_error_q1': 5.2579, 'l2_error_q2': 8.1426, 'l2_error_q3': 12.7099, 'r2_score_q1': -0.0013, 'r2_score_q2': 0.0236, 'r2_score_q3': 0.0566, 'mape_mean': 70.2147, 'mape_std': 14.4068, 'rmse_mean': 2.9701, 'rmse_std': 0.8326}
 2025-11-14 20:13:56,107 - INFO - Learning rate for epoch 1: 0.0001
-2025-11-14 20:13:56,155 - INFO - Saved best model to /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_4/best_model.pth
+2025-11-14 20:13:56,155 - INFO - Saved best model to /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_4/best_model.pth
 2025-11-14 20:13:57,126 - INFO - Fold 4 Train Epoch 2/200, Batch 0, Loss: 9.1504, Pearson: 0.5086, Spearman: 0.4894
 2025-11-14 20:14:07,181 - INFO - Fold 4 Train Epoch 2/200, Batch 10, Loss: 9.6456, Pearson: 0.5271, Spearman: 0.5101
 image : torch.Size([128, 3, 224, 224]), y_true: torch.Size([128, 785]), y_pred: torch.Size([128, 785])
@@ -31372,7 +31372,7 @@ Batch 76 Pearson correlation: 0.5589
 2025-11-14 20:15:24,278 - INFO - Fold 4 Val Epoch 2/200, Val Loss: 8.8908, Pearson Mean: 0.4845, Spearman Mean: 0.4945
 2025-11-14 20:15:24,279 - INFO - Validation Metrics: {'pearson_mean_genewise': 0.2594, 'spearman_mean_genewise': 0.2393, 'l1_error_mean': 2.1367, 'l2_errors_mean': 8.9034, 'r2_scores_mean': 0.0284, 'pearson_std': 0.0988, 'l2_error_q1': 5.1677, 'l2_error_q2': 8.0215, 'l2_error_q3': 12.2448, 'r2_score_q1': 0.0202, 'r2_score_q2': 0.0463, 'r2_score_q3': 0.0856, 'mape_mean': 69.5338, 'mape_std': 16.0655, 'rmse_mean': 2.8919, 'rmse_std': 0.7351}
 2025-11-14 20:15:24,279 - INFO - Learning rate for epoch 2: 0.0001
-2025-11-14 20:15:24,344 - INFO - Saved best model to /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_4/best_model.pth
+2025-11-14 20:15:24,344 - INFO - Saved best model to /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_4/best_model.pth
 2025-11-14 20:15:25,376 - INFO - Fold 4 Train Epoch 3/200, Batch 0, Loss: 8.5868, Pearson: 0.5513, Spearman: 0.5272
 2025-11-14 20:15:35,578 - INFO - Fold 4 Train Epoch 3/200, Batch 10, Loss: 8.2846, Pearson: 0.5618, Spearman: 0.5311
 2025-11-14 20:15:45,748 - INFO - Fold 4 Train Epoch 3/200, Batch 20, Loss: 8.5243, Pearson: 0.5606, Spearman: 0.5352
@@ -31511,7 +31511,7 @@ Batch 47 Pearson correlation: 0.5664
 2025-11-14 20:16:53,075 - INFO - Fold 4 Val Epoch 3/200, Val Loss: 8.6292, Pearson Mean: 0.5070, Spearman Mean: 0.5143
 2025-11-14 20:16:53,076 - INFO - Validation Metrics: {'pearson_mean_genewise': 0.2748, 'spearman_mean_genewise': 0.2533, 'l1_error_mean': 2.1005, 'l2_errors_mean': 8.6356, 'r2_scores_mean': 0.0523, 'pearson_std': 0.1019, 'l2_error_q1': 5.119, 'l2_error_q2': 7.8768, 'l2_error_q3': 11.9112, 'r2_score_q1': 0.0261, 'r2_score_q2': 0.0545, 'r2_score_q3': 0.0985, 'mape_mean': 68.3306, 'mape_std': 17.0156, 'rmse_mean': 2.8562, 'rmse_std': 0.6912}
 2025-11-14 20:16:53,076 - INFO - Learning rate for epoch 3: 0.0001
-2025-11-14 20:16:53,140 - INFO - Saved best model to /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_4/best_model.pth
+2025-11-14 20:16:53,140 - INFO - Saved best model to /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_4/best_model.pth
 2025-11-14 20:16:54,157 - INFO - Fold 4 Train Epoch 4/200, Batch 0, Loss: 8.1932, Pearson: 0.5682, Spearman: 0.5439
 2025-11-14 20:17:04,278 - INFO - Fold 4 Train Epoch 4/200, Batch 10, Loss: 7.7258, Pearson: 0.5909, Spearman: 0.5552
 image : torch.Size([128, 3, 224, 224]), y_true: torch.Size([128, 785]), y_pred: torch.Size([128, 785])
@@ -31766,7 +31766,7 @@ Batch 76 Pearson correlation: 0.5869
 2025-11-14 20:18:21,674 - INFO - Fold 4 Val Epoch 4/200, Val Loss: 8.6775, Pearson Mean: 0.5045, Spearman Mean: 0.5121
 2025-11-14 20:18:21,675 - INFO - Validation Metrics: {'pearson_mean_genewise': 0.2753, 'spearman_mean_genewise': 0.255, 'l1_error_mean': 2.0804, 'l2_errors_mean': 8.6868, 'r2_scores_mean': 0.0481, 'pearson_std': 0.1044, 'l2_error_q1': 5.1253, 'l2_error_q2': 7.8897, 'l2_error_q3': 11.941, 'r2_score_q1': 0.0239, 'r2_score_q2': 0.0533, 'r2_score_q3': 0.0953, 'mape_mean': 68.1301, 'mape_std': 16.9817, 'rmse_mean': 2.8627, 'rmse_std': 0.7011}
 2025-11-14 20:18:21,675 - INFO - Learning rate for epoch 4: 0.0001
-2025-11-14 20:18:21,739 - INFO - Saved best model to /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_4/best_model.pth
+2025-11-14 20:18:21,739 - INFO - Saved best model to /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_4/best_model.pth
 2025-11-14 20:18:22,695 - INFO - Fold 4 Train Epoch 5/200, Batch 0, Loss: 8.1280, Pearson: 0.5822, Spearman: 0.5560
 2025-11-14 20:18:32,815 - INFO - Fold 4 Train Epoch 5/200, Batch 10, Loss: 8.0258, Pearson: 0.5950, Spearman: 0.5575
 2025-11-14 20:18:42,955 - INFO - Fold 4 Train Epoch 5/200, Batch 20, Loss: 8.2080, Pearson: 0.5853, Spearman: 0.5531
@@ -31905,7 +31905,7 @@ Batch 47 Pearson correlation: 0.5993
 2025-11-14 20:19:50,274 - INFO - Fold 4 Val Epoch 5/200, Val Loss: 8.4319, Pearson Mean: 0.5288, Spearman Mean: 0.5354
 2025-11-14 20:19:50,274 - INFO - Validation Metrics: {'pearson_mean_genewise': 0.2842, 'spearman_mean_genewise': 0.2625, 'l1_error_mean': 2.1608, 'l2_errors_mean': 8.4408, 'r2_scores_mean': 0.0671, 'pearson_std': 0.1085, 'l2_error_q1': 5.1198, 'l2_error_q2': 7.8614, 'l2_error_q3': 11.7188, 'r2_score_q1': 0.0241, 'r2_score_q2': 0.0575, 'r2_score_q3': 0.1032, 'mape_mean': 65.0593, 'mape_std': 18.0439, 'rmse_mean': 2.8325, 'rmse_std': 0.6464}
 2025-11-14 20:19:50,275 - INFO - Learning rate for epoch 5: 0.0001
-2025-11-14 20:19:50,340 - INFO - Saved best model to /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_4/best_model.pth
+2025-11-14 20:19:50,340 - INFO - Saved best model to /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_4/best_model.pth
 2025-11-14 20:19:51,353 - INFO - Fold 4 Train Epoch 6/200, Batch 0, Loss: 7.7547, Pearson: 0.6035, Spearman: 0.5611
 2025-11-14 20:20:01,557 - INFO - Fold 4 Train Epoch 6/200, Batch 10, Loss: 8.1366, Pearson: 0.5994, Spearman: 0.5728
 image : torch.Size([128, 3, 224, 224]), y_true: torch.Size([128, 785]), y_pred: torch.Size([128, 785])
@@ -32160,7 +32160,7 @@ Batch 76 Pearson correlation: 0.6060
 2025-11-14 20:21:18,988 - INFO - Fold 4 Val Epoch 6/200, Val Loss: 8.3117, Pearson Mean: 0.5394, Spearman Mean: 0.5444
 2025-11-14 20:21:18,989 - INFO - Validation Metrics: {'pearson_mean_genewise': 0.2851, 'spearman_mean_genewise': 0.263, 'l1_error_mean': 2.074, 'l2_errors_mean': 8.326, 'r2_scores_mean': 0.0808, 'pearson_std': 0.1123, 'l2_error_q1': 5.072, 'l2_error_q2': 7.7578, 'l2_error_q3': 11.4523, 'r2_score_q1': 0.0337, 'r2_score_q2': 0.0669, 'r2_score_q3': 0.1145, 'mape_mean': 68.0757, 'mape_std': 18.1298, 'rmse_mean': 2.8125, 'rmse_std': 0.6447}
 2025-11-14 20:21:18,989 - INFO - Learning rate for epoch 6: 0.0001
-2025-11-14 20:21:19,061 - INFO - Saved best model to /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_4/best_model.pth
+2025-11-14 20:21:19,061 - INFO - Saved best model to /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_4/best_model.pth
 2025-11-14 20:21:19,920 - INFO - Fold 4 Train Epoch 7/200, Batch 0, Loss: 7.5811, Pearson: 0.6089, Spearman: 0.5742
 2025-11-14 20:21:29,846 - INFO - Fold 4 Train Epoch 7/200, Batch 10, Loss: 7.5253, Pearson: 0.6087, Spearman: 0.5676
 2025-11-14 20:21:39,994 - INFO - Fold 4 Train Epoch 7/200, Batch 20, Loss: 7.7399, Pearson: 0.6131, Spearman: 0.5734
@@ -32299,7 +32299,7 @@ Batch 47 Pearson correlation: 0.6165
 2025-11-14 20:22:47,318 - INFO - Fold 4 Val Epoch 7/200, Val Loss: 8.2387, Pearson Mean: 0.5457, Spearman Mean: 0.5509
 2025-11-14 20:22:47,318 - INFO - Validation Metrics: {'pearson_mean_genewise': 0.2938, 'spearman_mean_genewise': 0.2688, 'l1_error_mean': 2.0767, 'l2_errors_mean': 8.2525, 'r2_scores_mean': 0.0853, 'pearson_std': 0.1142, 'l2_error_q1': 5.0825, 'l2_error_q2': 7.6697, 'l2_error_q3': 11.3797, 'r2_score_q1': 0.0317, 'r2_score_q2': 0.0672, 'r2_score_q3': 0.1168, 'mape_mean': 65.6085, 'mape_std': 18.2278, 'rmse_mean': 2.8024, 'rmse_std': 0.6319}
 2025-11-14 20:22:47,318 - INFO - Learning rate for epoch 7: 0.0001
-2025-11-14 20:22:47,388 - INFO - Saved best model to /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_4/best_model.pth
+2025-11-14 20:22:47,388 - INFO - Saved best model to /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_4/best_model.pth
 2025-11-14 20:22:48,429 - INFO - Fold 4 Train Epoch 8/200, Batch 0, Loss: 7.6551, Pearson: 0.6015, Spearman: 0.5668
 2025-11-14 20:22:58,611 - INFO - Fold 4 Train Epoch 8/200, Batch 10, Loss: 7.3557, Pearson: 0.6269, Spearman: 0.5782
 image : torch.Size([128, 3, 224, 224]), y_true: torch.Size([128, 785]), y_pred: torch.Size([128, 785])
@@ -32554,7 +32554,7 @@ Batch 76 Pearson correlation: 0.6195
 2025-11-14 20:24:16,197 - INFO - Fold 4 Val Epoch 8/200, Val Loss: 8.1893, Pearson Mean: 0.5504, Spearman Mean: 0.5534
 2025-11-14 20:24:16,197 - INFO - Validation Metrics: {'pearson_mean_genewise': 0.297, 'spearman_mean_genewise': 0.272, 'l1_error_mean': 2.0385, 'l2_errors_mean': 8.2047, 'r2_scores_mean': 0.0913, 'pearson_std': 0.1161, 'l2_error_q1': 5.0431, 'l2_error_q2': 7.6446, 'l2_error_q3': 11.2643, 'r2_score_q1': 0.0385, 'r2_score_q2': 0.0724, 'r2_score_q3': 0.1225, 'mape_mean': 67.2733, 'mape_std': 18.5481, 'rmse_mean': 2.7936, 'rmse_std': 0.6329}
 2025-11-14 20:24:16,197 - INFO - Learning rate for epoch 8: 0.0001
-2025-11-14 20:24:16,262 - INFO - Saved best model to /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_4/best_model.pth
+2025-11-14 20:24:16,262 - INFO - Saved best model to /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_4/best_model.pth
 2025-11-14 20:24:17,302 - INFO - Fold 4 Train Epoch 9/200, Batch 0, Loss: 7.3639, Pearson: 0.6241, Spearman: 0.5806
 2025-11-14 20:24:27,472 - INFO - Fold 4 Train Epoch 9/200, Batch 10, Loss: 7.3665, Pearson: 0.6230, Spearman: 0.5783
 2025-11-14 20:24:37,630 - INFO - Fold 4 Train Epoch 9/200, Batch 20, Loss: 7.6313, Pearson: 0.6105, Spearman: 0.5701
@@ -32693,7 +32693,7 @@ Batch 47 Pearson correlation: 0.6208
 2025-11-14 20:25:45,129 - INFO - Fold 4 Val Epoch 9/200, Val Loss: 8.1655, Pearson Mean: 0.5538, Spearman Mean: 0.5571
 2025-11-14 20:25:45,130 - INFO - Validation Metrics: {'pearson_mean_genewise': 0.301, 'spearman_mean_genewise': 0.2738, 'l1_error_mean': 1.9972, 'l2_errors_mean': 8.1886, 'r2_scores_mean': 0.0924, 'pearson_std': 0.1196, 'l2_error_q1': 5.0321, 'l2_error_q2': 7.7079, 'l2_error_q3': 11.3249, 'r2_score_q1': 0.0361, 'r2_score_q2': 0.0713, 'r2_score_q3': 0.1227, 'mape_mean': 68.0079, 'mape_std': 18.1786, 'rmse_mean': 2.791, 'rmse_std': 0.6315}
 2025-11-14 20:25:45,130 - INFO - Learning rate for epoch 9: 0.0001
-2025-11-14 20:25:45,199 - INFO - Saved best model to /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_4/best_model.pth
+2025-11-14 20:25:45,199 - INFO - Saved best model to /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_4/best_model.pth
 2025-11-14 20:25:46,132 - INFO - Fold 4 Train Epoch 10/200, Batch 0, Loss: 7.4286, Pearson: 0.6208, Spearman: 0.5875
 2025-11-14 20:25:56,068 - INFO - Fold 4 Train Epoch 10/200, Batch 10, Loss: 7.5011, Pearson: 0.6322, Spearman: 0.5972
 image : torch.Size([128, 3, 224, 224]), y_true: torch.Size([128, 785]), y_pred: torch.Size([128, 785])
@@ -32948,7 +32948,7 @@ Batch 76 Pearson correlation: 0.6156
 2025-11-14 20:27:13,452 - INFO - Fold 4 Val Epoch 10/200, Val Loss: 8.1456, Pearson Mean: 0.5531, Spearman Mean: 0.5561
 2025-11-14 20:27:13,453 - INFO - Validation Metrics: {'pearson_mean_genewise': 0.2997, 'spearman_mean_genewise': 0.2755, 'l1_error_mean': 2.0463, 'l2_errors_mean': 8.1652, 'r2_scores_mean': 0.0935, 'pearson_std': 0.1203, 'l2_error_q1': 5.0625, 'l2_error_q2': 7.6512, 'l2_error_q3': 11.2461, 'r2_score_q1': 0.0366, 'r2_score_q2': 0.0728, 'r2_score_q3': 0.1257, 'mape_mean': 66.1216, 'mape_std': 18.7053, 'rmse_mean': 2.788, 'rmse_std': 0.6263}
 2025-11-14 20:27:13,453 - INFO - Learning rate for epoch 10: 0.0001
-2025-11-14 20:27:13,531 - INFO - Saved best model to /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_4/best_model.pth
+2025-11-14 20:27:13,531 - INFO - Saved best model to /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_4/best_model.pth
 2025-11-14 20:27:14,375 - INFO - Fold 4 Train Epoch 11/200, Batch 0, Loss: 7.4597, Pearson: 0.6239, Spearman: 0.5869
 2025-11-14 20:27:24,326 - INFO - Fold 4 Train Epoch 11/200, Batch 10, Loss: 7.3487, Pearson: 0.6297, Spearman: 0.5906
 2025-11-14 20:27:34,466 - INFO - Fold 4 Train Epoch 11/200, Batch 20, Loss: 7.2925, Pearson: 0.6346, Spearman: 0.5852
@@ -33342,7 +33342,7 @@ Batch 76 Pearson correlation: 0.6236
 2025-11-14 20:30:10,475 - INFO - Fold 4 Val Epoch 12/200, Val Loss: 8.1099, Pearson Mean: 0.5583, Spearman Mean: 0.5591
 2025-11-14 20:30:10,476 - INFO - Validation Metrics: {'pearson_mean_genewise': 0.3034, 'spearman_mean_genewise': 0.2772, 'l1_error_mean': 1.9971, 'l2_errors_mean': 8.1322, 'r2_scores_mean': 0.0972, 'pearson_std': 0.1215, 'l2_error_q1': 5.0107, 'l2_error_q2': 7.6331, 'l2_error_q3': 11.1822, 'r2_score_q1': 0.0391, 'r2_score_q2': 0.0746, 'r2_score_q3': 0.128, 'mape_mean': 67.2563, 'mape_std': 19.2109, 'rmse_mean': 2.782, 'rmse_std': 0.6266}
 2025-11-14 20:30:10,476 - INFO - Learning rate for epoch 12: 0.0001
-2025-11-14 20:30:10,541 - INFO - Saved best model to /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_4/best_model.pth
+2025-11-14 20:30:10,541 - INFO - Saved best model to /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_4/best_model.pth
 2025-11-14 20:30:11,560 - INFO - Fold 4 Train Epoch 13/200, Batch 0, Loss: 7.3384, Pearson: 0.6099, Spearman: 0.5749
 2025-11-14 20:30:21,752 - INFO - Fold 4 Train Epoch 13/200, Batch 10, Loss: 7.5112, Pearson: 0.6304, Spearman: 0.5957
 2025-11-14 20:30:31,928 - INFO - Fold 4 Train Epoch 13/200, Batch 20, Loss: 7.3233, Pearson: 0.6304, Spearman: 0.5915
@@ -33875,7 +33875,7 @@ Batch 47 Pearson correlation: 0.6295
 2025-11-14 20:34:37,814 - INFO - Fold 4 Val Epoch 15/200, Val Loss: 8.1144, Pearson Mean: 0.5572, Spearman Mean: 0.5589
 2025-11-14 20:34:37,815 - INFO - Validation Metrics: {'pearson_mean_genewise': 0.3025, 'spearman_mean_genewise': 0.2781, 'l1_error_mean': 2.0082, 'l2_errors_mean': 8.1375, 'r2_scores_mean': 0.095, 'pearson_std': 0.1242, 'l2_error_q1': 5.0457, 'l2_error_q2': 7.6424, 'l2_error_q3': 11.2257, 'r2_score_q1': 0.0338, 'r2_score_q2': 0.0705, 'r2_score_q3': 0.1269, 'mape_mean': 66.3387, 'mape_std': 18.9339, 'rmse_mean': 2.7836, 'rmse_std': 0.6235}
 2025-11-14 20:34:37,815 - INFO - Learning rate for epoch 15: 0.0001
-2025-11-14 20:34:37,876 - INFO - Saved best model to /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_4/best_model.pth
+2025-11-14 20:34:37,876 - INFO - Saved best model to /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_4/best_model.pth
 2025-11-14 20:34:38,605 - INFO - Fold 4 Train Epoch 16/200, Batch 0, Loss: 7.4774, Pearson: 0.6394, Spearman: 0.5984
 2025-11-14 20:34:44,742 - INFO - Fold 4 Train Epoch 16/200, Batch 10, Loss: 7.1069, Pearson: 0.6390, Spearman: 0.6048
 image : torch.Size([128, 3, 224, 224]), y_true: torch.Size([128, 785]), y_pred: torch.Size([128, 785])
@@ -40764,7 +40764,7 @@ Batch 39 Pearson correlation: 0.3268
 2025-11-14 21:20:23,004 - INFO - Fold 5 Val Epoch 1/200, Val Loss: 9.7289, Pearson Mean: 0.4584, Spearman Mean: 0.4485
 2025-11-14 21:20:23,004 - INFO - Validation Metrics: {'pearson_mean_genewise': 0.2316, 'spearman_mean_genewise': 0.2053, 'l1_error_mean': 2.3746, 'l2_errors_mean': 9.7129, 'r2_scores_mean': -0.0586, 'pearson_std': 0.1001, 'l2_error_q1': 5.9206, 'l2_error_q2': 8.7417, 'l2_error_q3': 12.4375, 'r2_score_q1': 0.0028, 'r2_score_q2': 0.0286, 'r2_score_q3': 0.0593, 'mape_mean': 68.8104, 'mape_std': 15.3093, 'rmse_mean': 3.0223, 'rmse_std': 0.7609}
 2025-11-14 21:20:23,004 - INFO - Learning rate for epoch 1: 0.0001
-2025-11-14 21:20:23,048 - INFO - Saved best model to /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_5/best_model.pth
+2025-11-14 21:20:23,048 - INFO - Saved best model to /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_5/best_model.pth
 2025-11-14 21:20:23,958 - INFO - Fold 5 Train Epoch 2/200, Batch 0, Loss: 9.1481, Pearson: 0.4890, Spearman: 0.4771
 image : torch.Size([128, 3, 224, 224]), y_true: torch.Size([128, 785]), y_pred: torch.Size([128, 785])
 Batch 40 Pearson correlation: 0.3719
@@ -41019,7 +41019,7 @@ Batch 65 Pearson correlation: 0.5201
 2025-11-14 21:21:52,648 - INFO - Fold 5 Val Epoch 2/200, Val Loss: 8.7907, Pearson Mean: 0.5252, Spearman Mean: 0.5159
 2025-11-14 21:21:52,648 - INFO - Validation Metrics: {'pearson_mean_genewise': 0.2741, 'spearman_mean_genewise': 0.2415, 'l1_error_mean': 2.2664, 'l2_errors_mean': 8.771, 'r2_scores_mean': 0.0471, 'pearson_std': 0.1001, 'l2_error_q1': 5.7319, 'l2_error_q2': 8.466, 'l2_error_q3': 11.3514, 'r2_score_q1': 0.0324, 'r2_score_q2': 0.0578, 'r2_score_q3': 0.095, 'mape_mean': 66.0472, 'mape_std': 18.035, 'rmse_mean': 2.8963, 'rmse_std': 0.6182}
 2025-11-14 21:21:52,648 - INFO - Learning rate for epoch 2: 0.0001
-2025-11-14 21:21:52,708 - INFO - Saved best model to /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_5/best_model.pth
+2025-11-14 21:21:52,708 - INFO - Saved best model to /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_5/best_model.pth
 2025-11-14 21:21:53,629 - INFO - Fold 5 Train Epoch 3/200, Batch 0, Loss: 8.6278, Pearson: 0.5310, Spearman: 0.5027
 2025-11-14 21:22:03,663 - INFO - Fold 5 Train Epoch 3/200, Batch 10, Loss: 8.9158, Pearson: 0.5350, Spearman: 0.5168
 2025-11-14 21:22:13,765 - INFO - Fold 5 Train Epoch 3/200, Batch 20, Loss: 8.3623, Pearson: 0.5521, Spearman: 0.5221
@@ -41158,7 +41158,7 @@ Batch 33 Pearson correlation: 0.5603
 2025-11-14 21:23:22,929 - INFO - Fold 5 Val Epoch 3/200, Val Loss: 8.7577, Pearson Mean: 0.5316, Spearman Mean: 0.5230
 2025-11-14 21:23:22,929 - INFO - Validation Metrics: {'pearson_mean_genewise': 0.282, 'spearman_mean_genewise': 0.2525, 'l1_error_mean': 2.1713, 'l2_errors_mean': 8.7408, 'r2_scores_mean': 0.0504, 'pearson_std': 0.0959, 'l2_error_q1': 5.7372, 'l2_error_q2': 8.559, 'l2_error_q3': 11.3888, 'r2_score_q1': 0.0323, 'r2_score_q2': 0.0557, 'r2_score_q3': 0.0904, 'mape_mean': 67.536, 'mape_std': 17.5743, 'rmse_mean': 2.8993, 'rmse_std': 0.5788}
 2025-11-14 21:23:22,930 - INFO - Learning rate for epoch 3: 0.0001
-2025-11-14 21:23:22,981 - INFO - Saved best model to /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_5/best_model.pth
+2025-11-14 21:23:22,981 - INFO - Saved best model to /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_5/best_model.pth
 2025-11-14 21:23:24,019 - INFO - Fold 5 Train Epoch 4/200, Batch 0, Loss: 7.9693, Pearson: 0.5941, Spearman: 0.5550
 image : torch.Size([128, 3, 224, 224]), y_true: torch.Size([128, 785]), y_pred: torch.Size([128, 785])
 Batch 34 Pearson correlation: 0.5637
@@ -41413,7 +41413,7 @@ Batch 59 Pearson correlation: 0.5782
 2025-11-14 21:24:53,278 - INFO - Fold 5 Val Epoch 4/200, Val Loss: 8.5977, Pearson Mean: 0.5434, Spearman Mean: 0.5373
 2025-11-14 21:24:53,279 - INFO - Validation Metrics: {'pearson_mean_genewise': 0.285, 'spearman_mean_genewise': 0.2593, 'l1_error_mean': 2.1867, 'l2_errors_mean': 8.5803, 'r2_scores_mean': 0.0674, 'pearson_std': 0.0979, 'l2_error_q1': 5.7133, 'l2_error_q2': 8.4024, 'l2_error_q3': 11.277, 'r2_score_q1': 0.0356, 'r2_score_q2': 0.0621, 'r2_score_q3': 0.0969, 'mape_mean': 66.9953, 'mape_std': 17.6282, 'rmse_mean': 2.8761, 'rmse_std': 0.5551}
 2025-11-14 21:24:53,279 - INFO - Learning rate for epoch 4: 0.0001
-2025-11-14 21:24:53,340 - INFO - Saved best model to /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_5/best_model.pth
+2025-11-14 21:24:53,340 - INFO - Saved best model to /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_5/best_model.pth
 2025-11-14 21:24:54,318 - INFO - Fold 5 Train Epoch 5/200, Batch 0, Loss: 7.8904, Pearson: 0.5815, Spearman: 0.5478
 2025-11-14 21:25:04,331 - INFO - Fold 5 Train Epoch 5/200, Batch 10, Loss: 8.1218, Pearson: 0.5959, Spearman: 0.5605
 2025-11-14 21:25:14,488 - INFO - Fold 5 Train Epoch 5/200, Batch 20, Loss: 7.7959, Pearson: 0.5882, Spearman: 0.5611
@@ -41808,7 +41808,7 @@ Batch 54 Pearson correlation: 0.5930
 2025-11-14 21:27:53,470 - INFO - Fold 5 Val Epoch 6/200, Val Loss: 8.4810, Pearson Mean: 0.5506, Spearman Mean: 0.5432
 2025-11-14 21:27:53,471 - INFO - Validation Metrics: {'pearson_mean_genewise': 0.2847, 'spearman_mean_genewise': 0.2601, 'l1_error_mean': 2.2404, 'l2_errors_mean': 8.4666, 'r2_scores_mean': 0.0779, 'pearson_std': 0.0969, 'l2_error_q1': 5.6705, 'l2_error_q2': 8.2742, 'l2_error_q3': 11.1508, 'r2_score_q1': 0.0403, 'r2_score_q2': 0.0657, 'r2_score_q3': 0.1033, 'mape_mean': 64.8248, 'mape_std': 18.6873, 'rmse_mean': 2.859, 'rmse_std': 0.5407}
 2025-11-14 21:27:53,471 - INFO - Learning rate for epoch 6: 0.0001
-2025-11-14 21:27:53,538 - INFO - Saved best model to /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_5/best_model.pth
+2025-11-14 21:27:53,538 - INFO - Saved best model to /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_5/best_model.pth
 2025-11-14 21:27:54,536 - INFO - Fold 5 Train Epoch 7/200, Batch 0, Loss: 7.6739, Pearson: 0.6083, Spearman: 0.5693
 2025-11-14 21:28:04,533 - INFO - Fold 5 Train Epoch 7/200, Batch 10, Loss: 7.8904, Pearson: 0.6057, Spearman: 0.5686
 2025-11-14 21:28:14,647 - INFO - Fold 5 Train Epoch 7/200, Batch 20, Loss: 7.7429, Pearson: 0.6208, Spearman: 0.5826
@@ -42063,7 +42063,7 @@ Batch 80 Pearson correlation: 0.6146
 2025-11-14 21:29:24,027 - INFO - Fold 5 Val Epoch 7/200, Val Loss: 8.4021, Pearson Mean: 0.5518, Spearman Mean: 0.5468
 2025-11-14 21:29:24,028 - INFO - Validation Metrics: {'pearson_mean_genewise': 0.3012, 'spearman_mean_genewise': 0.2721, 'l1_error_mean': 2.192, 'l2_errors_mean': 8.3797, 'r2_scores_mean': 0.0879, 'pearson_std': 0.1003, 'l2_error_q1': 5.6626, 'l2_error_q2': 8.0643, 'l2_error_q3': 11.021, 'r2_score_q1': 0.0437, 'r2_score_q2': 0.0719, 'r2_score_q3': 0.1136, 'mape_mean': 62.1235, 'mape_std': 18.7956, 'rmse_mean': 2.8437, 'rmse_std': 0.5413}
 2025-11-14 21:29:24,028 - INFO - Learning rate for epoch 7: 0.0001
-2025-11-14 21:29:24,092 - INFO - Saved best model to /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_5/best_model.pth
+2025-11-14 21:29:24,092 - INFO - Saved best model to /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_5/best_model.pth
 2025-11-14 21:29:25,022 - INFO - Fold 5 Train Epoch 8/200, Batch 0, Loss: 7.6969, Pearson: 0.6146, Spearman: 0.5791
 2025-11-14 21:29:34,888 - INFO - Fold 5 Train Epoch 8/200, Batch 10, Loss: 7.5284, Pearson: 0.6206, Spearman: 0.5780
 2025-11-14 21:29:45,003 - INFO - Fold 5 Train Epoch 8/200, Batch 20, Loss: 7.4942, Pearson: 0.6134, Spearman: 0.5717
@@ -42202,7 +42202,7 @@ Batch 48 Pearson correlation: 0.6232
 2025-11-14 21:30:54,154 - INFO - Fold 5 Val Epoch 8/200, Val Loss: 8.4301, Pearson Mean: 0.5573, Spearman Mean: 0.5508
 2025-11-14 21:30:54,155 - INFO - Validation Metrics: {'pearson_mean_genewise': 0.3046, 'spearman_mean_genewise': 0.277, 'l1_error_mean': 2.1168, 'l2_errors_mean': 8.4094, 'r2_scores_mean': 0.0837, 'pearson_std': 0.1033, 'l2_error_q1': 5.6608, 'l2_error_q2': 8.231, 'l2_error_q3': 11.0592, 'r2_score_q1': 0.0428, 'r2_score_q2': 0.0698, 'r2_score_q3': 0.1065, 'mape_mean': 66.8638, 'mape_std': 18.2677, 'rmse_mean': 2.8494, 'rmse_std': 0.5387}
 2025-11-14 21:30:54,155 - INFO - Learning rate for epoch 8: 0.0001
-2025-11-14 21:30:54,216 - INFO - Saved best model to /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_5/best_model.pth
+2025-11-14 21:30:54,216 - INFO - Saved best model to /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_5/best_model.pth
 2025-11-14 21:30:55,261 - INFO - Fold 5 Train Epoch 9/200, Batch 0, Loss: 7.5777, Pearson: 0.6240, Spearman: 0.5883
 2025-11-14 21:31:05,382 - INFO - Fold 5 Train Epoch 9/200, Batch 10, Loss: 7.7450, Pearson: 0.6158, Spearman: 0.5827
 image : torch.Size([128, 3, 224, 224]), y_true: torch.Size([128, 785]), y_pred: torch.Size([128, 785])
@@ -42596,7 +42596,7 @@ Batch 42 Pearson correlation: 0.6092
 2025-11-14 21:33:55,179 - INFO - Fold 5 Val Epoch 10/200, Val Loss: 8.3148, Pearson Mean: 0.5604, Spearman Mean: 0.5534
 2025-11-14 21:33:55,180 - INFO - Validation Metrics: {'pearson_mean_genewise': 0.3087, 'spearman_mean_genewise': 0.2803, 'l1_error_mean': 2.1171, 'l2_errors_mean': 8.2938, 'r2_scores_mean': 0.0954, 'pearson_std': 0.1058, 'l2_error_q1': 5.6098, 'l2_error_q2': 8.0344, 'l2_error_q3': 10.909, 'r2_score_q1': 0.0488, 'r2_score_q2': 0.076, 'r2_score_q3': 0.1186, 'mape_mean': 64.2329, 'mape_std': 19.2643, 'rmse_mean': 2.8301, 'rmse_std': 0.5334}
 2025-11-14 21:33:55,180 - INFO - Learning rate for epoch 10: 0.0001
-2025-11-14 21:33:55,241 - INFO - Saved best model to /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_5/best_model.pth
+2025-11-14 21:33:55,241 - INFO - Saved best model to /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_5/best_model.pth
 2025-11-14 21:33:56,175 - INFO - Fold 5 Train Epoch 11/200, Batch 0, Loss: 7.3770, Pearson: 0.6289, Spearman: 0.5923
 2025-11-14 21:34:06,136 - INFO - Fold 5 Train Epoch 11/200, Batch 10, Loss: 7.6566, Pearson: 0.6175, Spearman: 0.5816
 image : torch.Size([128, 3, 224, 224]), y_true: torch.Size([128, 785]), y_pred: torch.Size([128, 785])
@@ -43893,7 +43893,7 @@ Batch 82 Pearson correlation: 0.6322
 2025-11-14 21:42:42,119 - INFO - Fold 5 Val Epoch 16/200, Val Loss: 8.3109, Pearson Mean: 0.5625, Spearman Mean: 0.5553
 2025-11-14 21:42:42,120 - INFO - Validation Metrics: {'pearson_mean_genewise': 0.3113, 'spearman_mean_genewise': 0.2818, 'l1_error_mean': 2.0806, 'l2_errors_mean': 8.2885, 'r2_scores_mean': 0.0953, 'pearson_std': 0.1089, 'l2_error_q1': 5.6368, 'l2_error_q2': 8.022, 'l2_error_q3': 10.8995, 'r2_score_q1': 0.0466, 'r2_score_q2': 0.0752, 'r2_score_q3': 0.1176, 'mape_mean': 64.5677, 'mape_std': 18.9583, 'rmse_mean': 2.8294, 'rmse_std': 0.5319}
 2025-11-14 21:42:42,120 - INFO - Learning rate for epoch 16: 0.0001
-2025-11-14 21:42:42,184 - INFO - Saved best model to /home/puneet/maninder/amitCode/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_5/best_model.pth
+2025-11-14 21:42:42,184 - INFO - Saved best model to /home/puneet/maninder/code_model_training/modelResults/her2st_stnet_pretrained_true_amt_224/result_vit_2025-11-14_16-48-59/fold_5/best_model.pth
 2025-11-14 21:42:43,227 - INFO - Fold 5 Train Epoch 17/200, Batch 0, Loss: 7.1067, Pearson: 0.6299, Spearman: 0.5897
 2025-11-14 21:42:53,356 - INFO - Fold 5 Train Epoch 17/200, Batch 10, Loss: 7.2603, Pearson: 0.6306, Spearman: 0.5995
 2025-11-14 21:43:03,470 - INFO - Fold 5 Train Epoch 17/200, Batch 20, Loss: 7.1853, Pearson: 0.6356, Spearman: 0.5969

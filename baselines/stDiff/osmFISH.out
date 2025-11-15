@@ -7,8 +7,8 @@ INFO:root:Allocate tensors for mapping.
 INFO:root:Begin training with 26 genes and rna_count_based density_prior in clusters mode...
 INFO:root:Printing scores every 100 epochs.
 INFO:root:Saving results..
-adata_spatial:  /home/maninder/AmitCode/data/processedData/osmFISH/spatial.h5ad
-adata_seq:  /home/maninder/AmitCode/data/processedData/osmFISH/scRNA_common.h5ad
+adata_spatial:  /home/maninder/code_model_training/data/processedData/osmFISH/spatial.h5ad
+adata_seq:  /home/maninder/code_model_training/data/processedData/osmFISH/scRNA_common.h5ad
 sp shape (3405, 33)
 sc shape (1691, 33)
 The number of common genes:: 33

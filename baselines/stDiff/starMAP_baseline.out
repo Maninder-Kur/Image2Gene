@@ -1,6 +1,6 @@
 nohup: ignoring input
-adata_spatial:  /home/maninder/AmitCode/data/processedData/starMAP/spatial.h5ad
-adata_seq:  /home/maninder/AmitCode/data/processedData/starMAP/scRNA_common.h5ad
+adata_spatial:  /home/maninder/code_model_training/data/processedData/starMAP/spatial.h5ad
+adata_seq:  /home/maninder/code_model_training/data/processedData/starMAP/scRNA_common.h5ad
 sp shape (1549, 994)
 sc shape (14249, 994)
 The number of common genes:: 994

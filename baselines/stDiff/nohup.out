@@ -3,6 +3,6 @@ Traceback (most recent call last):
     from utils.compute_metrics import compute_metrics, spearmanrr
 ModuleNotFoundError: No module named 'utils'
 Traceback (most recent call last):
-  File "/home/maninder/AmitCode/stDiff/test-stDiff.py", line 7, in <module>
+  File "/home/maninder/code_model_training/stDiff/test-stDiff.py", line 7, in <module>
     import scanpy as sc
 ModuleNotFoundError: No module named 'scanpy'

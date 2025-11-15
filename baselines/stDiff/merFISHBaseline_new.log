@@ -14,8 +14,8 @@ INFO:root:rna count based density prior is calculated and saved in `obs``rna_cou
 INFO:root:Allocate tensors for mapping.
 INFO:root:Begin training with 123 genes and rna_count_based density_prior in clusters mode...
 INFO:root:Printing scores every 100 epochs.
-adata_spatial:  /home/maninder/AmitCode/data/processedData/merFISH/spatial.h5ad
-adata_seq:  /home/maninder/AmitCode/data/processedData/merFISH/scRNA_common.h5ad
+adata_spatial:  /home/maninder/code_model_training/data/processedData/merFISH/spatial.h5ad
+adata_seq:  /home/maninder/code_model_training/data/processedData/merFISH/scRNA_common.h5ad
 sp shape (64373, 154)
 sc shape (31299, 154)
 The number of common genes:: 154

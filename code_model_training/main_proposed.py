@@ -7,8 +7,8 @@ cscc: /home/puneet/maninder/data/cscc_dataset/224
 
 
 import sys
-sys.path.append('/home/puneet/maninder/amitCode/models')
-sys.path.append('/home/puneet/maninder/amitCode/utils')
+sys.path.append('/home/puneet/maninder/code_model_training/models')
+sys.path.append('/home/puneet/maninder/code_model_training/utils')
 
 import warnings
 warnings.filterwarnings("ignore")

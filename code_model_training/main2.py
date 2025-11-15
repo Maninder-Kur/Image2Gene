@@ -1,6 +1,6 @@
 import sys
-sys.path.append('/home/puneet/maninder/amitCode/models')
-sys.path.append('/home/puneet/maninder/amitCode/utils')
+sys.path.append('/home/puneet/maninder/code_model_training/models')
+sys.path.append('/home/puneet/maninder/code_model_training/utils')
 
 import warnings
 warnings.filterwarnings("ignore")
@@ -35,6 +35,7 @@ from set_deterministic_seed import set_deterministic_seed
 from models import STNet, EfficientNet, EfficientNetB4GeneRegressor, Custom_VGG16, HisToGene, TCGN
 from torch.utils.data import ConcatDataset
 from proposedModels import ImageGeneCrossTransformer
+from sklearn.model_selection import KFold
 from proposedModels2 import ImageToGeneTransformer
 
 def main():
@@ -570,6 +571,7 @@ def main():
             'GSM4284321', 'GSM4284319', 'GSM4284318'
         ]
 
+
     if params["dataset_name"] == "her2":
         gsm_samples =  [
             "A1", "A2", "A3", "A4", "A5", "A6",
@@ -581,6 +583,9 @@ def main():
             "G1", "G2", "G3",
             "H1", "H2", "H3"
         ]
+        # gsm_samples =  [
+        #     "A1", "A2", "A3", "A4", "A5", "A6"
+        # ]      
 
     # --- Define paths ---
     dataset_path = params.get("dataset_path", "")
@@ -612,14 +617,11 @@ def main():
         print(genes_file)
         print(gene_names)
 
-    H = params.get("image_height", 224)
-    W = params.get("image_width", 224)
-    
     # --- Optional image transforms ---
     from torchvision import transforms
     transform = transforms.Compose([
         transforms.ToPILImage(),
-        transforms.Resize((H, W)),
+        transforms.Resize((224, 224)),
         transforms.ToTensor()
     ])
 

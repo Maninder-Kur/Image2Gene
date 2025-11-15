@@ -1,6 +1,6 @@
 nohup: ignoring input
-adata_spatial:  /home/maninder/AmitCode/data/processedData/seqFISH/spatial.h5ad
-adata_seq:  /home/maninder/AmitCode/data/processedData/seqFISH/scRNA_common.h5ad
+adata_spatial:  /home/maninder/code_model_training/data/processedData/seqFISH/spatial.h5ad
+adata_seq:  /home/maninder/code_model_training/data/processedData/seqFISH/scRNA_common.h5ad
 sp shape (913, 9782)
 sc shape (14249, 9782)
 The number of common genes:: 9782
