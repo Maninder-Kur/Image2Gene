@@ -52,8 +52,9 @@ class GraphConvolution(nn.Module):
     def forward_single_batch(self, H_v, H_e, adj_e, adj_v, T):
         if self.node_layer:
             multiplier1 = torch.mm(T, torch.diag((H_e @ self.p.t()).t()[0])) @ T.to_dense().t() # to dense
-            mask1 = torch.eye(multiplier1.shape[0]).cuda()
-            M1 = mask1 * torch.ones(multiplier1.shape[0]).cuda() + (1. - mask1)*multiplier1
+            dev1 = multiplier1.device
+            mask1 = torch.eye(multiplier1.shape[0], device=dev1)
+            M1 = mask1 * torch.ones_like(mask1) + (1. - mask1) * multiplier1
             adjusted_A = torch.mul(M1, adj_v)
             output = torch.mm(adjusted_A, torch.mm(H_v, self.weight))
             ret=self.activation(output)
@@ -63,8 +64,9 @@ class GraphConvolution(nn.Module):
 
         else:
             multiplier2 = torch.spmm(T.t(), torch.diag((H_v @ self.p.t()).t()[0])) @ T.to_dense()
-            mask2 = torch.eye(multiplier2.shape[0]).cuda()
-            M3 = mask2 * torch.ones(multiplier2.shape[0]).cuda() + (1. - mask2) * multiplier2
+            dev2 = multiplier2.device
+            mask2 = torch.eye(multiplier2.shape[0], device=dev2)
+            M3 = mask2 * torch.ones_like(mask2) + (1. - mask2) * multiplier2
             adjusted_A = torch.mul(M3, adj_e)
             normalized_adjusted_A = adjusted_A / adjusted_A.max(0, keepdim=True)[0]
             output = torch.mm(normalized_adjusted_A, torch.mm(H_e, self.weight))
@@ -166,32 +168,52 @@ def sparse_mx_to_torch_sparse_tensor(sparse_mx):
         shape = torch.Size(sparse_mx.shape)
         return torch.sparse.FloatTensor(indices, values, shape)
 
-def create_transition_matrix_new(vertex_adj_all_input):
-    '''create N_v * N_e transition matrix'''
-    with torch.no_grad():
-        batch_size = vertex_adj_all_input.shape[0]
-        vertex_adj_all = vertex_adj_all_input.cpu().numpy()
-        transition_matrix = None
-        for batch in range(batch_size):
-            vertex_adj = vertex_adj_all[batch]
-            # np.fill_diagonal(vertex_adj, 0)
-            edge_index = np.nonzero(vertex_adj)
-            num_edge = int(len(edge_index[0]))
-            edge_name = [x for x in zip(edge_index[0], edge_index[1])]
+def create_transition_matrix_new(edge_pairs):
+    """
+    Build transition matrices T from edge_pairs.
 
-            row_index = [i for sub in edge_name for i in sub]
-            col_index = np.repeat([i for i in range(num_edge)], 2)
+    Input:
+      edge_pairs: torch.LongTensor, shape (B, N, K, 2) with values in [0, N-1]
+    Output:
+      T: torch.sparse.FloatTensor, shape (B, N, E) where E = N*K
+         (T[b] is sparse with rows=node, cols=edge_index)
+    """
+    import numpy as np
+    from scipy import sparse as sp
 
-            data = np.ones(num_edge * 2)
-            T = sp.csr_matrix((data, (row_index, col_index)),
-                              shape=(vertex_adj.shape[0], num_edge))
-            T = sparse_mx_to_torch_sparse_tensor(T).unsqueeze(dim=0)
-            if transition_matrix == None:
-                transition_matrix = T
-            else:
-                transition_matrix = torch.concat((T, transition_matrix), dim=0)
+    # allow numpy input too
+    if isinstance(edge_pairs, np.ndarray):
+        edge_pairs = torch.from_numpy(edge_pairs)
 
-        return transition_matrix
+    edge_pairs = edge_pairs.long()
+    B, N, K, _ = edge_pairs.shape
+    E = N * K
+
+    all_T = []
+    device = edge_pairs.device
+
+    for b in range(B):
+        pairs = edge_pairs[b].cpu().numpy().reshape(E, 2)  # (E,2)
+        row_idx = []
+        col_idx = []
+        for j in range(E):
+            s = int(pairs[j, 0])
+            e = int(pairs[j, 1])
+            # each edge connects start and end -> mark both nodes in column j
+            row_idx.append(s)
+            col_idx.append(j)
+            row_idx.append(e)
+            col_idx.append(j)
+
+        data = np.ones(len(row_idx), dtype=np.float32)
+        T_csr = sp.csr_matrix((data, (row_idx, col_idx)), shape=(N, E))
+        T_torch = sparse_mx_to_torch_sparse_tensor(T_csr)  # returns CPU sparse tensor
+        T_torch = T_torch.to(device)                       # move to same device as edge_pairs
+        all_T.append(T_torch.unsqueeze(0))
+
+    # concatenate batch dimension
+    return torch.cat(all_T, dim=0)  # (B, N, E) sparse tensors
+
 
 def normalize(mx):
     """Row-normalize sparse matrix"""
@@ -202,49 +224,60 @@ def normalize(mx):
     mx = r_mat_inv.dot(mx)
     return mx
 
-def create_edge_adj_tensor(vertex_adj_all_input,flag_normalize=True):
-    '''
-    :param vertex_adj_all: adjacent matrix (Batch,Num_nodes,Channel)
-    :param flag_normalize: Whether to normalize the edge adj matrix
-    :return: edge adjacent matrix
-    '''
-    vertex_adj_all=vertex_adj_all_input.cpu()
+def create_edge_adj_tensor(edge_pairs, topk=None, flag_normalize=True):
+    """
+    edge_pairs: (B, N, K, 2)
+    returns: edge_adj (B, E, E) where E = N*K
+    """
     with torch.no_grad():
-        batch_size = vertex_adj_all.shape[0]
-        edge_index = torch.nonzero(vertex_adj_all).view(batch_size, -1, 3)
-        num_edge_per_batch = edge_index.shape[1]
-        edge_adj = torch.zeros((batch_size, num_edge_per_batch, num_edge_per_batch))
+        B, N, K, _ = edge_pairs.shape
+        E = N * K
+        edge_pairs = edge_pairs.long()
 
-        edge_index_row = edge_index[:, :, 1].unsqueeze(dim=-1) + 1
-        edge_index_col = edge_index[:, :, 2].unsqueeze(dim=-1) + 1
+        start = edge_pairs[..., 0].view(B, E, 1)  # (B, E, 1)
+        end   = edge_pairs[..., 1].view(B, E, 1)  # (B, E, 1)
 
-        connection_row_row = edge_index_row @ edge_index_row.transpose(-2, -1)
-        edge_adj[connection_row_row == edge_index_row ** 2] = 1
+        edge_adj = torch.zeros((B, E, E), dtype=torch.float32, device=edge_pairs.device)
 
-        connection_row_col = edge_index_row @ edge_index_col.transpose(-2, -1)
-        edge_adj[connection_row_col.transpose(-2, -1) == edge_index_col ** 2] = 1
+        # mark connections where edges share start or end nodes
+        # (start==start'), (start==end'), (end==start'), (end==end')
+        s = start
+        e = end
+        edge_adj = edge_adj.masked_fill((s == s.transpose(1,2)), 1.0)
+        edge_adj = edge_adj.masked_fill((s == e.transpose(1,2)), 1.0)
+        edge_adj = edge_adj.masked_fill((e == s.transpose(1,2)), 1.0)
+        edge_adj = edge_adj.masked_fill((e == e.transpose(1,2)), 1.0)
 
-        connection_col_row = edge_index_col @ edge_index_row.transpose(-2, -1)
-        edge_adj[connection_col_row.transpose(-2, -1) == edge_index_row ** 2] = 1
-
-        connection_col_col = edge_index_col @ edge_index_col.transpose(-2, -1)
-        edge_adj[connection_col_col == edge_index_col ** 2] = 1
         if flag_normalize:
             edge_adj = normalize_tensor(edge_adj, plus_one=True)
+
         return edge_adj
 
+
 '''number=0'''
-def process_feature(x,graph):
-    distance_adj, edge_features,topk = build_edge_feature_tensor(x,graph,4)
-    '''global number
-    number+=1
-    np.save("connection"+str(number)+".npy",distance_adj.cpu().numpy())'''
-    #print(">", end="")
-    transition_matrix = create_transition_matrix_new(distance_adj)
-    #print(">", end="")
-    edge_adj = create_edge_adj_tensor(distance_adj)
-    #print("> ", end="")
-    return edge_features,edge_adj,normalize_tensor(distance_adj.to(torch.float32)),transition_matrix,topk
+def process_feature(x, graph):
+    """
+    Returns:
+      edge_features: (B, E, F)
+      edge_adj:     (B, E, E)
+      adj_v_norm:   (B, N, N) normalized vertex adjacency (distance_adj)
+      transition_matrix: (B, N, E) sparse matrices in torch.sparse format
+      edge_pairs:   (B, N, K, 2)
+    """
+    # build_edge_feature_tensor must return (distance_adj, edge_features, edge_pairs)
+    distance_adj, edge_features, edge_pairs = build_edge_feature_tensor(x, graph, topk=4)
+
+    # build transition matrix using edge_pairs (B, N, K, 2)
+    transition_matrix = create_transition_matrix_new(edge_pairs)
+
+    # build edge adjacency (edge-to-edge adjacency) using edge_pairs
+    edge_adj = create_edge_adj_tensor(edge_pairs, topk=edge_pairs.shape[2])
+
+    # normalize the distance_adj (vertex adjacency) for later use
+    adj_v_norm = normalize_tensor(distance_adj.to(torch.float32))
+
+    return edge_features, edge_adj, adj_v_norm, transition_matrix, edge_pairs
+
 
 if __name__ == '__main__':
     x = torch.randn((12, 196, 256)).cuda()

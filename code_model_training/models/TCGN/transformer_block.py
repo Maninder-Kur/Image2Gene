@@ -135,7 +135,35 @@ class Edge_Node_Transformer_fusion(nn.Module):
         self.linear_fusion = nn.Linear(emb_dim_edge + emb_dim_node, emb_dim_node)
 
     def forward(self,node_feature,edge_feature,H, W, relative_pos,topk,T):
-        edge_feature=(edge_feature.transpose(-1,-2)@T.to_dense().transpose(-2,-1)).transpose(-2,-1)/topk
+        # Convert T to dense on same device
+        T_dense = T.to_dense() if hasattr(T, "to_dense") else T
+        T_dense = T_dense.to(edge_feature.device)
+
+        # Ensure expected dims (edge_feature: B,E,F   T_dense: B,N,E)
+        if edge_feature.dim() != 3 or T_dense.dim() != 3:
+            print("DEBUG SHAPES:")
+            print("  edge_feature:", edge_feature.shape)
+            print("  T_dense:", T_dense.shape)
+            raise RuntimeError("edge_feature must be (B,E,F) and T must be (B,N,E)")
+
+        B1, E1, F = edge_feature.shape
+        B2, N, E2 = T_dense.shape
+
+        if B1 != B2:
+            raise RuntimeError(f"Batch mismatch: {B1} vs {B2}")
+        if E1 != E2:
+            raise RuntimeError(f"Edge count mismatch: {E1} vs {E2}")
+
+        # Ensure topk is scalar
+        if isinstance(topk, torch.Tensor):
+            topk_val = float(topk.item()) if topk.numel() == 1 else float(topk.reshape(-1)[0])
+        else:
+            topk_val = float(topk)
+
+        # Multiply: (B,F,E) @ (B,E,N) → (B,F,N) → (B,N,F)
+        tmp = torch.matmul(edge_feature.transpose(1, 2), T_dense.transpose(1, 2))  # (B,F,N)
+        edge_feature = (tmp.transpose(1, 2)) / (topk_val + 1e-9)
+
 
         node_feature=self.node_transformer(node_feature,H, W, relative_pos)
         edge_feature=self.edge_transformer(edge_feature)
@@ -163,7 +191,35 @@ class Edge_Node_Transformer_fusion_big(nn.Module):
         self.linear_fusion = nn.Linear(emb_dim_edge + emb_dim_node, emb_dim_node)
 
     def forward(self,node_feature,edge_feature,H, W, relative_pos,topk,T):
-        edge_feature=(edge_feature.transpose(-1,-2)@T.to_dense().transpose(-2,-1)).transpose(-2,-1)/topk
+        # Convert T to dense on same device
+        T_dense = T.to_dense() if hasattr(T, "to_dense") else T
+        T_dense = T_dense.to(edge_feature.device)
+
+        # Ensure expected dims (edge_feature: B,E,F   T_dense: B,N,E)
+        if edge_feature.dim() != 3 or T_dense.dim() != 3:
+            print("DEBUG SHAPES:")
+            print("  edge_feature:", edge_feature.shape)
+            print("  T_dense:", T_dense.shape)
+            raise RuntimeError("edge_feature must be (B,E,F) and T must be (B,N,E)")
+
+        B1, E1, F = edge_feature.shape
+        B2, N, E2 = T_dense.shape
+
+        if B1 != B2:
+            raise RuntimeError(f"Batch mismatch: {B1} vs {B2}")
+        if E1 != E2:
+            raise RuntimeError(f"Edge count mismatch: {E1} vs {E2}")
+
+        # Ensure topk is scalar
+        if isinstance(topk, torch.Tensor):
+            topk_val = float(topk.item()) if topk.numel() == 1 else float(topk.reshape(-1)[0])
+        else:
+            topk_val = float(topk)
+
+        # Multiply: (B,F,E) @ (B,E,N) → (B,F,N) → (B,N,F)
+        tmp = torch.matmul(edge_feature.transpose(1, 2), T_dense.transpose(1, 2))  # (B,F,N)
+        edge_feature = (tmp.transpose(1, 2)) / (topk_val + 1e-9)
+
 
         node_feature=self.node_transformer1(node_feature,H, W, relative_pos)
         node_feature = self.node_transformer2(node_feature, H, W, relative_pos)

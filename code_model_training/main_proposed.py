@@ -3,6 +3,8 @@ her2:  /home/puneet/maninder/data/her2st_dataset/224
 
 cscc: /home/puneet/maninder/data/cscc_dataset/224
 
+model:   ImageGeneCrossTransformerRoPE
+
 '''
 
 
@@ -42,6 +44,7 @@ from set_deterministic_seed import set_deterministic_seed
 from models import STNet, EfficientNet, EfficientNetB4GeneRegressor, Custom_VGG16, HisToGene
 from torch.utils.data import ConcatDataset
 from proposedModels import ImageGeneCrossTransformer
+from proposedModelsRoPE import ImageGeneCrossTransformerRoPE
 from sklearn.model_selection import KFold
 from proposedModels2 import ImageToGeneTransformer
 from proposedModel3 import ImageGeneCrossTransformerWithSinePE
@@ -164,6 +167,42 @@ def main():
                 pretrained=pretrained,
                 img_proj = img_proj
             )
+
+        elif params["model"] == "ImageGeneCrossTransformerRoPE":
+            # --- Get model hyperparameters ---
+            embed_dim = params.get("embed_dim", 512)
+            nhead = params.get("nhead", 4)
+            dim_feedforward = params.get("dim_feedforward", 1024)
+            dropout = params.get("dropout", 0.1)
+            pretrained = params.get("pretrained", False)
+            H = params.get("image_height", 224)
+            W = params.get("image_width", 224)
+            image_channels = params.get("image_channels", 3)
+            img_proj = params.get("img_proj", "vgg16")
+
+            # --- Logging configuration ---
+            logger.info("Initializing ImageGeneCrossTransformer with:")
+            logger.info(f"- Image size: {H}x{W}")
+            logger.info(f"- Embedding dimension (d_model): {embed_dim}")
+            logger.info(f"- Attention heads: {nhead}")
+            logger.info(f"- Feedforward dim: {dim_feedforward}")
+            logger.info(f"- Dropout: {dropout}")
+            logger.info(f"- Pretrained EfficientNet: {pretrained}")
+            logger.info(f"- Number of genes: {num_genes}")
+            logger.info(f"- Image channels: {image_channels}")
+
+            # --- Model initialization ---
+            model = ImageGeneCrossTransformerRoPE(
+                num_genes=num_genes,
+                d_model=embed_dim,
+                nhead=nhead,
+                dim_feedforward=dim_feedforward,
+                dropout=dropout,
+                pretrained=pretrained,
+                img_proj = img_proj
+            )
+
+
 
         elif params["model"] == "ImageToGeneTransformer":
             # --- Get model hyperparameters ---
@@ -309,7 +348,7 @@ def main():
                 # -------------------------------------------------------
                 # Forward pass (robust and safe)
                 # -------------------------------------------------------
-                if params["model"] in ["ImageGeneCrossTransformer", "ImageToGeneTransformer","ImageGeneCrossTransformerWithSinePE"]:
+                if params["model"] in ["ImageGeneCrossTransformer", "ImageToGeneTransformer","ImageGeneCrossTransformerWithSinePE", "ImageGeneCrossTransformerRoPE"]:
                     if np.random.rand() < conditioning_dropout:
                         output = model(images)  # inference-style
                         mode_used = "no_gene_values"
@@ -450,7 +489,7 @@ def main():
                     y_true = targets.to(device)                         # shape: (B, num_genes)
 
                     # --- Forward pass through model ---
-                    if params["model"] in ["ImageGeneCrossTransformer", "ImageToGeneTransformer", "ImageGeneCrossTransformerWithSinePE"]:
+                    if params["model"] in ["ImageGeneCrossTransformer", "ImageToGeneTransformer", "ImageGeneCrossTransformerWithSinePE","ImageGeneCrossTransformerRoPE"]:
                         y_pred,_ = model(images)
                     else:
                         y_pred = model(images)    

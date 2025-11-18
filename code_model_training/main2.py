@@ -105,6 +105,8 @@ def main():
             num_genes = 171
         elif params['dataset_name'] == "her2":
             num_genes = 785
+        elif params['dataset_name'] == "hist2st_845":
+            num_genes = 845
         else:
             raise ValueError(f"Unknown dataset name: {params['dataset_name']}")
 
@@ -117,7 +119,7 @@ def main():
             model = Custom_VGG16(num_genes=num_genes, pretrained=pretrained)
             
         elif params["model"] == "Effnet":
-            pretrained = params.get("pretrained", False)
+            pretrained = params.get("pretrained", True)
             model = EfficientNet(num_genes=num_genes, pretrained=pretrained) 
             
         elif params["model"] == "HisToGene":
@@ -570,7 +572,19 @@ def main():
             'GSM4284326', 'GSM4284325', 'GSM4284324',
             'GSM4284321', 'GSM4284319', 'GSM4284318'
         ]
-
+        
+    if params["dataset_name"] == "hist2st_845":
+        gsm_samples = [
+            '23209_C1', '23209_C2', '23209_D1', '23268_C1', '23268_C2', '23268_D1', '23269_C1', '23269_C2',
+            '23269_D1', '23270_D2', '23270_E1', '23270_E2', '23272_D2', '23272_E1', '23272_E2', '23277_D2',
+            '23277_E1', '23277_E2', '23287_C1', '23287_C2', '23287_D1', '23288_D2', '23288_E1', '23288_E2',
+            '23377_C1', '23377_C2', '23377_D1', '23450_D2', '23450_E1', '23450_E2', '23506_C1', '23506_C2',
+            '23506_D1', '23508_D2', '23508_E1', '23508_E2', '23567_D2', '23567_E1', '23567_E2', '23803_D2',
+            '23803_E1', '23803_E2', '23810_D2', '23810_E1', '23810_E2', '23895_C1', '23895_C2', '23895_D1',
+            '23901_C2', '23901_D1', '23903_C1', '23903_C2', '23903_D1', '23944_D2', '23944_E1', '23944_E2',
+            '24044_D2', '24044_E1', '24044_E2', '24105_C1', '24105_C2', '24105_D1', '24220_D2', '24220_E1',
+            '24220_E2', '24223_D2', '24223_E1', '24223_E2'
+        ]
 
     if params["dataset_name"] == "her2":
         gsm_samples =  [
@@ -594,6 +608,9 @@ def main():
         patch_paths = [os.path.join(dataset_path, f"{sample}_patches.h5") for sample in gsm_samples]
         adata_paths = [os.path.join(dataset_path, f"{sample}_spots.h5ad") for sample in gsm_samples]
     if params["dataset_name"] == "her2":
+        patch_paths = [os.path.join(dataset_path, f"{sample}.h5") for sample in gsm_samples]
+        adata_paths = [os.path.join(dataset_path, f"{sample}.h5ad") for sample in gsm_samples]
+    if params["dataset_name"] == "hist2st_845":
         patch_paths = [os.path.join(dataset_path, f"{sample}.h5") for sample in gsm_samples]
         adata_paths = [os.path.join(dataset_path, f"{sample}.h5ad") for sample in gsm_samples]
     logger.info(f"Total samples: {len(gsm_samples)}")
